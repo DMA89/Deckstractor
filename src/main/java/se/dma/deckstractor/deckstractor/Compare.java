@@ -1015,7 +1015,7 @@ public class Compare
 	//Populate arrays, nothing of interest below this point, seriously.
 	public void populateStringArray() {
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File("src/main/resources/cardnames")));
+			BufferedReader br = new BufferedReader(new FileReader(new File("src\\main\\resources\\cardnames")));
 			String line;
 			int counter = 0;
 			while ((line = br.readLine()) != null) {
@@ -1028,7 +1028,7 @@ public class Compare
 		}
 
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File("src/main/resources/blizzard-ids")));
+			BufferedReader br = new BufferedReader(new FileReader(new File("src\\main\\resources\\blizzard-ids")));
 			String line;
 			int counter = 0;
 			while ((line = br.readLine()) != null) {
@@ -1041,11 +1041,11 @@ public class Compare
 		}
 
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File("src/main/resources/hearthpwn-ids")));
+			BufferedReader br = new BufferedReader(new FileReader(new File("src\\main\\resources\\hearthpwn-ids")));
 			String line;
 			int counter = 0;
 			while ((line = br.readLine()) != null) {
-				ID[counter] = line;
+				HearthPwnID[counter] = line;
 				counter++;
 			}
 			br.close();
