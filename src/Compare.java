@@ -14,7 +14,6 @@ import java.nio.file.*;
 
 
 import javax.imageio.ImageIO;
-//import java.net.URL;
 
 
 public class Compare
