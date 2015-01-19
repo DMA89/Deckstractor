@@ -4,3 +4,5 @@
 bin/
 *.iml
 .idea/
+out/
+Tempcards/
