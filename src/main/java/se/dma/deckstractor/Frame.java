@@ -701,7 +701,7 @@ public class Frame {
 
         for (int m = 0; m < 30; m++) {
             if (CardNumb[m] > -1) {
-                URL = URL + Main.PROPERTIES.getProperty("heartpwn.id"+CardNumb[m]) + ":" + CardCount[m] + ";";
+                URL = URL + Main.PROPERTIES.getProperty("heartpwn.id."+CardNumb[m]) + ":" + CardCount[m] + ";";
             }
         }
         openWebpage(URL);
@@ -713,9 +713,9 @@ public class Frame {
         for (int m = 0; m < 30; m++) {
             if (CardNumb[m] > -1) {
                 if (CardCount[m] == 2) {
-                    str = str + Main.PROPERTIES.getProperty("card.name"+CardNumb[m]) + "\r\n" + Main.PROPERTIES.getProperty("card.name"+CardNumb[m]) + "\r\n";
+                    str = str + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\r\n" + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\r\n";
                 } else if (CardCount[m] == 1) {
-                    str = str + Main.PROPERTIES.getProperty("card.name"+CardNumb[m]) + "\r\n";
+                    str = str + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\r\n";
                 } else {
                 }
             }
@@ -729,9 +729,9 @@ public class Frame {
         for (int m = 0; m < 30; m++) {
             if (CardNumb[m] > -1) {
                 if (CardCount[m] == 2) {
-                    str = str + "2x: " + Main.PROPERTIES.getProperty("card.name"+CardNumb[m]) + "\r\n";
+                    str = str + "2x: " + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\r\n";
                 } else if (CardCount[m] == 1) {
-                    str = str + "1x: " + Main.PROPERTIES.getProperty("card.name"+CardNumb[m]) + "\r\n";
+                    str = str + "1x: " + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\r\n";
                 } else {
                 }
             }
@@ -747,7 +747,7 @@ public class Frame {
         for (int m = 0; m < 30; m++) {
             if (CardNumb[m] > -1) {
                 str = str + "  <Card>" + "\r\n";
-                str = str + "   <Id>" + Main.PROPERTIES.getProperty("blizzard.id"+CardNumb[m]) + "</Id>" + "\r\n";
+                str = str + "   <Id>" + Main.PROPERTIES.getProperty("blizzard.id."+CardNumb[m]) + "</Id>" + "\r\n";
                 str = str + "   <Count>" + CardCount[m] + "</Count>" + "\r\n";
                 str = str + "  </Card>" + "\r\n";
             }
@@ -789,7 +789,7 @@ public class Frame {
         editorPane.setText(" ");
         for (int m = 0; m < 30; m++) {
             if (CardCount[m] > 0) {
-                editorPane.setText(editorPane.getText() + CardCount[m] + "x: " + Main.PROPERTIES.getProperty("card.name"+CardNumb[m]) + "\n ");
+                editorPane.setText(editorPane.getText() + CardCount[m] + "x: " + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\n ");
             }
         }
     }
