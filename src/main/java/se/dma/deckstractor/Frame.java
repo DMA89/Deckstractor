@@ -701,7 +701,7 @@ public class Frame {
 
         for (int m = 0; m < 30; m++) {
             if (CardNumb[m] > -1) {
-                URL = URL + Main.PROPERTIES.getProperty("heartpwn.id."+CardNumb[m]) + ":" + CardCount[m] + ";";
+                URL = URL + Main.PROPERTIES.getProperty("hearthpwn.id."+CardNumb[m]) + ":" + CardCount[m] + ";";
             }
         }
         openWebpage(URL);
