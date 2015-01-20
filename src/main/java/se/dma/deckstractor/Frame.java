@@ -975,7 +975,6 @@ public class Frame {
 
     }
 
-
     //Capitalize first letter
     public static String capitalizeFirstLetter(String original) {
         if (original.length() == 0)
