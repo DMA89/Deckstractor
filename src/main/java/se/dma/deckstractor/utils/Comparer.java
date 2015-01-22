@@ -16,7 +16,12 @@ import java.nio.file.Paths;
 /**
  * Created by palle on 22/01/15.
  */
+
+
 class Comparer {
+
+
+    public static BufferedImage tempImg[] = new BufferedImage[21];
     private double test = 0;
     //Start new search
     public static void StartSearch(JEditorPane editorPane) {
@@ -72,15 +77,8 @@ class Comparer {
         top[19] = 889;
         top[20] = 929;
 
-        for (int x = 0; x < 21; x++) {
-            BufferedImage i;
-            i = robot.createScreenCapture(new Rectangle(pLeft, (top[x] + 1), pWidth, pHeight));
-            File output = new File("TempCards/" + x + ".jpeg");
-            try {
-                ImageIO.write(i, "jpeg", output);
-            } catch (IOException p) {
-                p.printStackTrace();
-            }
+        for (int i = 0; i < 21; i++) {
+            tempImg[i] = robot.createScreenCapture(new Rectangle(pLeft, (top[i] + 1), pWidth, pHeight));
         }
 
     } //End of GetScreen
@@ -112,33 +110,33 @@ class Comparer {
         top[7] = 889;
         top[8] = 930;
 
-        for (int x = 0; x < 9; x++) {
-            BufferedImage i = null;
-            i = robot.createScreenCapture(new Rectangle(pLeft, (top[x] - 5), pWidth, pHeight));
-            File output = new File("TempCards/" + x + ".jpeg");
-            try {
-                ImageIO.write(i, "jpeg", output);
-            } catch (IOException p) {
-                p.printStackTrace();
-            }
+        for (int i = 0; i < 9; i++) {
+            tempImg[i] = robot.createScreenCapture(new Rectangle(pLeft, (top[i] - 5), pWidth, pHeight));
+
         }
 
     } //End of GetScreenExtra
 
+
     //Img compare function
+    // (First buffered image, String location for second image, search direction: -1 for up, 1 for down or 0 for stay the same)
     //Following function almost 100% taken from: http://rosettacode.org/wiki/Percentage_difference_between_images
-    private static double ImgDiffPercent(String IMG1, String IMG2) {
-        BufferedImage img1 = null;
+    private static double ImgDiffPercent(BufferedImage img1, String IMG2, int searchDirection) {
         BufferedImage img2 = null;
         try {
             //URL url1 = new URL("http://rosettacode.org/mw/images/3/3c/Lenna50.jpg");
             //URL url2 = new URL("http://rosettacode.org/mw/images/b/b6/Lenna100.jpg");
-            img1 = ImageIO.read(new File(IMG1));
             img2 = ImageIO.read(new File(IMG2));
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        if (searchDirection==-1){
+            img1 = img1.getSubimage(0, 0, 50, 24);
+            img2 = img2.getSubimage(0, 1, 50, 24);
+        }else if (searchDirection==1){
+            img1 = img1.getSubimage(0, 1, 50, 24);
+            img2 = img2.getSubimage(0, 0, 50, 24);
+        }
 
         int width1 = img1.getWidth(null);
         int width2 = img2.getWidth(null);
@@ -170,292 +168,109 @@ class Comparer {
 
     }
 
-    //Img compare function one pixel up
-    //Following function almost 100% taken from: http://rosettacode.org/wiki/Percentage_difference_between_images
-    private static double ImgDiffPercentUp(String IMG1, String IMG2) {
-        BufferedImage cimg1 = null;
-        BufferedImage cimg2 = null;
-        try {
-            //URL url1 = new URL("http://rosettacode.org/mw/images/3/3c/Lenna50.jpg");
-            //URL url2 = new URL("http://rosettacode.org/mw/images/b/b6/Lenna100.jpg");
-            cimg1 = ImageIO.read(new File(IMG1));
-            cimg2 = ImageIO.read(new File(IMG2));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        BufferedImage img1 = cimg1.getSubimage(0, 0, 50, 24);
-        BufferedImage img2 = cimg2.getSubimage(0, 1, 50, 24);
 
-        int width1 = img1.getWidth(null);
-        int width2 = img2.getWidth(null);
-        int height1 = img1.getHeight(null);
-        int height2 = img2.getHeight(null);
-        if ((width1 != width2) || (height1 != height2)) {
-            System.err.println("Error: Images dimensions mismatch");
-            System.exit(1);
-        }
-        long diff = 0;
-        for (int y = 0; y < height1; y++) {
-            for (int x = 0; x < width1; x++) {
-                int rgb1 = img1.getRGB(x, y);
-                int rgb2 = img2.getRGB(x, y);
-                int r1 = (rgb1 >> 16) & 0xff;
-                int g1 = (rgb1 >> 8) & 0xff;
-                int b1 = (rgb1) & 0xff;
-                int r2 = (rgb2 >> 16) & 0xff;
-                int g2 = (rgb2 >> 8) & 0xff;
-                int b2 = (rgb2) & 0xff;
-                diff += Math.abs(r1 - r2);
-                diff += Math.abs(g1 - g2);
-                diff += Math.abs(b1 - b2);
-            }
-        }
-        double n = width1 * height1 * 3;
-        double p = diff / n / 255.0;
-        return (double) (p * 100.0);
-
-    }
-
-    //Img compare function one pixel down
-    //Following function almost 100% taken from: http://rosettacode.org/wiki/Percentage_difference_between_images
-    private static double ImgDiffPercentDown(String IMG1, String IMG2) {
-        BufferedImage cimg1 = null;
-        BufferedImage cimg2 = null;
-        try {
-            //URL url1 = new URL("http://rosettacode.org/mw/images/3/3c/Lenna50.jpg");
-            //URL url2 = new URL("http://rosettacode.org/mw/images/b/b6/Lenna100.jpg");
-            cimg1 = ImageIO.read(new File(IMG1));
-            cimg2 = ImageIO.read(new File(IMG2));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        BufferedImage img1 = cimg1.getSubimage(0, 1, 50, 24);
-        BufferedImage img2 = cimg2.getSubimage(0, 0, 50, 24);
-
-        int width1 = img1.getWidth(null);
-        int width2 = img2.getWidth(null);
-        int height1 = img1.getHeight(null);
-        int height2 = img2.getHeight(null);
-        if ((width1 != width2) || (height1 != height2)) {
-            System.err.println("Error: Images dimensions mismatch");
-            System.exit(1);
-        }
-        long diff = 0;
-        for (int y = 0; y < height1; y++) {
-            for (int x = 0; x < width1; x++) {
-                int rgb1 = img1.getRGB(x, y);
-                int rgb2 = img2.getRGB(x, y);
-                int r1 = (rgb1 >> 16) & 0xff;
-                int g1 = (rgb1 >> 8) & 0xff;
-                int b1 = (rgb1) & 0xff;
-                int r2 = (rgb2 >> 16) & 0xff;
-                int g2 = (rgb2 >> 8) & 0xff;
-                int b2 = (rgb2) & 0xff;
-                diff += Math.abs(r1 - r2);
-                diff += Math.abs(g1 - g2);
-                diff += Math.abs(b1 - b2);
-            }
-        }
-        double n = width1 * height1 * 3;
-        double p = diff / n / 255.0;
-        return (p * 100.0);
-
-    }
 
     //Match images
-    public void ImgMatch(int x) {
-        //editorPane.setText(editorPane.getText() + x + "\n");
-        boolean found = false;
+    public boolean ImageMatchCheck(int i, int j, boolean single, int searchDirection){
         Card card;
-
-        //Class search
-        for (int y = Main.chosenClass.getSearchStart(); y < (Main.chosenClass.getSearchEnd() + 1); y++) {
-            card = Main.cardService.getCard(y);
-            //Search for matching double cards
-            // Create a compare object specifying the 2 images for comparison.
-            Path path = Paths.get("DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-            if (Files.exists(path)) {
-                test = ImgDiffPercent("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
-                    found = true;
-                    Main.cardNumb[Main.currentSlot] = y;
-                    Main.cardCount[Main.currentSlot] = 2;
-                    //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                    if (Main.currentSlot > 20) {
-                        Main.currentSlot--;
-                    } else {
-                        Main.currentSlot++;
-                    }
-
-                    Main.totCards = Main.totCards + 2;
-                    //Match found!
-
-                }
-            }
-            //Search for matching single cards
-            path = Paths.get("SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-            if (Files.exists(path)) {
-
-                test = ImgDiffPercent("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
-                    found = true;
-                    Main.cardNumb[Main.currentSlot] = y;
-                    Main.cardCount[Main.currentSlot]++;
-                    //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                    if (Main.currentSlot > 20) {
-                        Main.currentSlot--;
-                    } else {
-                        Main.currentSlot++;
-                    }
-                    Main.totCards++;
-
-                }
-            }
-            if (found) {
-                break;
-            }
+        card = Main.cardService.getCard(j);
+        // Create a compare object specifying the 2 images for comparison.
+        String path;
+        if (single){
+            path = "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg";
+        }else{
+            path = "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg";
         }
-
-
-        //Neutral search
-        for (int y = 306; y < 535; y++) {
-            card = Main.cardService.getCard(y);
-            //Search for matching double cards
-            // Create a compare object specifying the 2 images for comparison.
-            Path path = Paths.get("DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-            if (Files.exists(path)) {
-                test = ImgDiffPercent("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
-                    found = true;
-                    Main.cardNumb[Main.currentSlot] = y;
-                    Main.cardCount[Main.currentSlot] = 2;
-                    //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                    if (Main.currentSlot > 20) {
-                        Main.currentSlot--;
-                    } else {
-                        Main.currentSlot++;
-                    }
-                    Main.totCards = Main.totCards + 2;
-                    //Match found!
-
-
-                }
-            }
-            //Search for matching single cards
-            path = Paths.get("SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-            if (Files.exists(path)) {
-
-                test = ImgDiffPercent("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
-                    found = true;
-                    Main.cardNumb[Main.currentSlot] = y;
+        if (Files.exists(Paths.get(path))) {
+            test = ImgDiffPercent(tempImg[i],path,searchDirection);
+            if ((test < Main.percentDiffAllowed) || ((i == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
+                Main.cardNumb[Main.currentSlot] = j;
+                if (single){
                     Main.cardCount[Main.currentSlot]++;
-                    //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                    if (Main.currentSlot > 20) {
-                        Main.currentSlot--;
-                    } else {
-                        Main.currentSlot++;
-                    }
                     Main.totCards++;
-
+                }else{
+                    Main.cardCount[Main.currentSlot] = 2;
+                    Main.totCards = Main.totCards + 2;
                 }
+                if (Main.currentSlot > 20) {
+                    Main.currentSlot--;
+                } else {
+                    Main.currentSlot++;
+                }
+                return true;
+            }else{
+                return false;
             }
-            if (found) {
-                break;
-            }
-        }
-
-
-        // This only runs is Normal test fails###
-        if (!found) {
-            for (int y = 306; y < 535; y++) {
-                card = Main.cardService.getCard(y);
-
-                //One pixel up, double.
-                Path path = Paths.get("DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if (Files.exists(path)) {
-
-
-                    test = ImgDiffPercentUp("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                    if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
-                        found = true;
-                        Main.cardNumb[Main.currentSlot] = y;
-                        Main.cardCount[Main.currentSlot] = 2;
-                        //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                        if (Main.currentSlot > 20) {
-                            Main.currentSlot--;
-                        } else {
-                            Main.currentSlot++;
-                        }
-                        Main.totCards = Main.totCards + 2;
-                        //Match found!
-
-                    }
-                }
-                //One pixel up
-                //Search for matching single cards
-                path = Paths.get("SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if (Files.exists(path)) {
-
-                    test = ImgDiffPercentUp("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                    if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
-                        found = true;
-                        Main.cardNumb[Main.currentSlot] = y;
-                        Main.cardCount[Main.currentSlot]++;
-                        //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                        if (Main.currentSlot > 20) {
-                            Main.currentSlot--;
-                        } else {
-                            Main.currentSlot++;
-                        }
-                        Main.totCards++;
-
-                    }
-                }
-                //One pixel down, double
-                path = Paths.get("DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if (Files.exists(path)) {
-
-
-                    test = ImgDiffPercentDown("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                    if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
-                        found = true;
-                        Main.cardNumb[Main.currentSlot] = y;
-                        Main.cardCount[Main.currentSlot] = 2;
-                        //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                        if (Main.currentSlot > 20) {
-                            Main.currentSlot--;
-                        } else {
-                            Main.currentSlot++;
-                        }
-                        Main.totCards = Main.totCards + 2;
-                        //Match found!
-                    }
-                }
-                //One pixel down
-                //Search for matching single cards
-                path = Paths.get("SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if (Files.exists(path)) {
-
-                    test = ImgDiffPercentDown("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                    if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
-                        found = true;
-                        Main.cardNumb[Main.currentSlot] = y;
-                        Main.cardCount[Main.currentSlot]++;
-                        //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                        if (Main.currentSlot > 20) {
-                            Main.currentSlot--;
-                        } else {
-                            Main.currentSlot++;
-                        }
-                        Main.totCards++;
-
-                    }
-                }
-                if (found) {
-                    break;
-                }
-            }
+        }else {
+            return false;
         }
     }
+
+
+
+    public boolean imgFind(int i) {
+        boolean found;
+        //Class search
+        for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
+            found = ImageMatchCheck(i, j, false, 0);
+            if (!found) {
+                found = ImageMatchCheck(i, j, true, 0);
+            }
+            if (found) {
+                return true;
+            }
+        }
+        //Neutral search
+        for (int j = 306; j < 535; j++) {
+            found = ImageMatchCheck(i, j, false, 0);
+            if (!found) {
+                found = ImageMatchCheck(i, j, true, 0);
+            }
+            if (found) {
+                return true;
+            }
+        }
+        //Extra test with one pixel up and down
+        // This only runs is Normal test fails###
+        for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
+                //One pixel up, double.
+                found = ImageMatchCheck(i, j, false, -1);
+                if (!found){
+                    //One pixel up, single cards
+                    found = ImageMatchCheck(i, j, true, -1);
+                }
+                if (!found){
+                    //One pixel down, double cards
+                    found = ImageMatchCheck(i, j, false, 1);
+                }
+                if (!found){
+                    //One pixel down, single cards
+                    found = ImageMatchCheck(i, j, true, 1);
+                }
+                if (found){
+                    return true;
+                }
+        }
+        for (int j = 306; j < 535; j++) {
+            //One pixel up, double.
+            found = ImageMatchCheck(i, j, false, -1);
+            if (!found) {
+                //One pixel up, single cards
+                found = ImageMatchCheck(i, j, true, -1);
+            }
+            if (!found) {
+                //One pixel up, single cards
+                found = ImageMatchCheck(i, j, false, 1);
+            }
+            if (!found) {
+                //One pixel up, single cards
+                found = ImageMatchCheck(i, j, true, 1);
+            }
+            if (found) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
