@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class MockCardRepository extends IdCounter implements CardRepository {
 
-    private Map<Long, Card> repo = new HashMap<>();
+    private final Map<Long, Card> repo = new HashMap<>();
 
     @Override
     public long saveCard(Card card) {

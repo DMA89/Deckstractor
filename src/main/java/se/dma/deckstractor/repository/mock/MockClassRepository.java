@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class MockClassRepository implements ClassRepository {
 
-    private Map<Long, HearthstoneClass> repo = new HashMap<>();
+    private final Map<Long, HearthstoneClass> repo = new HashMap<>();
 
     @Override
     public long saveHearthstoneClass(HearthstoneClass hearthstoneClass) {
@@ -29,8 +29,8 @@ public class MockClassRepository implements ClassRepository {
     @Override
     public HearthstoneClass getHearthstoneClassByName(String name) {
         for (int i = 0; i < repo.size(); i++) {
-            if (repo.get(Long.valueOf(i)).getName().equalsIgnoreCase(name)) {
-                return repo.get(Long.valueOf(i));
+            if (repo.get((long) i).getName().equalsIgnoreCase(name)) {
+                return repo.get((long) i);
             }
         }
         return null;

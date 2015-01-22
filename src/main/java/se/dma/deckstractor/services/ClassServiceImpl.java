@@ -11,7 +11,7 @@ import java.util.Collection;
  */
 public class ClassServiceImpl implements ClassService {
 
-    static ClassRepository repo = new MockClassRepository();
+    private static final ClassRepository repo = new MockClassRepository();
 
     @Override
     public long saveHearthstoneClass(HearthstoneClass hearthstoneClass) {

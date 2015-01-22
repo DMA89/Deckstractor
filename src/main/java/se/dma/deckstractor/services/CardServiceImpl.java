@@ -12,7 +12,7 @@ import java.util.Collection;
  */
 public class CardServiceImpl implements CardService {
 
-    static CardRepository repo = new MockCardRepository();
+    private static final CardRepository repo = new MockCardRepository();
 
     @Override
     public long saveCard(Card card) {
