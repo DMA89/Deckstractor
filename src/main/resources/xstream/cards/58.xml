@@ -1,0 +1,12 @@
+<card>
+    <id>58</id>
+    <name>Lord Jaraxxus</name>
+    <blizzardId>EX1_323</blizzardId>
+    <hearthPwnId>482</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

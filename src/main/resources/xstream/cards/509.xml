@@ -1,0 +1,12 @@
+<card>
+    <id>509</id>
+    <name>Madder Bomber</name>
+    <blizzardId>GVG_090</blizzardId>
+    <hearthPwnId>12177</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

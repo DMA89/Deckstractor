@@ -1,0 +1,12 @@
+<card>
+    <id>194</id>
+    <name>Seal of Light</name>
+    <blizzardId>GVG_057</blizzardId>
+    <hearthPwnId>12305</hearthPwnId>
+    <hearthstoneClass>
+        <id>5</id>
+        <name>Paladin</name>
+        <searchStart>170</searchStart>
+        <searchEnd>203</searchEnd>
+    </hearthstoneClass>
+</card>

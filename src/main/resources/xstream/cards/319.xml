@@ -1,0 +1,12 @@
+<card>
+    <id>319</id>
+    <name>Frostwolf Warlord</name>
+    <blizzardId>CS2_226</blizzardId>
+    <hearthPwnId>604</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

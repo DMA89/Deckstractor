@@ -1,0 +1,12 @@
+<card>
+    <id>248</id>
+    <name>Deadly Shot</name>
+    <blizzardId>EX1_617</blizzardId>
+    <hearthPwnId>239</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

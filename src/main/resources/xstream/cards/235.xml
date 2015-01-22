@@ -1,0 +1,12 @@
+<card>
+    <id>235</id>
+    <name>Snowchugger</name>
+    <blizzardId>GVG_002</blizzardId>
+    <hearthPwnId>12230</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

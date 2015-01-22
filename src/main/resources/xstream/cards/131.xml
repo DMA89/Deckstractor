@@ -1,0 +1,12 @@
+<card>
+    <id>131</id>
+    <name>Goblin Auto-Barber</name>
+    <blizzardId>GVG_023</blizzardId>
+    <hearthPwnId>12212</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

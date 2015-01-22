@@ -1,0 +1,12 @@
+<card>
+    <id>314</id>
+    <name>Dalaran Mage</name>
+    <blizzardId>EX1_582</blizzardId>
+    <hearthPwnId>388</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

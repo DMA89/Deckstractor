@@ -1,0 +1,12 @@
+<card>
+    <id>229</id>
+    <name>Ethereal Arcanist</name>
+    <blizzardId>EX1_274</blizzardId>
+    <hearthPwnId>125</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

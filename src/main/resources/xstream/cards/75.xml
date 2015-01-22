@@ -1,0 +1,12 @@
+<card>
+    <id>75</id>
+    <name>Rockbiter Weapon</name>
+    <blizzardId>CS2_045</blizzardId>
+    <hearthPwnId>491</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

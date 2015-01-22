@@ -1,0 +1,12 @@
+<card>
+    <id>529</id>
+    <name>Toshley</name>
+    <blizzardId>GVG_115</blizzardId>
+    <hearthPwnId>12225</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

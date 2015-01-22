@@ -1,0 +1,12 @@
+<card>
+    <id>68</id>
+    <name>Doomhammer</name>
+    <blizzardId>EX1_567</blizzardId>
+    <hearthPwnId>172</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

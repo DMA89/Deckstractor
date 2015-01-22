@@ -1,0 +1,12 @@
+<card>
+    <id>28</id>
+    <name>Grommash Hellscream</name>
+    <blizzardId>EX1_414</blizzardId>
+    <hearthPwnId>643</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

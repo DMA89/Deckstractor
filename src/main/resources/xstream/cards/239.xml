@@ -1,0 +1,12 @@
+<card>
+    <id>239</id>
+    <name>Gladiator&apos;s Longbow</name>
+    <blizzardId>DS1_188</blizzardId>
+    <hearthPwnId>278</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

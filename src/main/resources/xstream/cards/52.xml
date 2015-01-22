@@ -1,0 +1,12 @@
+<card>
+    <id>52</id>
+    <name>Succubus</name>
+    <blizzardId>EX1_306</blizzardId>
+    <hearthPwnId>208</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

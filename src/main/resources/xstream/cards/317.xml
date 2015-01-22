@@ -1,0 +1,12 @@
+<card>
+    <id>317</id>
+    <name>Elven Archer</name>
+    <blizzardId>CS2_189</blizzardId>
+    <hearthPwnId>356</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

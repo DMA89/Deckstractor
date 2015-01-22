@@ -1,0 +1,12 @@
+<card>
+    <id>389</id>
+    <name>Gadgetzan Auctioneer</name>
+    <blizzardId>EX1_095</blizzardId>
+    <hearthPwnId>131</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

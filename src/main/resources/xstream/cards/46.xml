@@ -1,0 +1,12 @@
+<card>
+    <id>46</id>
+    <name>Siphon Soul</name>
+    <blizzardId>EX1_309</blizzardId>
+    <hearthPwnId>573</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

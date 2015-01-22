@@ -1,0 +1,12 @@
+<card>
+    <id>140</id>
+    <name>Mind Control</name>
+    <blizzardId>CS1_113</blizzardId>
+    <hearthPwnId>401</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

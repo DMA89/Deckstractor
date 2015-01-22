@@ -1,0 +1,12 @@
+<card>
+    <id>98</id>
+    <name>Neptulon</name>
+    <blizzardId>GVG_042</blizzardId>
+    <hearthPwnId>12292</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

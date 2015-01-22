@@ -1,0 +1,12 @@
+<card>
+    <id>71</id>
+    <name>Ancestral Healing</name>
+    <blizzardId>CS2_041</blizzardId>
+    <hearthPwnId>216</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

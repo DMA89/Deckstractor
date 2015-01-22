@@ -1,0 +1,12 @@
+<card>
+    <id>123</id>
+    <name>Tinker&apos;s Sharpsword Oil</name>
+    <blizzardId>GVG_022</blizzardId>
+    <hearthPwnId>12276</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

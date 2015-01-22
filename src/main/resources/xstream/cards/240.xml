@@ -1,0 +1,12 @@
+<card>
+    <id>240</id>
+    <name>Glaivezooka</name>
+    <blizzardId>GVG_043</blizzardId>
+    <hearthPwnId>12267</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

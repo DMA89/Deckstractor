@@ -1,0 +1,12 @@
+<card>
+    <id>470</id>
+    <name>Nerubian Egg</name>
+    <blizzardId>FP1_007</blizzardId>
+    <hearthPwnId>7738</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

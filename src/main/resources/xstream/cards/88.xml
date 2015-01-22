@@ -1,0 +1,12 @@
+<card>
+    <id>88</id>
+    <name>Crackle</name>
+    <blizzardId>GVG_038</blizzardId>
+    <hearthPwnId>12241</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

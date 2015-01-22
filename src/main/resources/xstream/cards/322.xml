@@ -1,0 +1,12 @@
+<card>
+    <id>322</id>
+    <name>Grimscale Oracle</name>
+    <blizzardId>EX1_508</blizzardId>
+    <hearthPwnId>510</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

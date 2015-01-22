@@ -1,0 +1,12 @@
+<card>
+    <id>346</id>
+    <name>Voodoo Doctor</name>
+    <blizzardId>EX1_011</blizzardId>
+    <hearthPwnId>410</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

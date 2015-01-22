@@ -1,0 +1,12 @@
+<card>
+    <id>199</id>
+    <name>Bolvar Fordragon</name>
+    <blizzardId>GVG_063</blizzardId>
+    <hearthPwnId>12244</hearthPwnId>
+    <hearthstoneClass>
+        <id>5</id>
+        <name>Paladin</name>
+        <searchStart>170</searchStart>
+        <searchEnd>203</searchEnd>
+    </hearthstoneClass>
+</card>

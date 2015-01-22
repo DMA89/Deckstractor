@@ -1,0 +1,12 @@
+<card>
+    <id>50</id>
+    <name>Imp-losion</name>
+    <blizzardId>GVG_045</blizzardId>
+    <hearthPwnId>12302</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>230</id>
+    <name>Kirin Tor Mage</name>
+    <blizzardId>EX1_612</blizzardId>
+    <hearthPwnId>411</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

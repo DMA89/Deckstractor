@@ -1,0 +1,12 @@
+<card>
+    <id>158</id>
+    <name>Auchenai Soulpriest</name>
+    <blizzardId>EX1_591</blizzardId>
+    <hearthPwnId>656</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

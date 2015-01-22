@@ -1,0 +1,12 @@
+<card>
+    <id>79</id>
+    <name>Earth Shock</name>
+    <blizzardId>EX1_245</blizzardId>
+    <hearthPwnId>77</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>166</id>
+    <name>Shadowboxer</name>
+    <blizzardId>GVG_072</blizzardId>
+    <hearthPwnId>12256</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

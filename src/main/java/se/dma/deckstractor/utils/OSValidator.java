@@ -3,7 +3,7 @@ package main.java.se.dma.deckstractor.utils;
 /**
  * Created by mkyong.com
  */
-class OSValidator {
+public class OSValidator {
 
     private static final String OS = System.getProperty("os.name").toLowerCase();
 

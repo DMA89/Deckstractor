@@ -1,0 +1,12 @@
+<card>
+    <id>173</id>
+    <name>Coghammer</name>
+    <blizzardId>GVG_059</blizzardId>
+    <hearthPwnId>12228</hearthPwnId>
+    <hearthstoneClass>
+        <id>5</id>
+        <name>Paladin</name>
+        <searchStart>170</searchStart>
+        <searchEnd>203</searchEnd>
+    </hearthstoneClass>
+</card>

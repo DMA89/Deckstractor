@@ -1,0 +1,12 @@
+<card>
+    <id>305</id>
+    <name>Mech-Bear-Cat</name>
+    <blizzardId>GVG_034</blizzardId>
+    <hearthPwnId>12226</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

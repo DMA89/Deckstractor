@@ -1,0 +1,12 @@
+<card>
+    <id>38</id>
+    <name>Sacrificial Pact</name>
+    <blizzardId>NEW1_003</blizzardId>
+    <hearthPwnId>348</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

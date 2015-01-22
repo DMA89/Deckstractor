@@ -1,0 +1,12 @@
+<card>
+    <id>400</id>
+    <name>King Mukla</name>
+    <blizzardId>EX1_014</blizzardId>
+    <hearthPwnId>373</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

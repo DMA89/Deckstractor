@@ -1,0 +1,12 @@
+<card>
+    <id>33</id>
+    <name>Warbot</name>
+    <blizzardId>GVG_051</blizzardId>
+    <hearthPwnId>12260</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

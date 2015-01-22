@@ -1,0 +1,12 @@
+<card>
+    <id>284</id>
+    <name>Naturalize</name>
+    <blizzardId>EX1_161</blizzardId>
+    <hearthPwnId>154</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

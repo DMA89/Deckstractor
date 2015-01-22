@@ -1,0 +1,12 @@
+<card>
+    <id>187</id>
+    <name>Holy Wrath</name>
+    <blizzardId>EX1_365</blizzardId>
+    <hearthPwnId>355</hearthPwnId>
+    <hearthstoneClass>
+        <id>5</id>
+        <name>Paladin</name>
+        <searchStart>170</searchStart>
+        <searchEnd>203</searchEnd>
+    </hearthstoneClass>
+</card>

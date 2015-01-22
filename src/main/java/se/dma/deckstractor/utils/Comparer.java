@@ -17,7 +17,7 @@ import java.nio.file.Paths;
  * Created by palle on 22/01/15.
  */
 class Comparer {
-
+    private double test = 0;
     //Start new search
     public static void StartSearch(JEditorPane editorPane) {
         //Button pressed
@@ -29,7 +29,6 @@ class Comparer {
         Main.currentSlot = 0;
         Main.totCards = 0;
         editorPane.setText(" ");
-        Main.i = 0;
         Comparer.GetScreen();
         Main.timer.start();
     }
@@ -276,8 +275,8 @@ class Comparer {
             // Create a compare object specifying the 2 images for comparison.
             Path path = Paths.get("DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
             if (Files.exists(path)) {
-                Main.test = ImgDiffPercent("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if ((Main.test < Main.percentDiffAllowed) || ((x == 20) && (Main.test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
+                test = ImgDiffPercent("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
+                if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
                     found = true;
                     Main.cardNumb[Main.currentSlot] = y;
                     Main.cardCount[Main.currentSlot] = 2;
@@ -297,8 +296,8 @@ class Comparer {
             path = Paths.get("SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
             if (Files.exists(path)) {
 
-                Main.test = ImgDiffPercent("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if ((Main.test < Main.percentDiffAllowed) || ((x == 20) && (Main.test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
+                test = ImgDiffPercent("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
+                if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
                     found = true;
                     Main.cardNumb[Main.currentSlot] = y;
                     Main.cardCount[Main.currentSlot]++;
@@ -325,8 +324,8 @@ class Comparer {
             // Create a compare object specifying the 2 images for comparison.
             Path path = Paths.get("DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
             if (Files.exists(path)) {
-                Main.test = ImgDiffPercent("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if ((Main.test < Main.percentDiffAllowed) || ((x == 20) && (Main.test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
+                test = ImgDiffPercent("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
+                if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
                     found = true;
                     Main.cardNumb[Main.currentSlot] = y;
                     Main.cardCount[Main.currentSlot] = 2;
@@ -346,8 +345,8 @@ class Comparer {
             path = Paths.get("SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
             if (Files.exists(path)) {
 
-                Main.test = ImgDiffPercent("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                if ((Main.test < Main.percentDiffAllowed) || ((x == 20) && (Main.test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
+                test = ImgDiffPercent("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
+                if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
                     found = true;
                     Main.cardNumb[Main.currentSlot] = y;
                     Main.cardCount[Main.currentSlot]++;
@@ -377,8 +376,8 @@ class Comparer {
                 if (Files.exists(path)) {
 
 
-                    Main.test = ImgDiffPercentUp("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                    if ((Main.test < Main.percentDiffAllowed) || ((x == 20) && (Main.test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
+                    test = ImgDiffPercentUp("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
+                    if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
                         found = true;
                         Main.cardNumb[Main.currentSlot] = y;
                         Main.cardCount[Main.currentSlot] = 2;
@@ -398,8 +397,8 @@ class Comparer {
                 path = Paths.get("SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
                 if (Files.exists(path)) {
 
-                    Main.test = ImgDiffPercentUp("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                    if ((Main.test < Main.percentDiffAllowed) || ((x == 20) && (Main.test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
+                    test = ImgDiffPercentUp("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
+                    if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
                         found = true;
                         Main.cardNumb[Main.currentSlot] = y;
                         Main.cardCount[Main.currentSlot]++;
@@ -418,8 +417,8 @@ class Comparer {
                 if (Files.exists(path)) {
 
 
-                    Main.test = ImgDiffPercentDown("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                    if ((Main.test < Main.percentDiffAllowed) || ((x == 20) && (Main.test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
+                    test = ImgDiffPercentDown("TempCards/" + x + ".jpeg", "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg");
+                    if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
                         found = true;
                         Main.cardNumb[Main.currentSlot] = y;
                         Main.cardCount[Main.currentSlot] = 2;
@@ -438,8 +437,8 @@ class Comparer {
                 path = Paths.get("SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
                 if (Files.exists(path)) {
 
-                    Main.test = ImgDiffPercentDown("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
-                    if ((Main.test < Main.percentDiffAllowed) || ((x == 20) && (Main.test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
+                    test = ImgDiffPercentDown("TempCards/" + x + ".jpeg", "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg");
+                    if ((test < Main.percentDiffAllowed) || ((x == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
                         found = true;
                         Main.cardNumb[Main.currentSlot] = y;
                         Main.cardCount[Main.currentSlot]++;

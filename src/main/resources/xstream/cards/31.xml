@@ -1,0 +1,12 @@
+<card>
+    <id>31</id>
+    <name>Shieldmaiden</name>
+    <blizzardId>GVG_053</blizzardId>
+    <hearthPwnId>12215</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

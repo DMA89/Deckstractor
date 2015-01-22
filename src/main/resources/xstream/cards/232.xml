@@ -1,0 +1,12 @@
+<card>
+    <id>232</id>
+    <name>Sorcerer&apos;s Apprentice</name>
+    <blizzardId>EX1_608</blizzardId>
+    <hearthPwnId>4</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

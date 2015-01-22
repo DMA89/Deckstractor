@@ -18,18 +18,19 @@ import java.io.IOException;
 public class Handler implements ActionListener {
 
     private final Comparer comparer = new Comparer();
+    private int i = 0;
 
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == Main.timer) {
             //Timer pulse
-            if (Main.i == 0) {
-                comparer.ImgMatch(Main.i);
-                Main.i++;
+            if (i == 0) {
+                comparer.ImgMatch(i);
+                i++;
                 Frame.cardsFound.setText("Cards found: " + Main.totCards);
-            } else if (Main.i == 20) {
-                comparer.ImgMatch(Main.i);
+            } else if (i == 20) {
+                comparer.ImgMatch(i);
                 Main.timer.stop();
-                Main.i = 0;
+                i = 0;
                 Frame.cardsFound.setText("Cards found: " + Main.totCards);
                 if (Main.totCards < 30) {
                     String str = "<html><font color=\"red\"> Only " + Main.totCards + " where found, please scroll <br> ALL the way down in your decklist <br> and then press \"Second Extraction\".</font>";
@@ -37,11 +38,11 @@ public class Handler implements ActionListener {
                 }
 
             } else {
-                comparer.ImgMatch(Main.i);
-                Main.i++;
+                comparer.ImgMatch(i);
+                i++;
                 if (Main.totCards > 29) {
                     Main.timer.stop();
-                    Main.i = 0;
+                    i = 0;
                     Frame.cardsFound.setText("Cards found: " + Main.totCards);
                 }
                 Frame.cardsFound.setText("Cards found: " + Main.totCards);
@@ -52,17 +53,17 @@ public class Handler implements ActionListener {
         } else if (event.getSource() == Main.timerMore) {
 
             //Timer pulse
-            if (Main.i == 0) {
-                comparer.ImgMatch(Main.i);
+            if (i == 0) {
+                comparer.ImgMatch(i);
                 Main.timerMore.stop();
-                Main.i = 0;
+                i = 0;
             } else {
-                comparer.ImgMatch(Main.i);
+                comparer.ImgMatch(i);
                 if (Main.totCards > 29) {
                     Main.timerMore.stop();
-                    Main.i = 0;
+                    i = 0;
                 }
-                Main.i--;
+                i--;
             }
             Frame.cardsFound.setText("Cards found: " + Main.totCards);
             Frame.UpdateWindow();
@@ -177,7 +178,7 @@ public class Handler implements ActionListener {
                 case "Second Extraction (If decklist has scroll)":
                     Comparer.GetScreenExtra();
                     Main.currentSlot = 29;
-                    Main.i = 8;
+                    i = 8;
                     Main.timerMore.start();
                     break;
             } //End of Export as text file.

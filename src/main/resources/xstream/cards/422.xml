@@ -1,0 +1,12 @@
+<card>
+    <id>422</id>
+    <name>Pint-Sized Summoner</name>
+    <blizzardId>EX1_076</blizzardId>
+    <hearthPwnId>54</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

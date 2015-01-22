@@ -1,0 +1,12 @@
+<card>
+    <id>463</id>
+    <name>Feugen</name>
+    <blizzardId>FP1_015</blizzardId>
+    <hearthPwnId>7745</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>306</id>
+    <name>Acidic Swamp Ooze</name>
+    <blizzardId>EX1_066</blizzardId>
+    <hearthPwnId>74</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

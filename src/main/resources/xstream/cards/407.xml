@@ -1,0 +1,12 @@
+<card>
+    <id>407</id>
+    <name>Mad Bomber</name>
+    <blizzardId>EX1_082</blizzardId>
+    <hearthPwnId>80</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

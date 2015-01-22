@@ -1,0 +1,12 @@
+<card>
+    <id>432</id>
+    <name>Silver Hand Knight</name>
+    <blizzardId>CS2_151</blizzardId>
+    <hearthPwnId>648</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

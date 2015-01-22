@@ -1,0 +1,12 @@
+<card>
+    <id>183</id>
+    <name>Blessing of Wisdom</name>
+    <blizzardId>EX1_363</blizzardId>
+    <hearthPwnId>100</hearthPwnId>
+    <hearthstoneClass>
+        <id>5</id>
+        <name>Paladin</name>
+        <searchStart>170</searchStart>
+        <searchEnd>203</searchEnd>
+    </hearthstoneClass>
+</card>

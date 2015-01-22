@@ -1,0 +1,12 @@
+<card>
+    <id>2</id>
+    <name>Gorehowl</name>
+    <blizzardId>EX1_411</blizzardId>
+    <hearthPwnId>96</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>485</id>
+    <name>Burly Rockjaw Trogg</name>
+    <blizzardId>GVG_068</blizzardId>
+    <hearthPwnId>12233</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

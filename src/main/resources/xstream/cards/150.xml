@@ -1,0 +1,12 @@
+<card>
+    <id>150</id>
+    <name>Shadow Madness</name>
+    <blizzardId>EX1_334</blizzardId>
+    <hearthPwnId>442</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>108</id>
+    <name>Fan of Knives</name>
+    <blizzardId>EX1_129</blizzardId>
+    <hearthPwnId>378</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

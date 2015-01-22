@@ -1,0 +1,12 @@
+<card>
+    <id>444</id>
+    <name>The Beast</name>
+    <blizzardId>EX1_577</blizzardId>
+    <hearthPwnId>179</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

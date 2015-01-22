@@ -1,0 +1,12 @@
+<card>
+    <id>145</id>
+    <name>Circle of Healing</name>
+    <blizzardId>EX1_621</blizzardId>
+    <hearthPwnId>38</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

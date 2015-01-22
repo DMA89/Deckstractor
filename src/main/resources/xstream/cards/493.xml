@@ -1,0 +1,12 @@
+<card>
+    <id>493</id>
+    <name>Flying Machine</name>
+    <blizzardId>GVG_084</blizzardId>
+    <hearthPwnId>12247</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

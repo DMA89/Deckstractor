@@ -1,0 +1,12 @@
+<card>
+    <id>247</id>
+    <name>Bestial Wrath</name>
+    <blizzardId>EX1_549</blizzardId>
+    <hearthPwnId>304</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>301</id>
+    <name>Anodized Robo Cub</name>
+    <blizzardId>GVG_030</blizzardId>
+    <hearthPwnId>12219</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

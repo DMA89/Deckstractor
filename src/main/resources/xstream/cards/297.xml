@@ -1,0 +1,12 @@
+<card>
+    <id>297</id>
+    <name>Ancient of War</name>
+    <blizzardId>EX1_178</blizzardId>
+    <hearthPwnId>242</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

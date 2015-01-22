@@ -1,0 +1,12 @@
+<card>
+    <id>413</id>
+    <name>Mind Control Tech</name>
+    <blizzardId>EX1_085</blizzardId>
+    <hearthPwnId>368</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

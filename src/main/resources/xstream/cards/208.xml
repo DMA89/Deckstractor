@@ -1,0 +1,12 @@
+<card>
+    <id>208</id>
+    <name>Flamestrike</name>
+    <blizzardId>CS2_032</blizzardId>
+    <hearthPwnId>44</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

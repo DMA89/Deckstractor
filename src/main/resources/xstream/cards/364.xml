@@ -1,0 +1,12 @@
+<card>
+    <id>364</id>
+    <name>Big Game Hunter</name>
+    <blizzardId>EX1_005</blizzardId>
+    <hearthPwnId>73</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

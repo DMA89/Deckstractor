@@ -1,0 +1,12 @@
+<card>
+    <id>148</id>
+    <name>Mass Dispel</name>
+    <blizzardId>EX1_626</blizzardId>
+    <hearthPwnId>249</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

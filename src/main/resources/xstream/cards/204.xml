@@ -1,0 +1,12 @@
+<card>
+    <id>204</id>
+    <name>Arcane Explosion</name>
+    <blizzardId>CS2_025</blizzardId>
+    <hearthPwnId>56</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

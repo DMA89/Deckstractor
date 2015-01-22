@@ -1,0 +1,12 @@
+<card>
+    <id>64</id>
+    <name>Fel Cannon</name>
+    <blizzardId>GVG_020</blizzardId>
+    <hearthPwnId>12221</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>456</id>
+    <name>Young Priestess</name>
+    <blizzardId>EX1_004</blizzardId>
+    <hearthPwnId>123</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

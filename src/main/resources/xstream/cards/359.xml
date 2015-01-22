@@ -1,0 +1,12 @@
+<card>
+    <id>359</id>
+    <name>Arcane Golem</name>
+    <blizzardId>EX1_089</blizzardId>
+    <hearthPwnId>97</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

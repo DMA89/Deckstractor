@@ -1,0 +1,12 @@
+<card>
+    <id>357</id>
+    <name>Ancient Watcher</name>
+    <blizzardId>EX1_045</blizzardId>
+    <hearthPwnId>153</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

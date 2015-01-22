@@ -1,0 +1,12 @@
+<card>
+    <id>251</id>
+    <name>Flare</name>
+    <blizzardId>EX1_544</blizzardId>
+    <hearthPwnId>630</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

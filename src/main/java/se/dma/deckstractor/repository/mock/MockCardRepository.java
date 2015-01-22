@@ -2,7 +2,7 @@ package main.java.se.dma.deckstractor.repository.mock;
 
 import main.java.se.dma.deckstractor.domain.Card;
 import main.java.se.dma.deckstractor.domain.HearthstoneClass;
-import main.java.se.dma.deckstractor.repository.CardRepository;
+import main.java.se.dma.deckstractor.repository.interfaces.CardRepository;
 
 import java.util.*;
 

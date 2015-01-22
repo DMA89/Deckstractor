@@ -1,0 +1,12 @@
+<card>
+    <id>331</id>
+    <name>Nightblade</name>
+    <blizzardId>EX1_593</blizzardId>
+    <hearthPwnId>184</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>371</id>
+    <name>Coldlight Oracle</name>
+    <blizzardId>EX1_050</blizzardId>
+    <hearthPwnId>88</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

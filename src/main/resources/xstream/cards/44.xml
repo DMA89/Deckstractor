@@ -1,0 +1,12 @@
+<card>
+    <id>44</id>
+    <name>Sense Demons</name>
+    <blizzardId>EX1_317</blizzardId>
+    <hearthPwnId>327</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

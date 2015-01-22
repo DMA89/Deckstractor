@@ -1,0 +1,12 @@
+<card>
+    <id>157</id>
+    <name>Northshire Cleric</name>
+    <blizzardId>CS2_235</blizzardId>
+    <hearthPwnId>600</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

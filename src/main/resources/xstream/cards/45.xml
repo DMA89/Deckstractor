@@ -1,0 +1,12 @@
+<card>
+    <id>45</id>
+    <name>Shadowflame</name>
+    <blizzardId>EX1_303</blizzardId>
+    <hearthPwnId>673</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

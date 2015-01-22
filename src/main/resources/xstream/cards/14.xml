@@ -1,0 +1,12 @@
+<card>
+    <id>14</id>
+    <name>Inner Rage</name>
+    <blizzardId>EX1_607</blizzardId>
+    <hearthPwnId>366</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

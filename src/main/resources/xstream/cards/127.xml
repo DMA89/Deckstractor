@@ -1,0 +1,12 @@
+<card>
+    <id>127</id>
+    <name>Master of Disguise</name>
+    <blizzardId>NEW1_014</blizzardId>
+    <hearthPwnId>127</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

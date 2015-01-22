@@ -1,0 +1,12 @@
+<card>
+    <id>219</id>
+    <name>Mirror Entity</name>
+    <blizzardId>EX1_294</blizzardId>
+    <hearthPwnId>569</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

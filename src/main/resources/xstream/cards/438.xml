@@ -1,0 +1,12 @@
+<card>
+    <id>438</id>
+    <name>Stampeding Kodo</name>
+    <blizzardId>NEW1_041</blizzardId>
+    <hearthPwnId>389</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

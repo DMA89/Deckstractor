@@ -1,0 +1,12 @@
+<card>
+    <id>66</id>
+    <name>Mal&apos;Ganis</name>
+    <blizzardId>GVG_021</blizzardId>
+    <hearthPwnId>12294</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

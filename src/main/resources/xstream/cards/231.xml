@@ -1,0 +1,12 @@
+<card>
+    <id>231</id>
+    <name>Mana Wyrm</name>
+    <blizzardId>NEW1_012</blizzardId>
+    <hearthPwnId>263</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>443</id>
+    <name>Tauren Warrior</name>
+    <blizzardId>EX1_390</blizzardId>
+    <hearthPwnId>477</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

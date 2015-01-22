@@ -1,0 +1,12 @@
+<card>
+    <id>92</id>
+    <name>Al&apos;Akir the Windlord</name>
+    <blizzardId>NEW1_010</blizzardId>
+    <hearthPwnId>335</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

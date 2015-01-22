@@ -1,0 +1,12 @@
+<card>
+    <id>356</id>
+    <name>Ancient Mage</name>
+    <blizzardId>EX1_584</blizzardId>
+    <hearthPwnId>176</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

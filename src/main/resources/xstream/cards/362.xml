@@ -1,0 +1,12 @@
+<card>
+    <id>362</id>
+    <name>Azure Drake</name>
+    <blizzardId>EX1_284</blizzardId>
+    <hearthPwnId>280</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

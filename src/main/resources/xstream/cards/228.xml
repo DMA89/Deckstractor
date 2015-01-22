@@ -1,0 +1,12 @@
+<card>
+    <id>228</id>
+    <name>Archmage Antonidas</name>
+    <blizzardId>EX1_559</blizzardId>
+    <hearthPwnId>220</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

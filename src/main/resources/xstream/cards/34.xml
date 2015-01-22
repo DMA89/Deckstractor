@@ -1,0 +1,12 @@
+<card>
+    <id>34</id>
+    <name>Corruption</name>
+    <blizzardId>CS2_063</blizzardId>
+    <hearthPwnId>252</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

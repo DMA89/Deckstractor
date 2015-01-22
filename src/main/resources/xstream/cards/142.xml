@@ -1,0 +1,12 @@
+<card>
+    <id>142</id>
+    <name>Power Word: Shield</name>
+    <blizzardId>CS2_004</blizzardId>
+    <hearthPwnId>431</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

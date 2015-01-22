@@ -1,0 +1,12 @@
+<card>
+    <id>175</id>
+    <name>Blessing of Might</name>
+    <blizzardId>CS2_087</blizzardId>
+    <hearthPwnId>394</hearthPwnId>
+    <hearthstoneClass>
+        <id>5</id>
+        <name>Paladin</name>
+        <searchStart>170</searchStart>
+        <searchEnd>203</searchEnd>
+    </hearthstoneClass>
+</card>

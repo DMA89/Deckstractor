@@ -1,0 +1,12 @@
+<card>
+    <id>274</id>
+    <name>Innervate</name>
+    <blizzardId>EX1_169</blizzardId>
+    <hearthPwnId>548</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

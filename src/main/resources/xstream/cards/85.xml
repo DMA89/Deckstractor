@@ -1,0 +1,12 @@
+<card>
+    <id>85</id>
+    <name>Lightning Storm</name>
+    <blizzardId>EX1_259</blizzardId>
+    <hearthPwnId>676</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

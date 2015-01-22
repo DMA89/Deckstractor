@@ -1,0 +1,12 @@
+<card>
+    <id>118</id>
+    <name>Eviscerate</name>
+    <blizzardId>EX1_124</blizzardId>
+    <hearthPwnId>382</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

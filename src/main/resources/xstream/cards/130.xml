@@ -1,0 +1,12 @@
+<card>
+    <id>130</id>
+    <name>Anub&apos;ar Ambusher</name>
+    <blizzardId>FP1_026</blizzardId>
+    <hearthPwnId>7728</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

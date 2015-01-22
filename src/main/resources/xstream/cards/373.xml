@@ -1,0 +1,12 @@
+<card>
+    <id>373</id>
+    <name>Crazed Alchemist</name>
+    <blizzardId>EX1_059</blizzardId>
+    <hearthPwnId>612</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

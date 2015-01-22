@@ -1,0 +1,12 @@
+<card>
+    <id>385</id>
+    <name>Faerie Dragon</name>
+    <blizzardId>NEW1_023</blizzardId>
+    <hearthPwnId>213</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

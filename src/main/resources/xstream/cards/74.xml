@@ -1,0 +1,12 @@
+<card>
+    <id>74</id>
+    <name>Hex</name>
+    <blizzardId>EX1_246</blizzardId>
+    <hearthPwnId>270</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

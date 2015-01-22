@@ -1,0 +1,12 @@
+<card>
+    <id>250</id>
+    <name>Explosive Trap</name>
+    <blizzardId>EX1_610</blizzardId>
+    <hearthPwnId>344</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

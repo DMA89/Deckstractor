@@ -1,0 +1,12 @@
+<card>
+    <id>395</id>
+    <name>Illidan Stormrage</name>
+    <blizzardId>EX1_614</blizzardId>
+    <hearthPwnId>203</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

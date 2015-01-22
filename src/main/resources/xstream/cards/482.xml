@@ -1,0 +1,12 @@
+<card>
+    <id>482</id>
+    <name>Arcane Nullifier X-21</name>
+    <blizzardId>GVG_091</blizzardId>
+    <hearthPwnId>12246</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

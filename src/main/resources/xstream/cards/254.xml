@@ -1,0 +1,12 @@
+<card>
+    <id>254</id>
+    <name>Snake Trap</name>
+    <blizzardId>EX1_554</blizzardId>
+    <hearthPwnId>210</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

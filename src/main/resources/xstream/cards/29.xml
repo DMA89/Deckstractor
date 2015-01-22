@@ -1,0 +1,12 @@
+<card>
+    <id>29</id>
+    <name>Iron Juggernaut</name>
+    <blizzardId>GVG_056</blizzardId>
+    <hearthPwnId>12295</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>168</id>
+    <name>Upgraded Repair Bot</name>
+    <blizzardId>GVG_083</blizzardId>
+    <hearthPwnId>12185</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

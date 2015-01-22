@@ -1,0 +1,12 @@
+<card>
+    <id>459</id>
+    <name>Baron Rivendare</name>
+    <blizzardId>FP1_031</blizzardId>
+    <hearthPwnId>7740</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

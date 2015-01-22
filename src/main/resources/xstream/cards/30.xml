@@ -1,0 +1,12 @@
+<card>
+    <id>30</id>
+    <name>Screwjank Clunker</name>
+    <blizzardId>GVG_055</blizzardId>
+    <hearthPwnId>12220</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

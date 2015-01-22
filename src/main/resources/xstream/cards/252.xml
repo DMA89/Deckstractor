@@ -1,0 +1,12 @@
+<card>
+    <id>252</id>
+    <name>Freezing Trap</name>
+    <blizzardId>EX1_611</blizzardId>
+    <hearthPwnId>99</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>304</id>
+    <name>Malorne</name>
+    <blizzardId>GVG_035</blizzardId>
+    <hearthPwnId>12293</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>387</id>
+    <name>Flesheating Ghoul</name>
+    <blizzardId>tt_004</blizzardId>
+    <hearthPwnId>610</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

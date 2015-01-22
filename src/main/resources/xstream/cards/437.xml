@@ -1,0 +1,12 @@
+<card>
+    <id>437</id>
+    <name>Spiteful Smith</name>
+    <blizzardId>CS2_221</blizzardId>
+    <hearthPwnId>627</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

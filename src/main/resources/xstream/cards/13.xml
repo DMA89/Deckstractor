@@ -1,0 +1,12 @@
+<card>
+    <id>13</id>
+    <name>Commanding Shout</name>
+    <blizzardId>NEW1_036</blizzardId>
+    <hearthPwnId>166</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

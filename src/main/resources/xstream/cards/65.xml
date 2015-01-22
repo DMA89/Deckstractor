@@ -1,0 +1,12 @@
+<card>
+    <id>65</id>
+    <name>Floating Watcher</name>
+    <blizzardId>GVG_100</blizzardId>
+    <hearthPwnId>12271</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>137</id>
+    <name>Holy Nova</name>
+    <blizzardId>CS1_112</blizzardId>
+    <hearthPwnId>671</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

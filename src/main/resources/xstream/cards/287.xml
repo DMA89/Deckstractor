@@ -1,0 +1,12 @@
+<card>
+    <id>287</id>
+    <name>Savagery</name>
+    <blizzardId>EX1_578</blizzardId>
+    <hearthPwnId>148</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

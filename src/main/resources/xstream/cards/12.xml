@@ -1,0 +1,12 @@
+<card>
+    <id>12</id>
+    <name>Brawl</name>
+    <blizzardId>EX1_407</blizzardId>
+    <hearthPwnId>297</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

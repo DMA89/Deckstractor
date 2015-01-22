@@ -1,0 +1,12 @@
+<card>
+    <id>56</id>
+    <name>Felguard</name>
+    <blizzardId>EX1_301</blizzardId>
+    <hearthPwnId>236</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

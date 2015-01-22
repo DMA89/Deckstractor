@@ -1,0 +1,12 @@
+<card>
+    <id>460</id>
+    <name>Dancing Swords</name>
+    <blizzardId>FP1_029</blizzardId>
+    <hearthPwnId>7736</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

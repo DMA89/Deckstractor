@@ -1,0 +1,12 @@
+<card>
+    <id>293</id>
+    <name>Recycle</name>
+    <blizzardId>GVG_031</blizzardId>
+    <hearthPwnId>12279</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>6</id>
+    <name>Cleave</name>
+    <blizzardId>CS2_114</blizzardId>
+    <hearthPwnId>81</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

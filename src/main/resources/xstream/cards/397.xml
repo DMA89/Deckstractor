@@ -1,0 +1,12 @@
+<card>
+    <id>397</id>
+    <name>Injured Blademaster</name>
+    <blizzardId>CS2_181</blizzardId>
+    <hearthPwnId>209</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

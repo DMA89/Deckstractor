@@ -1,8 +1,8 @@
 package main.java.se.dma.deckstractor.ui;
 
 import main.java.se.dma.deckstractor.Main;
-import main.java.se.dma.deckstractor.services.CardService;
-import main.java.se.dma.deckstractor.services.CardServiceImpl;
+import main.java.se.dma.deckstractor.services.interfaces.CardService;
+import main.java.se.dma.deckstractor.services.implementations.CardServiceImpl;
 import main.java.se.dma.deckstractor.utils.Handler;
 
 import javax.swing.*;
@@ -11,6 +11,7 @@ import java.awt.*;
 public class Frame {
     public static final JEditorPane editorPane = new JEditorPane();
     public static final JLabel cardsFound = new JLabel("Cards found: 0");
+    private final int interval = 1;
 
     public Frame() {
     }
@@ -57,8 +58,8 @@ public class Frame {
 
         Handler handler = new Handler();
 
-        Main.timer = new Timer(Main.interval, handler);
-        Main.timerMore = new Timer(Main.interval, handler);
+        Main.timer = new Timer(interval, handler);
+        Main.timerMore = new Timer(interval, handler);
 
         editorPane.setEditable(true);
         editorPane.setPreferredSize(new Dimension(190, 500));

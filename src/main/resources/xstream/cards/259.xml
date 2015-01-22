@@ -1,0 +1,12 @@
+<card>
+    <id>259</id>
+    <name>Feign Death</name>
+    <blizzardId>GVG_026</blizzardId>
+    <hearthPwnId>12238</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

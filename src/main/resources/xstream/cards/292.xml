@@ -1,0 +1,12 @@
+<card>
+    <id>292</id>
+    <name>Dark Wispers</name>
+    <blizzardId>GVG_041</blizzardId>
+    <hearthPwnId>12298</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

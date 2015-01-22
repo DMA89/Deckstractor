@@ -1,0 +1,12 @@
+<card>
+    <id>386</id>
+    <name>Fen Creeper</name>
+    <blizzardId>CS1_069</blizzardId>
+    <hearthPwnId>476</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

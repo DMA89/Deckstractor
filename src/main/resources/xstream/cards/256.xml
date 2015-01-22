@@ -1,0 +1,12 @@
+<card>
+    <id>256</id>
+    <name>Unleash the Hounds</name>
+    <blizzardId>EX1_538</blizzardId>
+    <hearthPwnId>317</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>220</id>
+    <name>Pyroblast</name>
+    <blizzardId>EX1_279</blizzardId>
+    <hearthPwnId>496</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

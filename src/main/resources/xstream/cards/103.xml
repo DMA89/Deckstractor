@@ -1,0 +1,12 @@
+<card>
+    <id>103</id>
+    <name>Perdition&apos;s Blade</name>
+    <blizzardId>EX1_133</blizzardId>
+    <hearthPwnId>82</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

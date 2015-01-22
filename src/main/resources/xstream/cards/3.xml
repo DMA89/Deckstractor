@@ -1,0 +1,12 @@
+<card>
+    <id>3</id>
+    <name>Death&apos;s Bite</name>
+    <blizzardId>FP1_021</blizzardId>
+    <hearthPwnId>7734</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

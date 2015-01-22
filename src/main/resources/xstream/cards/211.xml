@@ -1,0 +1,12 @@
+<card>
+    <id>211</id>
+    <name>Mirror Image</name>
+    <blizzardId>CS2_027</blizzardId>
+    <hearthPwnId>30</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

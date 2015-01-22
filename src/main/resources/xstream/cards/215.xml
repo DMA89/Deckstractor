@@ -1,0 +1,12 @@
+<card>
+    <id>215</id>
+    <name>Counterspell</name>
+    <blizzardId>EX1_287</blizzardId>
+    <hearthPwnId>531</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

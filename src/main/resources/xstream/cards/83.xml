@@ -1,0 +1,12 @@
+<card>
+    <id>83</id>
+    <name>Lava Burst</name>
+    <blizzardId>EX1_241</blizzardId>
+    <hearthPwnId>679</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

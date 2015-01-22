@@ -1,0 +1,12 @@
+<card>
+    <id>196</id>
+    <name>Aldor Peacekeeper</name>
+    <blizzardId>EX1_382</blizzardId>
+    <hearthPwnId>23</hearthPwnId>
+    <hearthstoneClass>
+        <id>5</id>
+        <name>Paladin</name>
+        <searchStart>170</searchStart>
+        <searchEnd>203</searchEnd>
+    </hearthstoneClass>
+</card>

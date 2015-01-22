@@ -1,0 +1,12 @@
+<card>
+    <id>214</id>
+    <name>Cone of Cold</name>
+    <blizzardId>EX1_275</blizzardId>
+    <hearthPwnId>26</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>93</id>
+    <name>Dust Devil</name>
+    <blizzardId>EX1_243</blizzardId>
+    <hearthPwnId>129</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

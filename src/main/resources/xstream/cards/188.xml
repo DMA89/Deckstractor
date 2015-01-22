@@ -1,0 +1,12 @@
+<card>
+    <id>188</id>
+    <name>Lay on Hands</name>
+    <blizzardId>EX1_354</blizzardId>
+    <hearthPwnId>506</hearthPwnId>
+    <hearthstoneClass>
+        <id>5</id>
+        <name>Paladin</name>
+        <searchStart>170</searchStart>
+        <searchEnd>203</searchEnd>
+    </hearthstoneClass>
+</card>

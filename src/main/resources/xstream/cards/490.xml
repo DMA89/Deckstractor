@@ -1,0 +1,12 @@
+<card>
+    <id>490</id>
+    <name>Enhance-o Mechano</name>
+    <blizzardId>GVG_107</blizzardId>
+    <hearthPwnId>12176</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

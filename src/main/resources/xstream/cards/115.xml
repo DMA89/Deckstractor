@@ -1,0 +1,12 @@
+<card>
+    <id>115</id>
+    <name>Blade Flurry</name>
+    <blizzardId>CS2_233</blizzardId>
+    <hearthPwnId>244</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>269</id>
+    <name>King of Beasts</name>
+    <blizzardId>GVG_046</blizzardId>
+    <hearthPwnId>12285</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

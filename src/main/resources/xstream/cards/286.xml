@@ -1,0 +1,12 @@
+<card>
+    <id>286</id>
+    <name>Power of the Wild</name>
+    <blizzardId>EX1_160</blizzardId>
+    <hearthPwnId>165</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

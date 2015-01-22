@@ -1,0 +1,12 @@
+<card>
+    <id>104</id>
+    <name>Cogmaster&apos;s Wrench</name>
+    <blizzardId>GVG_024</blizzardId>
+    <hearthPwnId>12265</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

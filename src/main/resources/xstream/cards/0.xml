@@ -1,0 +1,12 @@
+<card>
+    <id>0</id>
+    <name>Arcanite Reaper</name>
+    <blizzardId>CS2_112</blizzardId>
+    <hearthPwnId>182</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

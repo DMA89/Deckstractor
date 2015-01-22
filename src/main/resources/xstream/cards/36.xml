@@ -1,0 +1,12 @@
+<card>
+    <id>36</id>
+    <name>Hellfire</name>
+    <blizzardId>CS2_062</blizzardId>
+    <hearthPwnId>122</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

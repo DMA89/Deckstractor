@@ -1,0 +1,12 @@
+<card>
+    <id>135</id>
+    <name>Trade Prince Gallywix</name>
+    <blizzardId>GVG_028</blizzardId>
+    <hearthPwnId>12291</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

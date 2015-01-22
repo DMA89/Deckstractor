@@ -1,0 +1,12 @@
+<card>
+    <id>258</id>
+    <name>Cobra Shot</name>
+    <blizzardId>GVG_073</blizzardId>
+    <hearthPwnId>12304</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

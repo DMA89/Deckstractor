@@ -1,0 +1,12 @@
+<card>
+    <id>442</id>
+    <name>Sylvanas Windrunner</name>
+    <blizzardId>EX1_016</blizzardId>
+    <hearthPwnId>33</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

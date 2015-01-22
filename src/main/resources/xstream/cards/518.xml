@@ -1,0 +1,12 @@
+<card>
+    <id>518</id>
+    <name>Piloted Shredder</name>
+    <blizzardId>GVG_096</blizzardId>
+    <hearthPwnId>12191</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

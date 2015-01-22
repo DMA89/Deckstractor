@@ -1,0 +1,12 @@
+<card>
+    <id>153</id>
+    <name>Thoughtsteal</name>
+    <blizzardId>EX1_339</blizzardId>
+    <hearthPwnId>62</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

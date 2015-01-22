@@ -1,0 +1,12 @@
+<card>
+    <id>62</id>
+    <name>Voidcaller</name>
+    <blizzardId>FP1_022</blizzardId>
+    <hearthPwnId>7733</hearthPwnId>
+    <hearthstoneClass>
+        <id>1</id>
+        <name>Warlock</name>
+        <searchStart>34</searchStart>
+        <searchEnd>67</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>207</id>
+    <name>Fireball</name>
+    <blizzardId>CS2_029</blizzardId>
+    <hearthPwnId>522</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

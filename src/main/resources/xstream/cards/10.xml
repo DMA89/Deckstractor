@@ -1,0 +1,12 @@
+<card>
+    <id>10</id>
+    <name>Whirlwind</name>
+    <blizzardId>EX1_400</blizzardId>
+    <hearthPwnId>161</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

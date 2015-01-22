@@ -1,0 +1,12 @@
+<card>
+    <id>23</id>
+    <name>Warsong Commander</name>
+    <blizzardId>EX1_084</blizzardId>
+    <hearthPwnId>193</hearthPwnId>
+    <hearthstoneClass>
+        <id>0</id>
+        <name>Warrior</name>
+        <searchStart>0</searchStart>
+        <searchEnd>33</searchEnd>
+    </hearthstoneClass>
+</card>

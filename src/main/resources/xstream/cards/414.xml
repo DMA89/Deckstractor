@@ -1,0 +1,12 @@
+<card>
+    <id>414</id>
+    <name>Mogu&apos;shan Warden</name>
+    <blizzardId>EX1_396</blizzardId>
+    <hearthPwnId>346</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

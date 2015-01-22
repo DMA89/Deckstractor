@@ -1,0 +1,12 @@
+<card>
+    <id>489</id>
+    <name>Dr. Boom</name>
+    <blizzardId>GVG_110</blizzardId>
+    <hearthPwnId>12182</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

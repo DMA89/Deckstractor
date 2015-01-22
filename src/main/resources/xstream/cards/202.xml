@@ -1,0 +1,12 @@
+<card>
+    <id>202</id>
+    <name>Scarlet Purifier</name>
+    <blizzardId>GVG_101</blizzardId>
+    <hearthPwnId>12240</hearthPwnId>
+    <hearthstoneClass>
+        <id>5</id>
+        <name>Paladin</name>
+        <searchStart>170</searchStart>
+        <searchEnd>203</searchEnd>
+    </hearthstoneClass>
+</card>

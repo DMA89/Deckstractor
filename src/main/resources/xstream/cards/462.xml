@@ -1,0 +1,12 @@
+<card>
+    <id>462</id>
+    <name>Echoing Ooze</name>
+    <blizzardId>FP1_003</blizzardId>
+    <hearthPwnId>7754</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

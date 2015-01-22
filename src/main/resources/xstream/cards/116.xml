@@ -1,0 +1,12 @@
+<card>
+    <id>116</id>
+    <name>Cold Blood</name>
+    <blizzardId>CS2_073</blizzardId>
+    <hearthPwnId>92</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

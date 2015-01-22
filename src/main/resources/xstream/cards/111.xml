@@ -1,0 +1,12 @@
+<card>
+    <id>111</id>
+    <name>Sinister Strike</name>
+    <blizzardId>CS2_075</blizzardId>
+    <hearthPwnId>205</hearthPwnId>
+    <hearthstoneClass>
+        <id>3</id>
+        <name>Rogue</name>
+        <searchStart>102</searchStart>
+        <searchEnd>135</searchEnd>
+    </hearthstoneClass>
+</card>

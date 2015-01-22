@@ -1,0 +1,12 @@
+<card>
+    <id>312</id>
+    <name>Chillwind Yeti</name>
+    <blizzardId>CS2_182</blizzardId>
+    <hearthPwnId>31</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

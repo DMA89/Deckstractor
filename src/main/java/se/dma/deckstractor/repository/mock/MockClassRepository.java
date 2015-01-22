@@ -1,7 +1,7 @@
 package main.java.se.dma.deckstractor.repository.mock;
 
 import main.java.se.dma.deckstractor.domain.HearthstoneClass;
-import main.java.se.dma.deckstractor.repository.ClassRepository;
+import main.java.se.dma.deckstractor.repository.interfaces.ClassRepository;
 
 import java.util.ArrayList;
 import java.util.Collection;

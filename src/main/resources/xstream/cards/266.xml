@@ -1,0 +1,12 @@
+<card>
+    <id>266</id>
+    <name>Scavenging Hyena</name>
+    <blizzardId>EX1_531</blizzardId>
+    <hearthPwnId>279</hearthPwnId>
+    <hearthstoneClass>
+        <id>7</id>
+        <name>Hunter</name>
+        <searchStart>238</searchStart>
+        <searchEnd>271</searchEnd>
+    </hearthstoneClass>
+</card>

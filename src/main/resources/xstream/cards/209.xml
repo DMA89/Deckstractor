@@ -1,0 +1,12 @@
+<card>
+    <id>209</id>
+    <name>Frost Nova</name>
+    <blizzardId>CS2_026</blizzardId>
+    <hearthPwnId>49</hearthPwnId>
+    <hearthstoneClass>
+        <id>6</id>
+        <name>Mage</name>
+        <searchStart>204</searchStart>
+        <searchEnd>237</searchEnd>
+    </hearthstoneClass>
+</card>

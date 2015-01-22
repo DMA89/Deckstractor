@@ -1,0 +1,12 @@
+<card>
+    <id>283</id>
+    <name>Mark of Nature</name>
+    <blizzardId>EX1_155</blizzardId>
+    <hearthPwnId>149</hearthPwnId>
+    <hearthstoneClass>
+        <id>8</id>
+        <name>Druid</name>
+        <searchStart>272</searchStart>
+        <searchEnd>305</searchEnd>
+    </hearthstoneClass>
+</card>

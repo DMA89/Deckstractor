@@ -1,0 +1,12 @@
+<card>
+    <id>164</id>
+    <name>Dark Cultist</name>
+    <blizzardId>FP1_023</blizzardId>
+    <hearthPwnId>7735</hearthPwnId>
+    <hearthstoneClass>
+        <id>4</id>
+        <name>Priest</name>
+        <searchStart>136</searchStart>
+        <searchEnd>169</searchEnd>
+    </hearthstoneClass>
+</card>

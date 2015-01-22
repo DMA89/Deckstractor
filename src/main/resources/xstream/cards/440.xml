@@ -1,0 +1,12 @@
+<card>
+    <id>440</id>
+    <name>Sunfury Protector</name>
+    <blizzardId>EX1_058</blizzardId>
+    <hearthPwnId>372</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>

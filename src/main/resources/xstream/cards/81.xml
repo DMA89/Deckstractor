@@ -1,0 +1,12 @@
+<card>
+    <id>81</id>
+    <name>Feral Spirit</name>
+    <blizzardId>EX1_248</blizzardId>
+    <hearthPwnId>214</hearthPwnId>
+    <hearthstoneClass>
+        <id>2</id>
+        <name>Shaman</name>
+        <searchStart>68</searchStart>
+        <searchEnd>101</searchEnd>
+    </hearthstoneClass>
+</card>

@@ -1,0 +1,12 @@
+<card>
+    <id>406</id>
+    <name>Lorewalker Cho</name>
+    <blizzardId>EX1_100</blizzardId>
+    <hearthPwnId>456</hearthPwnId>
+    <hearthstoneClass>
+        <id>9</id>
+        <name>Neutral</name>
+        <searchStart>306</searchStart>
+        <searchEnd>534</searchEnd>
+    </hearthstoneClass>
+</card>
