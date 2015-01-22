@@ -19,7 +19,7 @@ public class Frame {
 
     //Create Button, Pane and timer
     public static JEditorPane editorPane = new JEditorPane();
-    public static JLabel totalcards = new JLabel("Cards found: 0");
+    public static JLabel totalCardsLabel = new JLabel("Cards found: 0");
     public static Timer timer;
     public static Timer timerMore;
 
@@ -72,7 +72,7 @@ public class Frame {
 
         initializeMenuBar(frame, handler);
 
-        frame.add(totalcards);
+        frame.add(totalCardsLabel);
         frame.add(editorPane);
         frame.revalidate();
 
@@ -185,15 +185,15 @@ public class Frame {
                 if(i==0){
                     ImgMatch(i);
                     i++;
-                    totalcards.setText("Cards found: " + totalCards);
+                    totalCardsLabel.setText("Cards found: " + totalCards);
                 }else if(i==20){
                     ImgMatch(i);
                     timer.stop();
                     i=0;
-                    totalcards.setText("Cards found: " + totalCards);
+                    totalCardsLabel.setText("Cards found: " + totalCards);
                     if (totalCards<30){
                         String str = "<html><font color=\"red\"> Only " + totalCards + " where found, please scroll <br> ALL the way down in your decklist <br> and then press \"Second Extraction\".</font>";
-                        totalcards.setText(str);
+                        totalCardsLabel.setText(str);
                     }
 
                 }else{
@@ -202,9 +202,9 @@ public class Frame {
                     if (totalCards>29){
                         timer.stop();
                         i=0;
-                        totalcards.setText("Cards found: " + totalCards);
+                        totalCardsLabel.setText("Cards found: " + totalCards);
                     }
-                    totalcards.setText("Cards found: " + totalCards);
+                    totalCardsLabel.setText("Cards found: " + totalCards);
                 }
                 UpdateWindow();
 
@@ -224,7 +224,7 @@ public class Frame {
                     }
                     i--;
                 }
-                totalcards.setText("Cards found: " + totalCards);
+                totalCardsLabel.setText("Cards found: " + totalCards);
                 UpdateWindow();
             }else if("..as Warrior".equals(event.getActionCommand())){
                 chosenClassInt=1;
