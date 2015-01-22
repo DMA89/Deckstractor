@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>399</id>
-    <name>Jungle Panther</name>
-    <blizzardId>EX1_017</blizzardId>
-    <hearthPwnId>392</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>399</id>
+  <name>Jungle Panther</name>
+  <blizzardId>EX1_017</blizzardId>
+  <hearthPwnId>392</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

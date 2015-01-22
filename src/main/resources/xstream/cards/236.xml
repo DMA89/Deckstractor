@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>236</id>
-    <name>Soot Spewer</name>
-    <blizzardId>GVG_123</blizzardId>
-    <hearthPwnId>12306</hearthPwnId>
-    <hearthstoneClass>
-        <id>6</id>
-        <name>Mage</name>
-        <searchStart>204</searchStart>
-        <searchEnd>237</searchEnd>
-    </hearthstoneClass>
+  <id>236</id>
+  <name>Soot Spewer</name>
+  <blizzardId>GVG_123</blizzardId>
+  <hearthPwnId>12306</hearthPwnId>
+  <hearthstoneClass>
+    <id>6</id>
+    <name>Mage</name>
+    <searchStart>204</searchStart>
+    <searchEnd>237</searchEnd>
+  </hearthstoneClass>
 </card>

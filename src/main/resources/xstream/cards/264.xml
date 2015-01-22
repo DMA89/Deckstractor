@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>264</id>
-    <name>King Krush</name>
-    <blizzardId>EX1_543</blizzardId>
-    <hearthPwnId>194</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>264</id>
+  <name>King Krush</name>
+  <blizzardId>EX1_543</blizzardId>
+  <hearthPwnId>194</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

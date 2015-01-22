@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>265</id>
-    <name>Savannah Highmane</name>
-    <blizzardId>EX1_534</blizzardId>
-    <hearthPwnId>8</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>265</id>
+  <name>Savannah Highmane</name>
+  <blizzardId>EX1_534</blizzardId>
+  <hearthPwnId>8</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

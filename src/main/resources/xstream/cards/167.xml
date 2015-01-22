@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>167</id>
-    <name>Shrinkmeister</name>
-    <blizzardId>GVG_011</blizzardId>
-    <hearthPwnId>12197</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>167</id>
+  <name>Shrinkmeister</name>
+  <blizzardId>GVG_011</blizzardId>
+  <hearthPwnId>12197</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>

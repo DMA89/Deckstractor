@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>147</id>
-    <name>Inner Fire</name>
-    <blizzardId>CS1_129</blizzardId>
-    <hearthPwnId>207</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>147</id>
+  <name>Inner Fire</name>
+  <blizzardId>CS1_129</blizzardId>
+  <hearthPwnId>207</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>

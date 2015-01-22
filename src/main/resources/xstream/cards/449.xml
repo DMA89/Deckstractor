@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>449</id>
-    <name>Venture Co. Mercenary</name>
-    <blizzardId>CS2_227</blizzardId>
-    <hearthPwnId>509</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>449</id>
+  <name>Venture Co. Mercenary</name>
+  <blizzardId>CS2_227</blizzardId>
+  <hearthPwnId>509</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

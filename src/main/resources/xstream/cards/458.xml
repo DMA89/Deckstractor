@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>458</id>
-    <name>Ysera</name>
-    <blizzardId>EX1_572</blizzardId>
-    <hearthPwnId>495</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>458</id>
+  <name>Ysera</name>
+  <blizzardId>EX1_572</blizzardId>
+  <hearthPwnId>495</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>69</id>
-    <name>Stormforged Axe</name>
-    <blizzardId>EX1_247</blizzardId>
-    <hearthPwnId>152</hearthPwnId>
-    <hearthstoneClass>
-        <id>2</id>
-        <name>Shaman</name>
-        <searchStart>68</searchStart>
-        <searchEnd>101</searchEnd>
-    </hearthstoneClass>
+  <id>69</id>
+  <name>Stormforged Axe</name>
+  <blizzardId>EX1_247</blizzardId>
+  <hearthPwnId>152</hearthPwnId>
+  <hearthstoneClass>
+    <id>2</id>
+    <name>Shaman</name>
+    <searchStart>68</searchStart>
+    <searchEnd>101</searchEnd>
+  </hearthstoneClass>
 </card>

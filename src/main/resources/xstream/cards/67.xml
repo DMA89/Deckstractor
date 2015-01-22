@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>67</id>
-    <name>Mistress of Pain</name>
-    <blizzardId>GVG_018</blizzardId>
-    <hearthPwnId>12283</hearthPwnId>
-    <hearthstoneClass>
-        <id>1</id>
-        <name>Warlock</name>
-        <searchStart>34</searchStart>
-        <searchEnd>67</searchEnd>
-    </hearthstoneClass>
+  <id>67</id>
+  <name>Mistress of Pain</name>
+  <blizzardId>GVG_018</blizzardId>
+  <hearthPwnId>12283</hearthPwnId>
+  <hearthstoneClass>
+    <id>1</id>
+    <name>Warlock</name>
+    <searchStart>34</searchStart>
+    <searchEnd>67</searchEnd>
+  </hearthstoneClass>
 </card>

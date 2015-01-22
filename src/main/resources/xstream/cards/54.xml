@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>54</id>
-    <name>Blood Imp</name>
-    <blizzardId>CS2_059</blizzardId>
-    <hearthPwnId>196</hearthPwnId>
-    <hearthstoneClass>
-        <id>1</id>
-        <name>Warlock</name>
-        <searchStart>34</searchStart>
-        <searchEnd>67</searchEnd>
-    </hearthstoneClass>
+  <id>54</id>
+  <name>Blood Imp</name>
+  <blizzardId>CS2_059</blizzardId>
+  <hearthPwnId>196</hearthPwnId>
+  <hearthstoneClass>
+    <id>1</id>
+    <name>Warlock</name>
+    <searchStart>34</searchStart>
+    <searchEnd>67</searchEnd>
+  </hearthstoneClass>
 </card>

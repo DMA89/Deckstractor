@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>139</id>
-    <name>Mind Blast</name>
-    <blizzardId>DS1_233</blizzardId>
-    <hearthPwnId>415</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>139</id>
+  <name>Mind Blast</name>
+  <blizzardId>DS1_233</blizzardId>
+  <hearthPwnId>415</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>

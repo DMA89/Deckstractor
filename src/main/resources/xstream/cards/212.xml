@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>212</id>
-    <name>Polymorph</name>
-    <blizzardId>CS2_022</blizzardId>
-    <hearthPwnId>595</hearthPwnId>
-    <hearthstoneClass>
-        <id>6</id>
-        <name>Mage</name>
-        <searchStart>204</searchStart>
-        <searchEnd>237</searchEnd>
-    </hearthstoneClass>
+  <id>212</id>
+  <name>Polymorph</name>
+  <blizzardId>CS2_022</blizzardId>
+  <hearthPwnId>595</hearthPwnId>
+  <hearthstoneClass>
+    <id>6</id>
+    <name>Mage</name>
+    <searchStart>204</searchStart>
+    <searchEnd>237</searchEnd>
+  </hearthstoneClass>
 </card>

@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>37</id>
-    <name>Mortal Coil</name>
-    <blizzardId>EX1_302</blizzardId>
-    <hearthPwnId>43</hearthPwnId>
-    <hearthstoneClass>
-        <id>1</id>
-        <name>Warlock</name>
-        <searchStart>34</searchStart>
-        <searchEnd>67</searchEnd>
-    </hearthstoneClass>
+  <id>37</id>
+  <name>Mortal Coil</name>
+  <blizzardId>EX1_302</blizzardId>
+  <hearthPwnId>43</hearthPwnId>
+  <hearthstoneClass>
+    <id>1</id>
+    <name>Warlock</name>
+    <searchStart>34</searchStart>
+    <searchEnd>67</searchEnd>
+  </hearthstoneClass>
 </card>

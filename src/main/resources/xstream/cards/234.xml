@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>234</id>
-    <name>Goblin Blastmage</name>
-    <blizzardId>GVG_004</blizzardId>
-    <hearthPwnId>12195</hearthPwnId>
-    <hearthstoneClass>
-        <id>6</id>
-        <name>Mage</name>
-        <searchStart>204</searchStart>
-        <searchEnd>237</searchEnd>
-    </hearthstoneClass>
+  <id>234</id>
+  <name>Goblin Blastmage</name>
+  <blizzardId>GVG_004</blizzardId>
+  <hearthPwnId>12195</hearthPwnId>
+  <hearthstoneClass>
+    <id>6</id>
+    <name>Mage</name>
+    <searchStart>204</searchStart>
+    <searchEnd>237</searchEnd>
+  </hearthstoneClass>
 </card>

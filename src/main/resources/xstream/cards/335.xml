@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>335</id>
-    <name>Raid Leader</name>
-    <blizzardId>CS2_122</blizzardId>
-    <hearthPwnId>502</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>335</id>
+  <name>Raid Leader</name>
+  <blizzardId>CS2_122</blizzardId>
+  <hearthPwnId>502</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

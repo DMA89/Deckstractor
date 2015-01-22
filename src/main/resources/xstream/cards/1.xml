@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>1</id>
-    <name>Fiery War Axe</name>
-    <blizzardId>CS2_106</blizzardId>
-    <hearthPwnId>632</hearthPwnId>
-    <hearthstoneClass>
-        <id>0</id>
-        <name>Warrior</name>
-        <searchStart>0</searchStart>
-        <searchEnd>33</searchEnd>
-    </hearthstoneClass>
+  <id>1</id>
+  <name>Fiery War Axe</name>
+  <blizzardId>CS2_106</blizzardId>
+  <hearthPwnId>632</hearthPwnId>
+  <hearthstoneClass>
+    <id>0</id>
+    <name>Warrior</name>
+    <searchStart>0</searchStart>
+    <searchEnd>33</searchEnd>
+  </hearthstoneClass>
 </card>

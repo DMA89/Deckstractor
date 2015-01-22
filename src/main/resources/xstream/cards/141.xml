@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>141</id>
-    <name>Mind Vision</name>
-    <blizzardId>CS2_003</blizzardId>
-    <hearthPwnId>438</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>141</id>
+  <name>Mind Vision</name>
+  <blizzardId>CS2_003</blizzardId>
+  <hearthPwnId>438</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>

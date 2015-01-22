@@ -5,10 +5,7 @@ import main.java.se.dma.deckstractor.domain.HearthstoneClass;
 import main.java.se.dma.deckstractor.repository.interfaces.ClassRepository;
 import main.java.se.dma.deckstractor.utils.FileCounter;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -25,7 +22,7 @@ public class XstreamClassRepository implements ClassRepository {
         String xml = xStream.toXML(hearthstoneClass);
         PrintWriter writer = null;
         try {
-            writer = new PrintWriter("/main/resources/xstream/hearthstoneclasses/" + hearthstoneClass.getId() + ".xml", "UTF-8");
+            writer = new PrintWriter("/home/palle/development/gitrepos/Deckstractor/src/main/resources/xstream/hearthstoneclasses/" + hearthstoneClass.getId() + ".xml", "UTF-8");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {
@@ -38,7 +35,19 @@ public class XstreamClassRepository implements ClassRepository {
 
     @Override
     public HearthstoneClass getHearthstoneClass(long id) {
-        return (HearthstoneClass) xStream.fromXML("/main/resources/xstream/hearthstoneclasses/" + id + ".xml");
+        InputStream in = getClass().getResourceAsStream("/main/resources/xstream/hearthstoneclasses/" + id + ".xml");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+        StringBuffer buffer = new StringBuffer();
+        String line = null;
+        try {
+            while ((line = reader.readLine()) != null) {
+                buffer.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        HearthstoneClass hearthstoneClass = (HearthstoneClass) xStream.fromXML(buffer.toString());
+        return hearthstoneClass;
     }
 
     @Override
@@ -55,9 +64,9 @@ public class XstreamClassRepository implements ClassRepository {
     @Override
     public Collection getAllHearthstoneClasses() {
         List<HearthstoneClass> hearthstoneClasses = new ArrayList();
-        int nr = new File("/main/resources/xstream/hearthstoneclasses/").listFiles().length;
+        int nr = FileCounter.getFile("/main/resources/xstream/hearthstoneclasses/");
         for (int i = 0; i < nr; i++) {
-            hearthstoneClasses.add((HearthstoneClass) xStream.fromXML("/main/resources/xstream/hearthstoneclasses/" + i + ".xml"));
+            hearthstoneClasses.add(getHearthstoneClass(i));
         }
         return hearthstoneClasses;
     }

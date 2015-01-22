@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>267</id>
-    <name>Webspinner</name>
-    <blizzardId>FP1_011</blizzardId>
-    <hearthPwnId>7741</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>267</id>
+  <name>Webspinner</name>
+  <blizzardId>FP1_011</blizzardId>
+  <hearthPwnId>7741</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

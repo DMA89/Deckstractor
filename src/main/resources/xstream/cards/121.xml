@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>121</id>
-    <name>Shadowstep</name>
-    <blizzardId>EX1_144</blizzardId>
-    <hearthPwnId>550</hearthPwnId>
-    <hearthstoneClass>
-        <id>3</id>
-        <name>Rogue</name>
-        <searchStart>102</searchStart>
-        <searchEnd>135</searchEnd>
-    </hearthstoneClass>
+  <id>121</id>
+  <name>Shadowstep</name>
+  <blizzardId>EX1_144</blizzardId>
+  <hearthPwnId>550</hearthPwnId>
+  <hearthstoneClass>
+    <id>3</id>
+    <name>Rogue</name>
+    <searchStart>102</searchStart>
+    <searchEnd>135</searchEnd>
+  </hearthstoneClass>
 </card>

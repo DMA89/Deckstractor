@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>41</id>
-    <name>Bane of Doom</name>
-    <blizzardId>EX1_320</blizzardId>
-    <hearthPwnId>670</hearthPwnId>
-    <hearthstoneClass>
-        <id>1</id>
-        <name>Warlock</name>
-        <searchStart>34</searchStart>
-        <searchEnd>67</searchEnd>
-    </hearthstoneClass>
+  <id>41</id>
+  <name>Bane of Doom</name>
+  <blizzardId>EX1_320</blizzardId>
+  <hearthPwnId>670</hearthPwnId>
+  <hearthstoneClass>
+    <id>1</id>
+    <name>Warlock</name>
+    <searchStart>34</searchStart>
+    <searchEnd>67</searchEnd>
+  </hearthstoneClass>
 </card>

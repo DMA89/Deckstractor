@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>349</id>
-    <name>Abomination</name>
-    <blizzardId>EX1_097</blizzardId>
-    <hearthPwnId>597</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>349</id>
+  <name>Abomination</name>
+  <blizzardId>EX1_097</blizzardId>
+  <hearthPwnId>597</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

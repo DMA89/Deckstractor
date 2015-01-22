@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>532</id>
-    <name>Gelbin Mekkatorque</name>
-    <blizzardId>EX1_112</blizzardId>
-    <hearthPwnId>251</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>532</id>
+  <name>Gelbin Mekkatorque</name>
+  <blizzardId>EX1_112</blizzardId>
+  <hearthPwnId>251</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

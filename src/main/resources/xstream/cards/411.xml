@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>411</id>
-    <name>Master Swordsmith</name>
-    <blizzardId>NEW1_037</blizzardId>
-    <hearthPwnId>584</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>411</id>
+  <name>Master Swordsmith</name>
+  <blizzardId>NEW1_037</blizzardId>
+  <hearthPwnId>584</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

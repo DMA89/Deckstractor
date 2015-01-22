@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>246</id>
-    <name>Tracking</name>
-    <blizzardId>DS1_184</blizzardId>
-    <hearthPwnId>163</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>246</id>
+  <name>Tracking</name>
+  <blizzardId>DS1_184</blizzardId>
+  <hearthPwnId>163</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>355</id>
-    <name>Ancient Brewmaster</name>
-    <blizzardId>EX1_057</blizzardId>
-    <hearthPwnId>572</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>355</id>
+  <name>Ancient Brewmaster</name>
+  <blizzardId>EX1_057</blizzardId>
+  <hearthPwnId>572</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

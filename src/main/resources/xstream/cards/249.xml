@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>249</id>
-    <name>Explosive Shot</name>
-    <blizzardId>EX1_537</blizzardId>
-    <hearthPwnId>114</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>249</id>
+  <name>Explosive Shot</name>
+  <blizzardId>EX1_537</blizzardId>
+  <hearthPwnId>114</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

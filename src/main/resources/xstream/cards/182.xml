@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>182</id>
-    <name>Blessed Champion</name>
-    <blizzardId>EX1_355</blizzardId>
-    <hearthPwnId>7</hearthPwnId>
-    <hearthstoneClass>
-        <id>5</id>
-        <name>Paladin</name>
-        <searchStart>170</searchStart>
-        <searchEnd>203</searchEnd>
-    </hearthstoneClass>
+  <id>182</id>
+  <name>Blessed Champion</name>
+  <blizzardId>EX1_355</blizzardId>
+  <hearthPwnId>7</hearthPwnId>
+  <hearthstoneClass>
+    <id>5</id>
+    <name>Paladin</name>
+    <searchStart>170</searchStart>
+    <searchEnd>203</searchEnd>
+  </hearthstoneClass>
 </card>

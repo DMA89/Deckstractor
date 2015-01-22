@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>151</id>
-    <name>Shadowform</name>
-    <blizzardId>EX1_625</blizzardId>
-    <hearthPwnId>421</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>151</id>
+  <name>Shadowform</name>
+  <blizzardId>EX1_625</blizzardId>
+  <hearthPwnId>421</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>

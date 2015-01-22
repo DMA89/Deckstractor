@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>94</id>
-    <name>Earth Elemental</name>
-    <blizzardId>EX1_250</blizzardId>
-    <hearthPwnId>124</hearthPwnId>
-    <hearthstoneClass>
-        <id>2</id>
-        <name>Shaman</name>
-        <searchStart>68</searchStart>
-        <searchEnd>101</searchEnd>
-    </hearthstoneClass>
+  <id>94</id>
+  <name>Earth Elemental</name>
+  <blizzardId>EX1_250</blizzardId>
+  <hearthPwnId>124</hearthPwnId>
+  <hearthstoneClass>
+    <id>2</id>
+    <name>Shaman</name>
+    <searchStart>68</searchStart>
+    <searchEnd>101</searchEnd>
+  </hearthstoneClass>
 </card>

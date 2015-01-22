@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>91</id>
-    <name>Windspeaker</name>
-    <blizzardId>EX1_587</blizzardId>
-    <hearthPwnId>151</hearthPwnId>
-    <hearthstoneClass>
-        <id>2</id>
-        <name>Shaman</name>
-        <searchStart>68</searchStart>
-        <searchEnd>101</searchEnd>
-    </hearthstoneClass>
+  <id>91</id>
+  <name>Windspeaker</name>
+  <blizzardId>EX1_587</blizzardId>
+  <hearthPwnId>151</hearthPwnId>
+  <hearthstoneClass>
+    <id>2</id>
+    <name>Shaman</name>
+    <searchStart>68</searchStart>
+    <searchEnd>101</searchEnd>
+  </hearthstoneClass>
 </card>

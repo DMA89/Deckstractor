@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>22</id>
-    <name>Kor&apos;kron Elite</name>
-    <blizzardId>NEW1_011</blizzardId>
-    <hearthPwnId>130</hearthPwnId>
-    <hearthstoneClass>
-        <id>0</id>
-        <name>Warrior</name>
-        <searchStart>0</searchStart>
-        <searchEnd>33</searchEnd>
-    </hearthstoneClass>
+  <id>22</id>
+  <name>Kor'kron Elite</name>
+  <blizzardId>NEW1_011</blizzardId>
+  <hearthPwnId>130</hearthPwnId>
+  <hearthstoneClass>
+    <id>0</id>
+    <name>Warrior</name>
+    <searchStart>0</searchStart>
+    <searchEnd>33</searchEnd>
+  </hearthstoneClass>
 </card>

@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>143</id>
-    <name>Shadow Word: Death</name>
-    <blizzardId>EX1_622</blizzardId>
-    <hearthPwnId>547</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>143</id>
+  <name>Shadow Word: Death</name>
+  <blizzardId>EX1_622</blizzardId>
+  <hearthPwnId>547</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>

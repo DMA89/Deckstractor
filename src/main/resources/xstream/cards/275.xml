@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>275</id>
-    <name>Mark of the Wild</name>
-    <blizzardId>CS2_009</blizzardId>
-    <hearthPwnId>480</hearthPwnId>
-    <hearthstoneClass>
-        <id>8</id>
-        <name>Druid</name>
-        <searchStart>272</searchStart>
-        <searchEnd>305</searchEnd>
-    </hearthstoneClass>
+  <id>275</id>
+  <name>Mark of the Wild</name>
+  <blizzardId>CS2_009</blizzardId>
+  <hearthPwnId>480</hearthPwnId>
+  <hearthstoneClass>
+    <id>8</id>
+    <name>Druid</name>
+    <searchStart>272</searchStart>
+    <searchEnd>305</searchEnd>
+  </hearthstoneClass>
 </card>

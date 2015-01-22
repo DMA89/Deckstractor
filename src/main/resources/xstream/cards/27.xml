@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>27</id>
-    <name>Frothing Berserker</name>
-    <blizzardId>EX1_604</blizzardId>
-    <hearthPwnId>69</hearthPwnId>
-    <hearthstoneClass>
-        <id>0</id>
-        <name>Warrior</name>
-        <searchStart>0</searchStart>
-        <searchEnd>33</searchEnd>
-    </hearthstoneClass>
+  <id>27</id>
+  <name>Frothing Berserker</name>
+  <blizzardId>EX1_604</blizzardId>
+  <hearthPwnId>69</hearthPwnId>
+  <hearthstoneClass>
+    <id>0</id>
+    <name>Warrior</name>
+    <searchStart>0</searchStart>
+    <searchEnd>33</searchEnd>
+  </hearthstoneClass>
 </card>

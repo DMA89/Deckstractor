@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>80</id>
-    <name>Far Sight</name>
-    <blizzardId>CS2_053</blizzardId>
-    <hearthPwnId>107</hearthPwnId>
-    <hearthstoneClass>
-        <id>2</id>
-        <name>Shaman</name>
-        <searchStart>68</searchStart>
-        <searchEnd>101</searchEnd>
-    </hearthstoneClass>
+  <id>80</id>
+  <name>Far Sight</name>
+  <blizzardId>CS2_053</blizzardId>
+  <hearthPwnId>107</hearthPwnId>
+  <hearthstoneClass>
+    <id>2</id>
+    <name>Shaman</name>
+    <searchStart>68</searchStart>
+    <searchEnd>101</searchEnd>
+  </hearthstoneClass>
 </card>

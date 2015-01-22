@@ -1,11 +1,8 @@
 package main.java.se.dma.deckstractor.services.implementations;
 
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
 import main.java.se.dma.deckstractor.domain.Card;
 import main.java.se.dma.deckstractor.domain.HearthstoneClass;
 import main.java.se.dma.deckstractor.repository.interfaces.CardRepository;
-import main.java.se.dma.deckstractor.repository.mock.MockCardRepository;
 import main.java.se.dma.deckstractor.repository.persistence.XstreamCardRepository;
 import main.java.se.dma.deckstractor.services.interfaces.CardService;
 
@@ -14,7 +11,6 @@ import java.util.Collection;
 /**
  * Created by palle on 21/01/15.
  */
-@Singleton
 public class CardServiceImpl implements CardService {
 
     private CardRepository repo = new XstreamCardRepository();

@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>242</id>
-    <name>Arcane Shot</name>
-    <blizzardId>DS1_185</blizzardId>
-    <hearthPwnId>167</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>242</id>
+  <name>Arcane Shot</name>
+  <blizzardId>DS1_185</blizzardId>
+  <hearthPwnId>167</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

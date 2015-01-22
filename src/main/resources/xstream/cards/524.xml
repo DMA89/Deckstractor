@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>524</id>
-    <name>Sneed&apos;s Old Shredder</name>
-    <blizzardId>GVG_114</blizzardId>
-    <hearthPwnId>12187</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>524</id>
+  <name>Sneed's Old Shredder</name>
+  <blizzardId>GVG_114</blizzardId>
+  <hearthPwnId>12187</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>272</id>
-    <name>Claw</name>
-    <blizzardId>CS2_005</blizzardId>
-    <hearthPwnId>532</hearthPwnId>
-    <hearthstoneClass>
-        <id>8</id>
-        <name>Druid</name>
-        <searchStart>272</searchStart>
-        <searchEnd>305</searchEnd>
-    </hearthstoneClass>
+  <id>272</id>
+  <name>Claw</name>
+  <blizzardId>CS2_005</blizzardId>
+  <hearthPwnId>532</hearthPwnId>
+  <hearthstoneClass>
+    <id>8</id>
+    <name>Druid</name>
+    <searchStart>272</searchStart>
+    <searchEnd>305</searchEnd>
+  </hearthstoneClass>
 </card>

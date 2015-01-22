@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>122</id>
-    <name>Sabotage</name>
-    <blizzardId>GVG_047</blizzardId>
-    <hearthPwnId>12236</hearthPwnId>
-    <hearthstoneClass>
-        <id>3</id>
-        <name>Rogue</name>
-        <searchStart>102</searchStart>
-        <searchEnd>135</searchEnd>
-    </hearthstoneClass>
+  <id>122</id>
+  <name>Sabotage</name>
+  <blizzardId>GVG_047</blizzardId>
+  <hearthPwnId>12236</hearthPwnId>
+  <hearthstoneClass>
+    <id>3</id>
+    <name>Rogue</name>
+    <searchStart>102</searchStart>
+    <searchEnd>135</searchEnd>
+  </hearthstoneClass>
 </card>

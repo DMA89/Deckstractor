@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>379</id>
-    <name>Dire Wolf Alpha</name>
-    <blizzardId>EX1_162</blizzardId>
-    <hearthPwnId>305</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>379</id>
+  <name>Dire Wolf Alpha</name>
+  <blizzardId>EX1_162</blizzardId>
+  <hearthPwnId>305</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>268</id>
-    <name>Gahz&apos;rilla</name>
-    <blizzardId>GVG_049</blizzardId>
-    <hearthPwnId>12232</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>268</id>
+  <name>Gahz'rilla</name>
+  <blizzardId>GVG_049</blizzardId>
+  <hearthPwnId>12232</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

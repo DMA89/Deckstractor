@@ -18,6 +18,7 @@ import java.nio.file.Paths;
  */
 class Comparer {
     private double test = 0;
+
     //Start new search
     public static void StartSearch(JEditorPane editorPane) {
         //Button pressed

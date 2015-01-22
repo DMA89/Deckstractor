@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>78</id>
-    <name>Ancestral Spirit</name>
-    <blizzardId>CS2_038</blizzardId>
-    <hearthPwnId>526</hearthPwnId>
-    <hearthstoneClass>
-        <id>2</id>
-        <name>Shaman</name>
-        <searchStart>68</searchStart>
-        <searchEnd>101</searchEnd>
-    </hearthstoneClass>
+  <id>78</id>
+  <name>Ancestral Spirit</name>
+  <blizzardId>CS2_038</blizzardId>
+  <hearthPwnId>526</hearthPwnId>
+  <hearthstoneClass>
+    <id>2</id>
+    <name>Shaman</name>
+    <searchStart>68</searchStart>
+    <searchEnd>101</searchEnd>
+  </hearthstoneClass>
 </card>

@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>261</id>
-    <name>Starving Buzzard</name>
-    <blizzardId>CS2_237</blizzardId>
-    <hearthPwnId>101</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>261</id>
+  <name>Starving Buzzard</name>
+  <blizzardId>CS2_237</blizzardId>
+  <hearthPwnId>101</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

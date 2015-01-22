@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>352</id>
-    <name>Alarm-o-Bot</name>
-    <blizzardId>EX1_006</blizzardId>
-    <hearthPwnId>425</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>352</id>
+  <name>Alarm-o-Bot</name>
+  <blizzardId>EX1_006</blizzardId>
+  <hearthPwnId>425</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

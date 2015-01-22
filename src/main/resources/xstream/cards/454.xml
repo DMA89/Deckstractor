@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>454</id>
-    <name>Worgen Infiltrator</name>
-    <blizzardId>EX1_010</blizzardId>
-    <hearthPwnId>112</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>454</id>
+  <name>Worgen Infiltrator</name>
+  <blizzardId>EX1_010</blizzardId>
+  <hearthPwnId>112</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

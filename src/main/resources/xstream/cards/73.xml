@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>73</id>
-    <name>Frost Shock</name>
-    <blizzardId>CS2_037</blizzardId>
-    <hearthPwnId>233</hearthPwnId>
-    <hearthstoneClass>
-        <id>2</id>
-        <name>Shaman</name>
-        <searchStart>68</searchStart>
-        <searchEnd>101</searchEnd>
-    </hearthstoneClass>
+  <id>73</id>
+  <name>Frost Shock</name>
+  <blizzardId>CS2_037</blizzardId>
+  <hearthPwnId>233</hearthPwnId>
+  <hearthstoneClass>
+    <id>2</id>
+    <name>Shaman</name>
+    <searchStart>68</searchStart>
+    <searchEnd>101</searchEnd>
+  </hearthstoneClass>
 </card>

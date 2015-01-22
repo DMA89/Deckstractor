@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>138</id>
-    <name>Holy Smite</name>
-    <blizzardId>CS1_130</blizzardId>
-    <hearthPwnId>409</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>138</id>
+  <name>Holy Smite</name>
+  <blizzardId>CS1_130</blizzardId>
+  <hearthPwnId>409</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>

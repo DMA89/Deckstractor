@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>447</id>
-    <name>Tinkmaster Overspark</name>
-    <blizzardId>EX1_083</blizzardId>
-    <hearthPwnId>245</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>447</id>
+  <name>Tinkmaster Overspark</name>
+  <blizzardId>EX1_083</blizzardId>
+  <hearthPwnId>245</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

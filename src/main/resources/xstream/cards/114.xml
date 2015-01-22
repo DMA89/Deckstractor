@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>114</id>
-    <name>Betrayal</name>
-    <blizzardId>EX1_126</blizzardId>
-    <hearthPwnId>198</hearthPwnId>
-    <hearthstoneClass>
-        <id>3</id>
-        <name>Rogue</name>
-        <searchStart>102</searchStart>
-        <searchEnd>135</searchEnd>
-    </hearthstoneClass>
+  <id>114</id>
+  <name>Betrayal</name>
+  <blizzardId>EX1_126</blizzardId>
+  <hearthPwnId>198</hearthPwnId>
+  <hearthstoneClass>
+    <id>3</id>
+    <name>Rogue</name>
+    <searchStart>102</searchStart>
+    <searchEnd>135</searchEnd>
+  </hearthstoneClass>
 </card>

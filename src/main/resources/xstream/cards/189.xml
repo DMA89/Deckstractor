@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>189</id>
-    <name>Noble Sacrifice</name>
-    <blizzardId>EX1_130</blizzardId>
-    <hearthPwnId>158</hearthPwnId>
-    <hearthstoneClass>
-        <id>5</id>
-        <name>Paladin</name>
-        <searchStart>170</searchStart>
-        <searchEnd>203</searchEnd>
-    </hearthstoneClass>
+  <id>189</id>
+  <name>Noble Sacrifice</name>
+  <blizzardId>EX1_130</blizzardId>
+  <hearthPwnId>158</hearthPwnId>
+  <hearthstoneClass>
+    <id>5</id>
+    <name>Paladin</name>
+    <searchStart>170</searchStart>
+    <searchEnd>203</searchEnd>
+  </hearthstoneClass>
 </card>

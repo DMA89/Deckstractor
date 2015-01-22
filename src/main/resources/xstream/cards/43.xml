@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>43</id>
-    <name>Power Overwhelming</name>
-    <blizzardId>EX1_316</blizzardId>
-    <hearthPwnId>170</hearthPwnId>
-    <hearthstoneClass>
-        <id>1</id>
-        <name>Warlock</name>
-        <searchStart>34</searchStart>
-        <searchEnd>67</searchEnd>
-    </hearthstoneClass>
+  <id>43</id>
+  <name>Power Overwhelming</name>
+  <blizzardId>EX1_316</blizzardId>
+  <hearthPwnId>170</hearthPwnId>
+  <hearthstoneClass>
+    <id>1</id>
+    <name>Warlock</name>
+    <searchStart>34</searchStart>
+    <searchEnd>67</searchEnd>
+  </hearthstoneClass>
 </card>

@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>330</id>
-    <name>Murloc Tidehunter</name>
-    <blizzardId>EX1_506</blizzardId>
-    <hearthPwnId>357</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>330</id>
+  <name>Murloc Tidehunter</name>
+  <blizzardId>EX1_506</blizzardId>
+  <hearthPwnId>357</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

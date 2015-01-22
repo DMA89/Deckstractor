@@ -9,15 +9,13 @@ public class FileCounter {
     public static int getFile(String dirPath) {
         int count = 0;
         File f = new File(dirPath);
-        File[] files  = f.listFiles();
+        File[] files = f.listFiles();
 
-        if(files != null)
-            for(int i=0; i < files.length; i++)
-            {
-                count ++;
+        if (files != null)
+            for (int i = 0; i < files.length; i++) {
+                count++;
                 File file = files[i];
-                if(file.isDirectory())
-                {
+                if (file.isDirectory()) {
                     getFile(file.getAbsolutePath());
                 }
             }

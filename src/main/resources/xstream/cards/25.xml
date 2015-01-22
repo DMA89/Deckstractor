@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>25</id>
-    <name>Armorsmith</name>
-    <blizzardId>EX1_402</blizzardId>
-    <hearthPwnId>644</hearthPwnId>
-    <hearthstoneClass>
-        <id>0</id>
-        <name>Warrior</name>
-        <searchStart>0</searchStart>
-        <searchEnd>33</searchEnd>
-    </hearthstoneClass>
+  <id>25</id>
+  <name>Armorsmith</name>
+  <blizzardId>EX1_402</blizzardId>
+  <hearthPwnId>644</hearthPwnId>
+  <hearthstoneClass>
+    <id>0</id>
+    <name>Warrior</name>
+    <searchStart>0</searchStart>
+    <searchEnd>33</searchEnd>
+  </hearthstoneClass>
 </card>

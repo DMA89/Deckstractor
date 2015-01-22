@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>9</id>
-    <name>Shield Block</name>
-    <blizzardId>EX1_606</blizzardId>
-    <hearthPwnId>493</hearthPwnId>
-    <hearthstoneClass>
-        <id>0</id>
-        <name>Warrior</name>
-        <searchStart>0</searchStart>
-        <searchEnd>33</searchEnd>
-    </hearthstoneClass>
+  <id>9</id>
+  <name>Shield Block</name>
+  <blizzardId>EX1_606</blizzardId>
+  <hearthPwnId>493</hearthPwnId>
+  <hearthstoneClass>
+    <id>0</id>
+    <name>Warrior</name>
+    <searchStart>0</searchStart>
+    <searchEnd>33</searchEnd>
+  </hearthstoneClass>
 </card>

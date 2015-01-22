@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>285</id>
-    <name>Nourish</name>
-    <blizzardId>EX1_164</blizzardId>
-    <hearthPwnId>120</hearthPwnId>
-    <hearthstoneClass>
-        <id>8</id>
-        <name>Druid</name>
-        <searchStart>272</searchStart>
-        <searchEnd>305</searchEnd>
-    </hearthstoneClass>
+  <id>285</id>
+  <name>Nourish</name>
+  <blizzardId>EX1_164</blizzardId>
+  <hearthPwnId>120</hearthPwnId>
+  <hearthstoneClass>
+    <id>8</id>
+    <name>Druid</name>
+    <searchStart>272</searchStart>
+    <searchEnd>305</searchEnd>
+  </hearthstoneClass>
 </card>

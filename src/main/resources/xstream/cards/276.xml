@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>276</id>
-    <name>Moonfire</name>
-    <blizzardId>CS2_008</blizzardId>
-    <hearthPwnId>619</hearthPwnId>
-    <hearthstoneClass>
-        <id>8</id>
-        <name>Druid</name>
-        <searchStart>272</searchStart>
-        <searchEnd>305</searchEnd>
-    </hearthstoneClass>
+  <id>276</id>
+  <name>Moonfire</name>
+  <blizzardId>CS2_008</blizzardId>
+  <hearthPwnId>619</hearthPwnId>
+  <hearthstoneClass>
+    <id>8</id>
+    <name>Druid</name>
+    <searchStart>272</searchStart>
+    <searchEnd>305</searchEnd>
+  </hearthstoneClass>
 </card>

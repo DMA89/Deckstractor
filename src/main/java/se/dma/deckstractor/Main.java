@@ -1,13 +1,9 @@
 package main.java.se.dma.deckstractor;
 
-import com.google.inject.Guice;
-import com.google.inject.Inject;
-import com.google.inject.Injector;
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.Dom4JDriver;
 import main.java.se.dma.deckstractor.domain.Card;
 import main.java.se.dma.deckstractor.domain.HearthstoneClass;
-import main.java.se.dma.deckstractor.repository.modules.CardRepositoryModule;
-import main.java.se.dma.deckstractor.repository.modules.ClassRepositoryModule;
 import main.java.se.dma.deckstractor.services.implementations.CardServiceImpl;
 import main.java.se.dma.deckstractor.services.implementations.ClassServiceImpl;
 import main.java.se.dma.deckstractor.services.interfaces.CardService;
@@ -35,9 +31,12 @@ public class Main {
     public static ClassService classService = new ClassServiceImpl();
     public static CardService cardService = new CardServiceImpl();
 
-    private static XStream xstream;
+    public static XStream xstream;
 
     public static void main(String[] args) {
+        xstream = new XStream(new Dom4JDriver());
+        xstream.alias("card", Card.class);
+        xstream.alias("hearthstoneclass", HearthstoneClass.class);
         //initializeDatabase();
         try {
             if (OSValidator.isWindows()) {
@@ -57,9 +56,7 @@ public class Main {
     }
 
     private static void initializeDatabase() {
-        xstream = new XStream();
-        xstream.alias("card", Card.class);
-        xstream.alias("hearthstoneclass", HearthstoneClass.class);
+
         try {
             PROPERTIES = new Properties();
             PROPERTIES.load(Main.class.getResourceAsStream("/main/resources/data.properties"));
@@ -83,12 +80,13 @@ public class Main {
                 classService.saveHearthstoneClass(heartstoneClass);
 
                 String xml = xstream.toXML(heartstoneClass);
-                PrintWriter writer = new PrintWriter("/main/resources/xstream/hearthstoneclasses/" + String.valueOf(heartstoneClass.getId()) + ".xml", "UTF-8");
+                PrintWriter writer = new PrintWriter("/home/palle/development/gitrepos/Deckstractor/src/main/resources/xstream/hearthstoneclasses/" + String.valueOf(heartstoneClass.getId()) + ".xml", "UTF-8");
                 writer.println(xml);
                 writer.close();
             }
             for (int i = 0; i < Integer.valueOf(PROPERTIES.getProperty("total.amount.of.cards")); i++) {
                 Card card = new Card();
+                card.setId(i);
                 card.setName(PROPERTIES.getProperty("card.name." + i));
                 card.setBlizzardId(PROPERTIES.getProperty("blizzard.id." + i));
                 card.setHearthPwnId(PROPERTIES.getProperty("hearthpwn.id." + i));
@@ -115,7 +113,7 @@ public class Main {
                 }
                 cardService.saveCard(card);
                 String xml = xstream.toXML(card);
-                PrintWriter writer = new PrintWriter("/main/resources/xstream/cards/" + String.valueOf(card.getId()) + ".xml", "UTF-8");
+                PrintWriter writer = new PrintWriter("/home/palle/development/gitrepos/Deckstractor/src/main/resources/xstream/cards/" + String.valueOf(card.getId()) + ".xml", "UTF-8");
                 writer.println(xml);
                 writer.close();
             }

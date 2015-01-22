@@ -1,15 +1,13 @@
 package main.java.se.dma.deckstractor.repository.persistence;
 
 import com.thoughtworks.xstream.XStream;
+import main.java.se.dma.deckstractor.Main;
 import main.java.se.dma.deckstractor.domain.Card;
 import main.java.se.dma.deckstractor.domain.HearthstoneClass;
 import main.java.se.dma.deckstractor.repository.interfaces.CardRepository;
 import main.java.se.dma.deckstractor.utils.FileCounter;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -18,12 +16,10 @@ import java.util.List;
  * Created by palle on 22/01/15.
  */
 public class XstreamCardRepository implements CardRepository {
-    XStream xStream = new XStream();
-
     @Override
     public long saveCard(Card card) {
         card.setId(FileCounter.getFile("/main/resources/xstream/cards/"));
-        String xml = xStream.toXML(card);
+        String xml = Main.xstream.toXML(card);
         PrintWriter writer = null;
         try {
             writer = new PrintWriter("/main/resources/xstream/cards/" + card.getId() + ".xml", "UTF-8");
@@ -39,7 +35,20 @@ public class XstreamCardRepository implements CardRepository {
 
     @Override
     public Card getCard(long id) {
-        return (Card)xStream.fromXML("/main/resources/xstream/cards/" + id + ".xml");
+        InputStream in = getClass().getResourceAsStream("/main/resources/xstream/cards/" + id + ".xml");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+        StringBuffer buffer = new StringBuffer();
+        String line = null;
+        try {
+            while ((line = reader.readLine()) != null) {
+                buffer.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(buffer);
+        Card card = (Card) Main.xstream.fromXML(buffer.toString());
+        return card;
     }
 
     @Override
@@ -47,7 +56,7 @@ public class XstreamCardRepository implements CardRepository {
         List<Card> cards = new ArrayList();
         int nr = new File("/main/resources/xstream/cards/").listFiles().length;
         for (int i = 0; i < nr; i++) {
-            cards.add((Card) xStream.fromXML("/main/resources/xstream/cards/" + i + ".xml"));
+            cards.add(getCard(i));
         }
         return cards;
     }
@@ -83,7 +92,7 @@ public class XstreamCardRepository implements CardRepository {
 
     @Override
     public void updateCard(Card card) {
-        String xml = xStream.toXML(card);
+        String xml = Main.xstream.toXML(card);
         PrintWriter writer = null;
         try {
             writer = new PrintWriter("/main/resources/xstream/cards/" + String.valueOf(card.getId()) + ".xml", "UTF-8");

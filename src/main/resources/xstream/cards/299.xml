@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>299</id>
-    <name>Druid of the Claw</name>
-    <blizzardId>EX1_165</blizzardId>
-    <hearthPwnId>587</hearthPwnId>
-    <hearthstoneClass>
-        <id>8</id>
-        <name>Druid</name>
-        <searchStart>272</searchStart>
-        <searchEnd>305</searchEnd>
-    </hearthstoneClass>
+  <id>299</id>
+  <name>Druid of the Claw</name>
+  <blizzardId>EX1_165</blizzardId>
+  <hearthPwnId>587</hearthPwnId>
+  <hearthstoneClass>
+    <id>8</id>
+    <name>Druid</name>
+    <searchStart>272</searchStart>
+    <searchEnd>305</searchEnd>
+  </hearthstoneClass>
 </card>

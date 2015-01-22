@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>190</id>
-    <name>Redemption</name>
-    <blizzardId>EX1_136</blizzardId>
-    <hearthPwnId>657</hearthPwnId>
-    <hearthstoneClass>
-        <id>5</id>
-        <name>Paladin</name>
-        <searchStart>170</searchStart>
-        <searchEnd>203</searchEnd>
-    </hearthstoneClass>
+  <id>190</id>
+  <name>Redemption</name>
+  <blizzardId>EX1_136</blizzardId>
+  <hearthPwnId>657</hearthPwnId>
+  <hearthstoneClass>
+    <id>5</id>
+    <name>Paladin</name>
+    <searchStart>170</searchStart>
+    <searchEnd>203</searchEnd>
+  </hearthstoneClass>
 </card>

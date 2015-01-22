@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>97</id>
-    <name>Dunemaul Shaman</name>
-    <blizzardId>GVG_066</blizzardId>
-    <hearthPwnId>12234</hearthPwnId>
-    <hearthstoneClass>
-        <id>2</id>
-        <name>Shaman</name>
-        <searchStart>68</searchStart>
-        <searchEnd>101</searchEnd>
-    </hearthstoneClass>
+  <id>97</id>
+  <name>Dunemaul Shaman</name>
+  <blizzardId>GVG_066</blizzardId>
+  <hearthPwnId>12234</hearthPwnId>
+  <hearthstoneClass>
+    <id>2</id>
+    <name>Shaman</name>
+    <searchStart>68</searchStart>
+    <searchEnd>101</searchEnd>
+  </hearthstoneClass>
 </card>

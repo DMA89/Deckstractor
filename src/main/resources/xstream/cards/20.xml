@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>20</id>
-    <name>Bouncing Blade</name>
-    <blizzardId>GVG_050</blizzardId>
-    <hearthPwnId>12203</hearthPwnId>
-    <hearthstoneClass>
-        <id>0</id>
-        <name>Warrior</name>
-        <searchStart>0</searchStart>
-        <searchEnd>33</searchEnd>
-    </hearthstoneClass>
+  <id>20</id>
+  <name>Bouncing Blade</name>
+  <blizzardId>GVG_050</blizzardId>
+  <hearthPwnId>12203</hearthPwnId>
+  <hearthstoneClass>
+    <id>0</id>
+    <name>Warrior</name>
+    <searchStart>0</searchStart>
+    <searchEnd>33</searchEnd>
+  </hearthstoneClass>
 </card>

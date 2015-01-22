@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>87</id>
-    <name>Ancestor&apos;s Call</name>
-    <blizzardId>GVG_029</blizzardId>
-    <hearthPwnId>12218</hearthPwnId>
-    <hearthstoneClass>
-        <id>2</id>
-        <name>Shaman</name>
-        <searchStart>68</searchStart>
-        <searchEnd>101</searchEnd>
-    </hearthstoneClass>
+  <id>87</id>
+  <name>Ancestor's Call</name>
+  <blizzardId>GVG_029</blizzardId>
+  <hearthPwnId>12218</hearthPwnId>
+  <hearthstoneClass>
+    <id>2</id>
+    <name>Shaman</name>
+    <searchStart>68</searchStart>
+    <searchEnd>101</searchEnd>
+  </hearthstoneClass>
 </card>

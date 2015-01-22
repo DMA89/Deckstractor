@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>291</id>
-    <name>Poison Seeds</name>
-    <blizzardId>FP1_019</blizzardId>
-    <hearthPwnId>7726</hearthPwnId>
-    <hearthstoneClass>
-        <id>8</id>
-        <name>Druid</name>
-        <searchStart>272</searchStart>
-        <searchEnd>305</searchEnd>
-    </hearthstoneClass>
+  <id>291</id>
+  <name>Poison Seeds</name>
+  <blizzardId>FP1_019</blizzardId>
+  <hearthPwnId>7726</hearthPwnId>
+  <hearthstoneClass>
+    <id>8</id>
+    <name>Druid</name>
+    <searchStart>272</searchStart>
+    <searchEnd>305</searchEnd>
+  </hearthstoneClass>
 </card>

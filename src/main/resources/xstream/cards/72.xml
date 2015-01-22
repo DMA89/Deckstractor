@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>72</id>
-    <name>Bloodlust</name>
-    <blizzardId>CS2_046</blizzardId>
-    <hearthPwnId>256</hearthPwnId>
-    <hearthstoneClass>
-        <id>2</id>
-        <name>Shaman</name>
-        <searchStart>68</searchStart>
-        <searchEnd>101</searchEnd>
-    </hearthstoneClass>
+  <id>72</id>
+  <name>Bloodlust</name>
+  <blizzardId>CS2_046</blizzardId>
+  <hearthPwnId>256</hearthPwnId>
+  <hearthstoneClass>
+    <id>2</id>
+    <name>Shaman</name>
+    <searchStart>68</searchStart>
+    <searchEnd>101</searchEnd>
+  </hearthstoneClass>
 </card>

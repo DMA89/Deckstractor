@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>198</id>
-    <name>Tirion Fordring</name>
-    <blizzardId>EX1_383</blizzardId>
-    <hearthPwnId>391</hearthPwnId>
-    <hearthstoneClass>
-        <id>5</id>
-        <name>Paladin</name>
-        <searchStart>170</searchStart>
-        <searchEnd>203</searchEnd>
-    </hearthstoneClass>
+  <id>198</id>
+  <name>Tirion Fordring</name>
+  <blizzardId>EX1_383</blizzardId>
+  <hearthPwnId>391</hearthPwnId>
+  <hearthstoneClass>
+    <id>5</id>
+    <name>Paladin</name>
+    <searchStart>170</searchStart>
+    <searchEnd>203</searchEnd>
+  </hearthstoneClass>
 </card>

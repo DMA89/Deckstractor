@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>11</id>
-    <name>Battle Rage</name>
-    <blizzardId>EX1_392</blizzardId>
-    <hearthPwnId>664</hearthPwnId>
-    <hearthstoneClass>
-        <id>0</id>
-        <name>Warrior</name>
-        <searchStart>0</searchStart>
-        <searchEnd>33</searchEnd>
-    </hearthstoneClass>
+  <id>11</id>
+  <name>Battle Rage</name>
+  <blizzardId>EX1_392</blizzardId>
+  <hearthPwnId>664</hearthPwnId>
+  <hearthstoneClass>
+    <id>0</id>
+    <name>Warrior</name>
+    <searchStart>0</searchStart>
+    <searchEnd>33</searchEnd>
+  </hearthstoneClass>
 </card>

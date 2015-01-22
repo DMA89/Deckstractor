@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>136</id>
-    <name>Divine Spirit</name>
-    <blizzardId>CS2_236</blizzardId>
-    <hearthPwnId>554</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>136</id>
+  <name>Divine Spirit</name>
+  <blizzardId>CS2_236</blizzardId>
+  <hearthPwnId>554</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>

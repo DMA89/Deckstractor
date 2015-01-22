@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>415</id>
-    <name>Molten Giant</name>
-    <blizzardId>EX1_620</blizzardId>
-    <hearthPwnId>94</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>415</id>
+  <name>Molten Giant</name>
+  <blizzardId>EX1_620</blizzardId>
+  <hearthPwnId>94</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

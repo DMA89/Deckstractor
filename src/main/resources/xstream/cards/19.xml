@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>19</id>
-    <name>Upgrade!</name>
-    <blizzardId>EX1_409</blizzardId>
-    <hearthPwnId>638</hearthPwnId>
-    <hearthstoneClass>
-        <id>0</id>
-        <name>Warrior</name>
-        <searchStart>0</searchStart>
-        <searchEnd>33</searchEnd>
-    </hearthstoneClass>
+  <id>19</id>
+  <name>Upgrade!</name>
+  <blizzardId>EX1_409</blizzardId>
+  <hearthPwnId>638</hearthPwnId>
+  <hearthstoneClass>
+    <id>0</id>
+    <name>Warrior</name>
+    <searchStart>0</searchStart>
+    <searchEnd>33</searchEnd>
+  </hearthstoneClass>
 </card>

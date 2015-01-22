@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>144</id>
-    <name>Shadow Word: Pain</name>
-    <blizzardId>CS2_234</blizzardId>
-    <hearthPwnId>315</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>144</id>
+  <name>Shadow Word: Pain</name>
+  <blizzardId>CS2_234</blizzardId>
+  <hearthPwnId>315</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>

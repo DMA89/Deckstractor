@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>154</id>
-    <name>Light of the Naaru</name>
-    <blizzardId>GVG_012</blizzardId>
-    <hearthPwnId>12297</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>154</id>
+  <name>Light of the Naaru</name>
+  <blizzardId>GVG_012</blizzardId>
+  <hearthPwnId>12297</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>

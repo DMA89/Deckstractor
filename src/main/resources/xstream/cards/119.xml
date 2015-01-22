@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>119</id>
-    <name>Headcrack</name>
-    <blizzardId>EX1_137</blizzardId>
-    <hearthPwnId>135</hearthPwnId>
-    <hearthstoneClass>
-        <id>3</id>
-        <name>Rogue</name>
-        <searchStart>102</searchStart>
-        <searchEnd>135</searchEnd>
-    </hearthstoneClass>
+  <id>119</id>
+  <name>Headcrack</name>
+  <blizzardId>EX1_137</blizzardId>
+  <hearthPwnId>135</hearthPwnId>
+  <hearthstoneClass>
+    <id>3</id>
+    <name>Rogue</name>
+    <searchStart>102</searchStart>
+    <searchEnd>135</searchEnd>
+  </hearthstoneClass>
 </card>

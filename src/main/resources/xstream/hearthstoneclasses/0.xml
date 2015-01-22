@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <hearthstoneclass>
-    <id>0</id>
-    <name>Warrior</name>
-    <searchStart>0</searchStart>
-    <searchEnd>33</searchEnd>
+  <id>0</id>
+  <name>Warrior</name>
+  <searchStart>0</searchStart>
+  <searchEnd>33</searchEnd>
 </hearthstoneclass>

@@ -1,5 +1,6 @@
 package main.java.se.dma.deckstractor.domain;
 
+
 /**
  * Created by palle on 21/01/15.
  */

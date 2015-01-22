@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>76</id>
-    <name>Totemic Might</name>
-    <blizzardId>EX1_244</blizzardId>
-    <hearthPwnId>367</hearthPwnId>
-    <hearthstoneClass>
-        <id>2</id>
-        <name>Shaman</name>
-        <searchStart>68</searchStart>
-        <searchEnd>101</searchEnd>
-    </hearthstoneClass>
+  <id>76</id>
+  <name>Totemic Might</name>
+  <blizzardId>EX1_244</blizzardId>
+  <hearthPwnId>367</hearthPwnId>
+  <hearthstoneClass>
+    <id>2</id>
+    <name>Shaman</name>
+    <searchStart>68</searchStart>
+    <searchEnd>101</searchEnd>
+  </hearthstoneClass>
 </card>

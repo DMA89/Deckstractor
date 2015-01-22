@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>181</id>
-    <name>Avenging Wrath</name>
-    <blizzardId>EX1_384</blizzardId>
-    <hearthPwnId>142</hearthPwnId>
-    <hearthstoneClass>
-        <id>5</id>
-        <name>Paladin</name>
-        <searchStart>170</searchStart>
-        <searchEnd>203</searchEnd>
-    </hearthstoneClass>
+  <id>181</id>
+  <name>Avenging Wrath</name>
+  <blizzardId>EX1_384</blizzardId>
+  <hearthPwnId>142</hearthPwnId>
+  <hearthstoneClass>
+    <id>5</id>
+    <name>Paladin</name>
+    <searchStart>170</searchStart>
+    <searchEnd>203</searchEnd>
+  </hearthstoneClass>
 </card>

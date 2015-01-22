@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>218</id>
-    <name>Ice Lance</name>
-    <blizzardId>CS2_031</blizzardId>
-    <hearthPwnId>188</hearthPwnId>
-    <hearthstoneClass>
-        <id>6</id>
-        <name>Mage</name>
-        <searchStart>204</searchStart>
-        <searchEnd>237</searchEnd>
-    </hearthstoneClass>
+  <id>218</id>
+  <name>Ice Lance</name>
+  <blizzardId>CS2_031</blizzardId>
+  <hearthPwnId>188</hearthPwnId>
+  <hearthstoneClass>
+    <id>6</id>
+    <name>Mage</name>
+    <searchStart>204</searchStart>
+    <searchEnd>237</searchEnd>
+  </hearthstoneClass>
 </card>

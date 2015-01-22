@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>270</id>
-    <name>Metaltooth Leaper</name>
-    <blizzardId>GVG_048</blizzardId>
-    <hearthPwnId>12254</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>270</id>
+  <name>Metaltooth Leaper</name>
+  <blizzardId>GVG_048</blizzardId>
+  <hearthPwnId>12254</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

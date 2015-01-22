@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <hearthstoneclass>
-    <id>5</id>
-    <name>Paladin</name>
-    <searchStart>170</searchStart>
-    <searchEnd>203</searchEnd>
+  <id>5</id>
+  <name>Paladin</name>
+  <searchStart>170</searchStart>
+  <searchEnd>203</searchEnd>
 </hearthstoneclass>

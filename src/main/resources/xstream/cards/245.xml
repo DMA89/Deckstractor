@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>245</id>
-    <name>Multi-Shot</name>
-    <blizzardId>DS1_183</blizzardId>
-    <hearthPwnId>407</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>245</id>
+  <name>Multi-Shot</name>
+  <blizzardId>DS1_183</blizzardId>
+  <hearthPwnId>407</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

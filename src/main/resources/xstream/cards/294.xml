@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>294</id>
-    <name>Tree of Life</name>
-    <blizzardId>GVG_033</blizzardId>
-    <hearthPwnId>12270</hearthPwnId>
-    <hearthstoneClass>
-        <id>8</id>
-        <name>Druid</name>
-        <searchStart>272</searchStart>
-        <searchEnd>305</searchEnd>
-    </hearthstoneClass>
+  <id>294</id>
+  <name>Tree of Life</name>
+  <blizzardId>GVG_033</blizzardId>
+  <hearthPwnId>12270</hearthPwnId>
+  <hearthstoneClass>
+    <id>8</id>
+    <name>Druid</name>
+    <searchStart>272</searchStart>
+    <searchEnd>305</searchEnd>
+  </hearthstoneClass>
 </card>

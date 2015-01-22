@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>273</id>
-    <name>Healing Touch</name>
-    <blizzardId>CS2_007</blizzardId>
-    <hearthPwnId>258</hearthPwnId>
-    <hearthstoneClass>
-        <id>8</id>
-        <name>Druid</name>
-        <searchStart>272</searchStart>
-        <searchEnd>305</searchEnd>
-    </hearthstoneClass>
+  <id>273</id>
+  <name>Healing Touch</name>
+  <blizzardId>CS2_007</blizzardId>
+  <hearthPwnId>258</hearthPwnId>
+  <hearthstoneClass>
+    <id>8</id>
+    <name>Druid</name>
+    <searchStart>272</searchStart>
+    <searchEnd>305</searchEnd>
+  </hearthstoneClass>
 </card>

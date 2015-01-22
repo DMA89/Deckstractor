@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>271</id>
-    <name>Steamwheedle Sniper</name>
-    <blizzardId>GVG_087</blizzardId>
-    <hearthPwnId>12242</hearthPwnId>
-    <hearthstoneClass>
-        <id>7</id>
-        <name>Hunter</name>
-        <searchStart>238</searchStart>
-        <searchEnd>271</searchEnd>
-    </hearthstoneClass>
+  <id>271</id>
+  <name>Steamwheedle Sniper</name>
+  <blizzardId>GVG_087</blizzardId>
+  <hearthPwnId>12242</hearthPwnId>
+  <hearthstoneClass>
+    <id>7</id>
+    <name>Hunter</name>
+    <searchStart>238</searchStart>
+    <searchEnd>271</searchEnd>
+  </hearthstoneClass>
 </card>

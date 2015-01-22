@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>24</id>
-    <name>Arathi Weaponsmith</name>
-    <blizzardId>EX1_398</blizzardId>
-    <hearthPwnId>504</hearthPwnId>
-    <hearthstoneClass>
-        <id>0</id>
-        <name>Warrior</name>
-        <searchStart>0</searchStart>
-        <searchEnd>33</searchEnd>
-    </hearthstoneClass>
+  <id>24</id>
+  <name>Arathi Weaponsmith</name>
+  <blizzardId>EX1_398</blizzardId>
+  <hearthPwnId>504</hearthPwnId>
+  <hearthstoneClass>
+    <id>0</id>
+    <name>Warrior</name>
+    <searchStart>0</searchStart>
+    <searchEnd>33</searchEnd>
+  </hearthstoneClass>
 </card>

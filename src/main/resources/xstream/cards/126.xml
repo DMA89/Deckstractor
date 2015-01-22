@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>126</id>
-    <name>Kidnapper</name>
-    <blizzardId>NEW1_005</blizzardId>
-    <hearthPwnId>562</hearthPwnId>
-    <hearthstoneClass>
-        <id>3</id>
-        <name>Rogue</name>
-        <searchStart>102</searchStart>
-        <searchEnd>135</searchEnd>
-    </hearthstoneClass>
+  <id>126</id>
+  <name>Kidnapper</name>
+  <blizzardId>NEW1_005</blizzardId>
+  <hearthPwnId>562</hearthPwnId>
+  <hearthstoneClass>
+    <id>3</id>
+    <name>Rogue</name>
+    <searchStart>102</searchStart>
+    <searchEnd>135</searchEnd>
+  </hearthstoneClass>
 </card>

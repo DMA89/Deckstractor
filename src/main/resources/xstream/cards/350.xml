@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>350</id>
-    <name>Abusive Sergeant</name>
-    <blizzardId>CS2_188</blizzardId>
-    <hearthPwnId>577</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>350</id>
+  <name>Abusive Sergeant</name>
+  <blizzardId>CS2_188</blizzardId>
+  <hearthPwnId>577</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

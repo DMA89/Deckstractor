@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>174</id>
-    <name>Blessing of Kings</name>
-    <blizzardId>CS2_092</blizzardId>
-    <hearthPwnId>29</hearthPwnId>
-    <hearthstoneClass>
-        <id>5</id>
-        <name>Paladin</name>
-        <searchStart>170</searchStart>
-        <searchEnd>203</searchEnd>
-    </hearthstoneClass>
+  <id>174</id>
+  <name>Blessing of Kings</name>
+  <blizzardId>CS2_092</blizzardId>
+  <hearthPwnId>29</hearthPwnId>
+  <hearthstoneClass>
+    <id>5</id>
+    <name>Paladin</name>
+    <searchStart>170</searchStart>
+    <searchEnd>203</searchEnd>
+  </hearthstoneClass>
 </card>

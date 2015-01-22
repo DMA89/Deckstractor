@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>49</id>
-    <name>Demonheart</name>
-    <blizzardId>GVG_019</blizzardId>
-    <hearthPwnId>12237</hearthPwnId>
-    <hearthstoneClass>
-        <id>1</id>
-        <name>Warlock</name>
-        <searchStart>34</searchStart>
-        <searchEnd>67</searchEnd>
-    </hearthstoneClass>
+  <id>49</id>
+  <name>Demonheart</name>
+  <blizzardId>GVG_019</blizzardId>
+  <hearthPwnId>12237</hearthPwnId>
+  <hearthstoneClass>
+    <id>1</id>
+    <name>Warlock</name>
+    <searchStart>34</searchStart>
+    <searchEnd>67</searchEnd>
+  </hearthstoneClass>
 </card>

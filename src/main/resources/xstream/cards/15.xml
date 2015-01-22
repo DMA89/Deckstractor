@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>15</id>
-    <name>Mortal Strike</name>
-    <blizzardId>EX1_408</blizzardId>
-    <hearthPwnId>345</hearthPwnId>
-    <hearthstoneClass>
-        <id>0</id>
-        <name>Warrior</name>
-        <searchStart>0</searchStart>
-        <searchEnd>33</searchEnd>
-    </hearthstoneClass>
+  <id>15</id>
+  <name>Mortal Strike</name>
+  <blizzardId>EX1_408</blizzardId>
+  <hearthPwnId>345</hearthPwnId>
+  <hearthstoneClass>
+    <id>0</id>
+    <name>Warrior</name>
+    <searchStart>0</searchStart>
+    <searchEnd>33</searchEnd>
+  </hearthstoneClass>
 </card>

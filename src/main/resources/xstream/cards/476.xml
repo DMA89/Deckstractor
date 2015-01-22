@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>476</id>
-    <name>Undertaker</name>
-    <blizzardId>FP1_028</blizzardId>
-    <hearthPwnId>7737</hearthPwnId>
-    <hearthstoneClass>
-        <id>9</id>
-        <name>Neutral</name>
-        <searchStart>306</searchStart>
-        <searchEnd>534</searchEnd>
-    </hearthstoneClass>
+  <id>476</id>
+  <name>Undertaker</name>
+  <blizzardId>FP1_028</blizzardId>
+  <hearthPwnId>7737</hearthPwnId>
+  <hearthstoneClass>
+    <id>9</id>
+    <name>Neutral</name>
+    <searchStart>306</searchStart>
+    <searchEnd>534</searchEnd>
+  </hearthstoneClass>
 </card>

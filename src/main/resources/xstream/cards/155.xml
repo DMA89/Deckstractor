@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <card>
-    <id>155</id>
-    <name>Lightbomb</name>
-    <blizzardId>GVG_008</blizzardId>
-    <hearthPwnId>12301</hearthPwnId>
-    <hearthstoneClass>
-        <id>4</id>
-        <name>Priest</name>
-        <searchStart>136</searchStart>
-        <searchEnd>169</searchEnd>
-    </hearthstoneClass>
+  <id>155</id>
+  <name>Lightbomb</name>
+  <blizzardId>GVG_008</blizzardId>
+  <hearthPwnId>12301</hearthPwnId>
+  <hearthstoneClass>
+    <id>4</id>
+    <name>Priest</name>
+    <searchStart>136</searchStart>
+    <searchEnd>169</searchEnd>
+  </hearthstoneClass>
 </card>
