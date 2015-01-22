@@ -1,6 +1,12 @@
 .classpath
 .project
 .settings/
+.mtj.tmp/
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
 bin/
 *.iml
 .idea/
