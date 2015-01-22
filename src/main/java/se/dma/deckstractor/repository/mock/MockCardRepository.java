@@ -26,13 +26,13 @@ public class MockCardRepository extends IdCounter implements CardRepository {
     }
 
     @Override
-    public Collection getAllCards() {
-        return new ArrayList<>(repo.values());
+    public ArrayList<Card> getAllCards() {
+        return new ArrayList<Card>(repo.values());
     }
 
     @Override
-    public Collection getAllCardsByClass(HearthstoneClass hearthstoneClass) {
-        List returnList = new ArrayList();
+    public ArrayList<Card> getAllCardsByClass(HearthstoneClass hearthstoneClass) {
+        ArrayList<Card> returnList = new ArrayList();
         for (int i = 0; i < repo.size(); i++) {
             if (repo.get(i).getHearthstoneClass() == hearthstoneClass) {
                 returnList.add(repo.get(i));

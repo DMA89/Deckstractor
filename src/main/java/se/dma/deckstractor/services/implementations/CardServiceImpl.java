@@ -6,6 +6,7 @@ import main.java.se.dma.deckstractor.repository.interfaces.CardRepository;
 import main.java.se.dma.deckstractor.repository.persistence.XstreamCardRepository;
 import main.java.se.dma.deckstractor.services.interfaces.CardService;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -26,12 +27,12 @@ public class CardServiceImpl implements CardService {
     }
 
     @Override
-    public Collection getAllCards() {
+    public ArrayList<Card> getAllCards() {
         return repo.getAllCards();
     }
 
     @Override
-    public Collection getAllCardsByClass(HearthstoneClass hearthstoneClass) {
+    public ArrayList<Card> getAllCardsByClass(HearthstoneClass hearthstoneClass) {
         return repo.getAllCardsByClass(hearthstoneClass);
     }
 

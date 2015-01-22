@@ -5,6 +5,7 @@ import main.java.se.dma.deckstractor.repository.interfaces.ClassRepository;
 import main.java.se.dma.deckstractor.repository.persistence.XstreamClassRepository;
 import main.java.se.dma.deckstractor.services.interfaces.ClassService;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -30,7 +31,7 @@ public class ClassServiceImpl implements ClassService {
     }
 
     @Override
-    public Collection getAllHearthstoneClasses() {
+    public ArrayList<HearthstoneClass> getAllHearthstoneClasses() {
         return repo.getAllHearthstoneClasses();
     }
 

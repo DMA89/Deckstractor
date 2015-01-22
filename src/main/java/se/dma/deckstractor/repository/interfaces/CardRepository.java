@@ -3,6 +3,7 @@ package main.java.se.dma.deckstractor.repository.interfaces;
 import main.java.se.dma.deckstractor.domain.Card;
 import main.java.se.dma.deckstractor.domain.HearthstoneClass;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -13,9 +14,9 @@ public interface CardRepository {
 
     Card getCard(long id);
 
-    Collection getAllCards();
+    ArrayList<Card> getAllCards();
 
-    Collection getAllCardsByClass(HearthstoneClass hearthstoneClass);
+    ArrayList<Card> getAllCardsByClass(HearthstoneClass hearthstoneClass);
 
     void removeCard(long id);
 

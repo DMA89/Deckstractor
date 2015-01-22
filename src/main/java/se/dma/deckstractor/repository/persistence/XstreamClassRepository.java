@@ -1,25 +1,22 @@
 package main.java.se.dma.deckstractor.repository.persistence;
 
-import com.thoughtworks.xstream.XStream;
+import main.java.se.dma.deckstractor.Main;
 import main.java.se.dma.deckstractor.domain.HearthstoneClass;
 import main.java.se.dma.deckstractor.repository.interfaces.ClassRepository;
 import main.java.se.dma.deckstractor.utils.FileCounter;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by palle on 22/01/15.
  */
 public class XstreamClassRepository implements ClassRepository {
-    XStream xStream = new XStream();
 
     @Override
     public long saveHearthstoneClass(HearthstoneClass hearthstoneClass) {
-        hearthstoneClass.setId(FileCounter.getFile("/main/resources/xstream/hearthstoneclasses/"));
-        String xml = xStream.toXML(hearthstoneClass);
+        hearthstoneClass.setId(FileCounter.getFile("src/main/resources/xstream/hearthstoneclasses/"));
+        String xml = Main.xstream.toXML(hearthstoneClass);
         PrintWriter writer = null;
         try {
             writer = new PrintWriter("/home/palle/development/gitrepos/Deckstractor/src/main/resources/xstream/hearthstoneclasses/" + hearthstoneClass.getId() + ".xml", "UTF-8");
@@ -46,15 +43,15 @@ public class XstreamClassRepository implements ClassRepository {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        HearthstoneClass hearthstoneClass = (HearthstoneClass) xStream.fromXML(buffer.toString());
+        HearthstoneClass hearthstoneClass = (HearthstoneClass) Main.xstream.fromXML(buffer.toString());
         return hearthstoneClass;
     }
 
     @Override
     public HearthstoneClass getHearthstoneClassByName(String name) {
-        List<HearthstoneClass> hearthstoneClasses = (ArrayList) getAllHearthstoneClasses();
+        ArrayList<HearthstoneClass> hearthstoneClasses = getAllHearthstoneClasses();
         for (HearthstoneClass hearthstoneClass : hearthstoneClasses) {
-            if (hearthstoneClass.getName() == name) {
+            if (hearthstoneClass.getName().equalsIgnoreCase(name)) {
                 return hearthstoneClass;
             }
         }
@@ -62,9 +59,9 @@ public class XstreamClassRepository implements ClassRepository {
     }
 
     @Override
-    public Collection getAllHearthstoneClasses() {
-        List<HearthstoneClass> hearthstoneClasses = new ArrayList();
-        int nr = FileCounter.getFile("/main/resources/xstream/hearthstoneclasses/");
+    public ArrayList<HearthstoneClass> getAllHearthstoneClasses() {
+        ArrayList<HearthstoneClass> hearthstoneClasses = new ArrayList();
+        int nr = FileCounter.getFile("src/main/resources/xstream/hearthstoneclasses/");
         for (int i = 0; i < nr; i++) {
             hearthstoneClasses.add(getHearthstoneClass(i));
         }
@@ -91,7 +88,7 @@ public class XstreamClassRepository implements ClassRepository {
     @Override
     public void updateHearthstoneClass(HearthstoneClass hearthstoneClass) {
         hearthstoneClass.setId(new File("/main/resources/xstream/hearthstoneclasses/").listFiles().length);
-        String xml = xStream.toXML(hearthstoneClass);
+        String xml = Main.xstream.toXML(hearthstoneClass);
         PrintWriter writer = null;
         try {
             writer = new PrintWriter("/main/resources/xstream/hearthstoneclasses/" + String.valueOf(hearthstoneClass.getId()) + ".xml", "UTF-8");

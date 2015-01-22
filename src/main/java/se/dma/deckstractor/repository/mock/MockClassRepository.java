@@ -1,5 +1,6 @@
 package main.java.se.dma.deckstractor.repository.mock;
 
+import main.java.se.dma.deckstractor.domain.Card;
 import main.java.se.dma.deckstractor.domain.HearthstoneClass;
 import main.java.se.dma.deckstractor.repository.interfaces.ClassRepository;
 
@@ -37,8 +38,8 @@ public class MockClassRepository implements ClassRepository {
     }
 
     @Override
-    public Collection getAllHearthstoneClasses() {
-        return new ArrayList<>(repo.values());
+    public ArrayList<HearthstoneClass> getAllHearthstoneClasses() {
+        return new ArrayList<HearthstoneClass>(repo.values());
     }
 
     @Override

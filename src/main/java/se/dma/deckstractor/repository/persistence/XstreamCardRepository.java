@@ -1,6 +1,5 @@
 package main.java.se.dma.deckstractor.repository.persistence;
 
-import com.thoughtworks.xstream.XStream;
 import main.java.se.dma.deckstractor.Main;
 import main.java.se.dma.deckstractor.domain.Card;
 import main.java.se.dma.deckstractor.domain.HearthstoneClass;
@@ -9,8 +8,6 @@ import main.java.se.dma.deckstractor.utils.FileCounter;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by palle on 22/01/15.
@@ -18,7 +15,7 @@ import java.util.List;
 public class XstreamCardRepository implements CardRepository {
     @Override
     public long saveCard(Card card) {
-        card.setId(FileCounter.getFile("/main/resources/xstream/cards/"));
+        card.setId(FileCounter.getFile("src/main/resources/xstream/cards/"));
         String xml = Main.xstream.toXML(card);
         PrintWriter writer = null;
         try {
@@ -46,15 +43,14 @@ public class XstreamCardRepository implements CardRepository {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(buffer);
         Card card = (Card) Main.xstream.fromXML(buffer.toString());
         return card;
     }
 
     @Override
-    public Collection getAllCards() {
-        List<Card> cards = new ArrayList();
-        int nr = new File("/main/resources/xstream/cards/").listFiles().length;
+    public ArrayList<Card> getAllCards() {
+        ArrayList<Card> cards = new ArrayList();
+        int nr = FileCounter.getFile("src/main/resources/xstream/cards/");
         for (int i = 0; i < nr; i++) {
             cards.add(getCard(i));
         }
@@ -62,9 +58,9 @@ public class XstreamCardRepository implements CardRepository {
     }
 
     @Override
-    public Collection getAllCardsByClass(HearthstoneClass hearthstoneClass) {
-        List<Card> cards = (ArrayList) getAllCards();
-        List<Card> classCards = new ArrayList<>();
+    public ArrayList<Card> getAllCardsByClass(HearthstoneClass hearthstoneClass) {
+        ArrayList<Card> cards = (ArrayList) getAllCards();
+        ArrayList<Card> classCards = new ArrayList<>();
         for (Card card : cards) {
             if (card.getHearthstoneClass() == hearthstoneClass) {
                 classCards.add(card);

@@ -2,6 +2,7 @@ package main.java.se.dma.deckstractor.services.interfaces;
 
 import main.java.se.dma.deckstractor.domain.HearthstoneClass;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -14,7 +15,7 @@ public interface ClassService {
 
     HearthstoneClass getHearthstoneClassByName(String name);
 
-    Collection getAllHearthstoneClasses();
+    ArrayList<HearthstoneClass> getAllHearthstoneClasses();
 
     void removeHearthstoneClass(long id);
 

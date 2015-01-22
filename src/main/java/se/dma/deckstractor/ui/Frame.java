@@ -1,12 +1,13 @@
 package main.java.se.dma.deckstractor.ui;
 
 import main.java.se.dma.deckstractor.Main;
-import main.java.se.dma.deckstractor.services.implementations.CardServiceImpl;
-import main.java.se.dma.deckstractor.services.interfaces.CardService;
+import main.java.se.dma.deckstractor.domain.Card;
+import main.java.se.dma.deckstractor.domain.HearthstoneClass;
 import main.java.se.dma.deckstractor.utils.Handler;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Frame {
     public static final JEditorPane editorPane = new JEditorPane();
@@ -45,10 +46,6 @@ public class Frame {
     }
 
     public void init() {
-        CardService service = new CardServiceImpl();
-        for (int i = 0; i < 535; i++) {
-            System.out.println(service.getCard(i));
-        }
         for (int x = 0; x < 30; x++) {
             Main.cardNumb[x] = -1;
             Main.cardCount[x] = 0;
