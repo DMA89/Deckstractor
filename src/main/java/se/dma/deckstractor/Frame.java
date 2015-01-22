@@ -14,8 +14,8 @@ import java.nio.file.Paths;
 
 //Just testing a pull request
 public class Frame {
-    //Timer Interval
-    final static int interval = 1;
+    //Timer timerInterval
+    final static int timerInterval = 1;
 
     //Create Button, Pane and timer
     public static JEditorPane editorPane = new JEditorPane();
@@ -28,21 +28,22 @@ public class Frame {
 
     //Img recognition parameters
     public double test = 0;
-    public double percentdiffallowed = 9;
-    public double extradifftwenty = 1;
+    public double imgCompareDiffAllowed = 9;
+    public double lastImgExtraDiffAllowed = 1;
 
     //Search parameters
-    public int StartID = -1;
-    public int EndID = -1;
-    public static int ChosenClass = -1;
-    public static String ChosenClassStr = "";
+    public int startID = -1;
+    public int endID = -1;
+    public static int chosenClassInt = -1;
+    public static String chosenClassStr = "";
 
     //Current deck.
-    public static int[] CardNumb = new int[30];
-    public static int[] CardCount = new int[30];
+    public static int[] currentDeckID = new int[30];
+    public static int[] currentDeckCount = new int[30];
+    public static BufferedImage[] tempImg = new BufferedImage[21];
 
-    public static int CurrentSlot = 0;
-    public static int TotCards = 0;
+    public static int currentSlot = 0;
+    public static int totalCards = 0;
 
     public Frame() {
     }
@@ -50,8 +51,8 @@ public class Frame {
     public void init() {
 
         for (int x = 0; x < 30; x++) {
-            CardNumb[x] = -1;
-            CardCount[x] = 0;
+            currentDeckID[x] = -1;
+            currentDeckCount[x] = 0;
         }
 
         for(String key : Main.PROPERTIES.stringPropertyNames()) {
@@ -63,8 +64,8 @@ public class Frame {
 
         Handler handler = new Handler();
 
-        timer = new Timer(interval, handler);
-        timerMore = new Timer(interval, handler);
+        timer = new Timer(timerInterval, handler);
+        timerMore = new Timer(timerInterval, handler);
 
         editorPane.setEditable(true);
         editorPane.setPreferredSize(new Dimension(190, 500));
@@ -184,26 +185,26 @@ public class Frame {
                 if(i==0){
                     ImgMatch(i);
                     i++;
-                    totalcards.setText("Cards found: " + TotCards);
+                    totalcards.setText("Cards found: " + totalCards);
                 }else if(i==20){
                     ImgMatch(i);
                     timer.stop();
                     i=0;
-                    totalcards.setText("Cards found: " + TotCards);
-                    if (TotCards<30){
-                        String str = "<html><font color=\"red\"> Only " + TotCards + " where found, please scroll <br> ALL the way down in your decklist <br> and then press \"Second Extraction\".</font>";
+                    totalcards.setText("Cards found: " + totalCards);
+                    if (totalCards<30){
+                        String str = "<html><font color=\"red\"> Only " + totalCards + " where found, please scroll <br> ALL the way down in your decklist <br> and then press \"Second Extraction\".</font>";
                         totalcards.setText(str);
                     }
 
                 }else{
                     ImgMatch(i);
                     i++;
-                    if (TotCards>29){
+                    if (totalCards>29){
                         timer.stop();
                         i=0;
-                        totalcards.setText("Cards found: " + TotCards);
+                        totalcards.setText("Cards found: " + totalCards);
                     }
-                    totalcards.setText("Cards found: " + TotCards);
+                    totalcards.setText("Cards found: " + totalCards);
                 }
                 UpdateWindow();
 
@@ -217,67 +218,67 @@ public class Frame {
                     i=0;
                 }else{
                     ImgMatch(i);
-                    if (TotCards>29){
+                    if (totalCards>29){
                         timerMore.stop();
                         i=0;
                     }
                     i--;
                 }
-                totalcards.setText("Cards found: " + TotCards);
+                totalcards.setText("Cards found: " + totalCards);
                 UpdateWindow();
             }else if("..as Warrior".equals(event.getActionCommand())){
-                ChosenClass=1;
-                ChosenClassStr="warrior";
-                StartID = 0;
-                EndID = 33;
+                chosenClassInt=1;
+                chosenClassStr="warrior";
+                startID = 0;
+                endID = 33;
                 StartSearch();
             }else if("..as Warlock".equals(event.getActionCommand())){
-                ChosenClass=2;
-                ChosenClassStr="warlock";
-                StartID = 34;
-                EndID = 67;
+                chosenClassInt=2;
+                chosenClassStr="warlock";
+                startID = 34;
+                endID = 67;
                 StartSearch();
             }else if("..as Shaman".equals(event.getActionCommand())){
-                ChosenClass=3;
-                ChosenClassStr="shaman";
-                StartID =68;
-                EndID =101;
+                chosenClassInt=3;
+                chosenClassStr="shaman";
+                startID =68;
+                endID =101;
                 StartSearch();
             }else if("..as Rogue".equals(event.getActionCommand())){
-                ChosenClass=4;
-                ChosenClassStr="rogue";
-                StartID =102;
-                EndID =135;
+                chosenClassInt=4;
+                chosenClassStr="rogue";
+                startID =102;
+                endID =135;
                 StartSearch();
             }else if("..as Priest".equals(event.getActionCommand())){
-                ChosenClass=5;
-                ChosenClassStr="priest";
-                StartID =136;
-                EndID =169;
+                chosenClassInt=5;
+                chosenClassStr="priest";
+                startID =136;
+                endID =169;
                 StartSearch();
             }else if("..as Paladin".equals(event.getActionCommand())){
-                ChosenClass=6;
-                ChosenClassStr="paladin";
-                StartID =170;
-                EndID =203;
+                chosenClassInt=6;
+                chosenClassStr="paladin";
+                startID =170;
+                endID =203;
                 StartSearch();
             }else if("..as Mage".equals(event.getActionCommand())){
-                ChosenClass=7;
-                ChosenClassStr="mage";
-                StartID =204;
-                EndID =237;
+                chosenClassInt=7;
+                chosenClassStr="mage";
+                startID =204;
+                endID =237;
                 StartSearch();
             }else if("..as Hunter".equals(event.getActionCommand())){
-                ChosenClass=8;
-                ChosenClassStr="hunter";
-                StartID =238;
-                EndID =271;
+                chosenClassInt=8;
+                chosenClassStr="hunter";
+                startID =238;
+                endID =271;
                 StartSearch();
             }else if("..as Druid".equals(event.getActionCommand())){
-                ChosenClass=9;
-                ChosenClassStr="druid";
-                StartID =272;
-                EndID =305;
+                chosenClassInt=9;
+                chosenClassStr="druid";
+                startID =272;
+                endID =305;
                 StartSearch();
             }else if("Export as Text File".equals(event.getActionCommand())){
                 RemoveSpace();
@@ -395,7 +396,7 @@ public class Frame {
                 );
             }else if("Second Extraction (If decklist has scroll)".equals(event.getActionCommand())){
                 GetScreenExtra();
-                CurrentSlot=29;
+                currentSlot=29;
                 i=8;
                 timerMore.start();
             } //End of Export as text file.
@@ -442,14 +443,8 @@ public class Frame {
         top[20] = 929;
 
         for (int x = 0; x < 21; x++) {
-            BufferedImage i = null;
-            i = robot.createScreenCapture(new Rectangle(pleft, (top[x] + 1), pwidth, pheight));
-            File output = new File("TempCards\\" + x + ".jpeg");
-            try {
-                ImageIO.write(i, "jpeg", output);
-            } catch (IOException p) {
-                p.printStackTrace();
-            }
+            //BufferedImage i = null;
+            tempImg[x] = robot.createScreenCapture(new Rectangle(pleft, (top[x] + 1), pwidth, pheight));
         }
 
     } //End of GetScreen
@@ -483,14 +478,8 @@ public class Frame {
         top[8] = 930;
 
         for (int x = 0; x < 9; x++) {
-            BufferedImage i = null;
-            i = robot.createScreenCapture(new Rectangle(pleft, (top[x] - 5), pwidth, pheight));
-            File output = new File("TempCards\\" + x + ".jpeg");
-            try {
-                ImageIO.write(i, "jpeg", output);
-            } catch (IOException p) {
-                p.printStackTrace();
-            }
+            //BufferedImage i = null;
+            tempImg[x] = robot.createScreenCapture(new Rectangle(pleft, (top[x] - 5), pwidth, pheight));
         }
 
     } //End of GetScreenExtra
@@ -502,24 +491,24 @@ public class Frame {
         boolean found = false;
 
         //Class search
-        for (int y = StartID; y < (EndID + 1); y++) {
+        for (int y = startID; y < (endID + 1); y++) {
             //Search for matching double cards
             // Create a compare object specifying the 2 images for comparison.
             Path path = Paths.get("DoubleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
             if (Files.exists(path)) {
-                test = ImgDiffPercent("TempCards\\" + x + ".jpeg", "DoubleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
-                if ((test < percentdiffallowed) || ((x == 20) && (test < (percentdiffallowed + extradifftwenty)))) {
+                test = ImgDiffPercent(tempImg[x], "DoubleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
+                if ((test < imgCompareDiffAllowed) || ((x == 20) && (test < (imgCompareDiffAllowed + lastImgExtraDiffAllowed)))) {
                     found = true;
-                    CardNumb[CurrentSlot] = y;
-                    CardCount[CurrentSlot] = 2;
-                    //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                    if (CurrentSlot > 20) {
-                        CurrentSlot--;
+                    currentDeckID[currentSlot] = y;
+                    currentDeckCount[currentSlot] = 2;
+                    //editorPane.setText(editorPane.getText() + currentDeckCount[currentSlot] +"x: " + Name[currentDeckID[currentSlot]] + "\n ");
+                    if (currentSlot > 20) {
+                        currentSlot--;
                     } else {
-                        CurrentSlot++;
+                        currentSlot++;
                     }
 
-                    TotCards = TotCards + 2;
+                    totalCards = totalCards + 2;
                     //Match found!
 
                 }
@@ -528,18 +517,18 @@ public class Frame {
             path = Paths.get("SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
             if (Files.exists(path)) {
 
-                test = ImgDiffPercent("TempCards\\" + x + ".jpeg", "SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
-                if ((test < percentdiffallowed) || ((x == 20) && (test < (percentdiffallowed + extradifftwenty)))) {
+                test = ImgDiffPercent(tempImg[x], "SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
+                if ((test < imgCompareDiffAllowed) || ((x == 20) && (test < (imgCompareDiffAllowed + lastImgExtraDiffAllowed)))) {
                     found = true;
-                    CardNumb[CurrentSlot] = y;
-                    CardCount[CurrentSlot]++;
-                    //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                    if (CurrentSlot > 20) {
-                        CurrentSlot--;
+                    currentDeckID[currentSlot] = y;
+                    currentDeckCount[currentSlot]++;
+                    //editorPane.setText(editorPane.getText() + currentDeckCount[currentSlot] +"x: " + Name[currentDeckID[currentSlot]] + "\n ");
+                    if (currentSlot > 20) {
+                        currentSlot--;
                     } else {
-                        CurrentSlot++;
+                        currentSlot++;
                     }
-                    TotCards++;
+                    totalCards++;
 
                 }
             }
@@ -555,18 +544,18 @@ public class Frame {
             // Create a compare object specifying the 2 images for comparison.
             Path path = Paths.get("DoubleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
             if (Files.exists(path)) {
-                test = ImgDiffPercent("TempCards\\" + x + ".jpeg", "DoubleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
-                if ((test < percentdiffallowed) || ((x == 20) && (test < (percentdiffallowed + extradifftwenty)))) {
+                test = ImgDiffPercent(tempImg[x], "DoubleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
+                if ((test < imgCompareDiffAllowed) || ((x == 20) && (test < (imgCompareDiffAllowed + lastImgExtraDiffAllowed)))) {
                     found = true;
-                    CardNumb[CurrentSlot] = y;
-                    CardCount[CurrentSlot] = 2;
-                    //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                    if (CurrentSlot > 20) {
-                        CurrentSlot--;
+                    currentDeckID[currentSlot] = y;
+                    currentDeckCount[currentSlot] = 2;
+                    //editorPane.setText(editorPane.getText() + currentDeckCount[currentSlot] +"x: " + Name[currentDeckID[currentSlot]] + "\n ");
+                    if (currentSlot > 20) {
+                        currentSlot--;
                     } else {
-                        CurrentSlot++;
+                        currentSlot++;
                     }
-                    TotCards = TotCards + 2;
+                    totalCards = totalCards + 2;
                     //Match found!
 
 
@@ -576,18 +565,18 @@ public class Frame {
             path = Paths.get("SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
             if (Files.exists(path)) {
 
-                test = ImgDiffPercent("TempCards\\" + x + ".jpeg", "SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
-                if ((test < percentdiffallowed) || ((x == 20) && (test < (percentdiffallowed + extradifftwenty)))) {
+                test = ImgDiffPercent(tempImg[x], "SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
+                if ((test < imgCompareDiffAllowed) || ((x == 20) && (test < (imgCompareDiffAllowed + lastImgExtraDiffAllowed)))) {
                     found = true;
-                    CardNumb[CurrentSlot] = y;
-                    CardCount[CurrentSlot]++;
-                    //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                    if (CurrentSlot > 20) {
-                        CurrentSlot--;
+                    currentDeckID[currentSlot] = y;
+                    currentDeckCount[currentSlot]++;
+                    //editorPane.setText(editorPane.getText() + currentDeckCount[currentSlot] +"x: " + Name[currentDeckID[currentSlot]] + "\n ");
+                    if (currentSlot > 20) {
+                        currentSlot--;
                     } else {
-                        CurrentSlot++;
+                        currentSlot++;
                     }
-                    TotCards++;
+                    totalCards++;
 
                 }
             }
@@ -606,18 +595,18 @@ public class Frame {
                 if (Files.exists(path)) {
 
 
-                    test = ImgDiffPercentUp("TempCards\\" + x + ".jpeg", "DoubleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
-                    if ((test < percentdiffallowed) || ((x == 20) && (test < (percentdiffallowed + extradifftwenty)))) {
+                    test = ImgDiffPercentUp(tempImg[x], "DoubleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
+                    if ((test < imgCompareDiffAllowed) || ((x == 20) && (test < (imgCompareDiffAllowed + lastImgExtraDiffAllowed)))) {
                         found = true;
-                        CardNumb[CurrentSlot] = y;
-                        CardCount[CurrentSlot] = 2;
-                        //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                        if (CurrentSlot > 20) {
-                            CurrentSlot--;
+                        currentDeckID[currentSlot] = y;
+                        currentDeckCount[currentSlot] = 2;
+                        //editorPane.setText(editorPane.getText() + currentDeckCount[currentSlot] +"x: " + Name[currentDeckID[currentSlot]] + "\n ");
+                        if (currentSlot > 20) {
+                            currentSlot--;
                         } else {
-                            CurrentSlot++;
+                            currentSlot++;
                         }
-                        TotCards = TotCards + 2;
+                        totalCards = totalCards + 2;
                         //Match found!
 
                     }
@@ -627,18 +616,18 @@ public class Frame {
                 path = Paths.get("SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
                 if (Files.exists(path)) {
 
-                    test = ImgDiffPercentUp("TempCards\\" + x + ".jpeg", "SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
-                    if ((test < percentdiffallowed) || ((x == 20) && (test < (percentdiffallowed + extradifftwenty)))) {
+                    test = ImgDiffPercentUp(tempImg[x], "SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
+                    if ((test < imgCompareDiffAllowed) || ((x == 20) && (test < (imgCompareDiffAllowed + lastImgExtraDiffAllowed)))) {
                         found = true;
-                        CardNumb[CurrentSlot] = y;
-                        CardCount[CurrentSlot]++;
-                        //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                        if (CurrentSlot > 20) {
-                            CurrentSlot--;
+                        currentDeckID[currentSlot] = y;
+                        currentDeckCount[currentSlot]++;
+                        //editorPane.setText(editorPane.getText() + currentDeckCount[currentSlot] +"x: " + Name[currentDeckID[currentSlot]] + "\n ");
+                        if (currentSlot > 20) {
+                            currentSlot--;
                         } else {
-                            CurrentSlot++;
+                            currentSlot++;
                         }
-                        TotCards++;
+                        totalCards++;
 
                     }
                 }
@@ -647,18 +636,18 @@ public class Frame {
                 if (Files.exists(path)) {
 
 
-                    test = ImgDiffPercentDown("TempCards\\" + x + ".jpeg", "DoubleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
-                    if ((test < percentdiffallowed) || ((x == 20) && (test < (percentdiffallowed + extradifftwenty)))) {
+                    test = ImgDiffPercentDown(tempImg[x], "DoubleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
+                    if ((test < imgCompareDiffAllowed) || ((x == 20) && (test < (imgCompareDiffAllowed + lastImgExtraDiffAllowed)))) {
                         found = true;
-                        CardNumb[CurrentSlot] = y;
-                        CardCount[CurrentSlot] = 2;
-                        //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                        if (CurrentSlot > 20) {
-                            CurrentSlot--;
+                        currentDeckID[currentSlot] = y;
+                        currentDeckCount[currentSlot] = 2;
+                        //editorPane.setText(editorPane.getText() + currentDeckCount[currentSlot] +"x: " + Name[currentDeckID[currentSlot]] + "\n ");
+                        if (currentSlot > 20) {
+                            currentSlot--;
                         } else {
-                            CurrentSlot++;
+                            currentSlot++;
                         }
-                        TotCards = TotCards + 2;
+                        totalCards = totalCards + 2;
                         //Match found!
                     }
                 }
@@ -667,18 +656,18 @@ public class Frame {
                 path = Paths.get("SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
                 if (Files.exists(path)) {
 
-                    test = ImgDiffPercentDown("TempCards\\" + x + ".jpeg", "SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
-                    if ((test < percentdiffallowed) || ((x == 20) && (test < (percentdiffallowed + extradifftwenty)))) {
+                    test = ImgDiffPercentDown(tempImg[x], "SingleImgTemplate\\" + Main.PROPERTIES.getProperty("blizzard.id."+y) + ".jpeg");
+                    if ((test < imgCompareDiffAllowed) || ((x == 20) && (test < (imgCompareDiffAllowed + lastImgExtraDiffAllowed)))) {
                         found = true;
-                        CardNumb[CurrentSlot] = y;
-                        CardCount[CurrentSlot]++;
-                        //editorPane.setText(editorPane.getText() + CardCount[CurrentSlot] +"x: " + Name[CardNumb[CurrentSlot]] + "\n ");
-                        if (CurrentSlot > 20) {
-                            CurrentSlot--;
+                        currentDeckID[currentSlot] = y;
+                        currentDeckCount[currentSlot]++;
+                        //editorPane.setText(editorPane.getText() + currentDeckCount[currentSlot] +"x: " + Name[currentDeckID[currentSlot]] + "\n ");
+                        if (currentSlot > 20) {
+                            currentSlot--;
                         } else {
-                            CurrentSlot++;
+                            currentSlot++;
                         }
-                        TotCards++;
+                        totalCards++;
 
                     }
                 }
@@ -697,11 +686,11 @@ public class Frame {
         String URL = "http://www.hearthpwn.com/deckbuilder/";
 
 
-        URL = URL + ChosenClassStr + "#";
+        URL = URL + chosenClassStr + "#";
 
         for (int m = 0; m < 30; m++) {
-            if (CardNumb[m] > -1) {
-                URL = URL + Main.PROPERTIES.getProperty("heartpwn.id."+CardNumb[m]) + ":" + CardCount[m] + ";";
+            if (currentDeckID[m] > -1) {
+                URL = URL + Main.PROPERTIES.getProperty("hearthpwn.id."+currentDeckID[m]) + ":" + currentDeckCount[m] + ";";
             }
         }
         openWebpage(URL);
@@ -711,11 +700,11 @@ public class Frame {
     public static String CreateTxt() {
         String str = "";
         for (int m = 0; m < 30; m++) {
-            if (CardNumb[m] > -1) {
-                if (CardCount[m] == 2) {
-                    str = str + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\r\n" + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\r\n";
-                } else if (CardCount[m] == 1) {
-                    str = str + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\r\n";
+            if (currentDeckID[m] > -1) {
+                if (currentDeckCount[m] == 2) {
+                    str = str + Main.PROPERTIES.getProperty("card.name."+currentDeckID[m]) + "\r\n" + Main.PROPERTIES.getProperty("card.name."+currentDeckID[m]) + "\r\n";
+                } else if (currentDeckCount[m] == 1) {
+                    str = str + Main.PROPERTIES.getProperty("card.name."+currentDeckID[m]) + "\r\n";
                 } else {
                 }
             }
@@ -727,11 +716,11 @@ public class Frame {
     public static String CreateTxtNum() {
         String str = "";
         for (int m = 0; m < 30; m++) {
-            if (CardNumb[m] > -1) {
-                if (CardCount[m] == 2) {
-                    str = str + "2x: " + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\r\n";
-                } else if (CardCount[m] == 1) {
-                    str = str + "1x: " + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\r\n";
+            if (currentDeckID[m] > -1) {
+                if (currentDeckCount[m] == 2) {
+                    str = str + "2x: " + Main.PROPERTIES.getProperty("card.name."+currentDeckID[m]) + "\r\n";
+                } else if (currentDeckCount[m] == 1) {
+                    str = str + "1x: " + Main.PROPERTIES.getProperty("card.name."+currentDeckID[m]) + "\r\n";
                 } else {
                 }
             }
@@ -745,15 +734,15 @@ public class Frame {
         str = str + "<Deck>" + "\r\n";
         str = str + " <Cards>" + "\r\n";
         for (int m = 0; m < 30; m++) {
-            if (CardNumb[m] > -1) {
+            if (currentDeckID[m] > -1) {
                 str = str + "  <Card>" + "\r\n";
-                str = str + "   <Id>" + Main.PROPERTIES.getProperty("blizzard.id."+CardNumb[m]) + "</Id>" + "\r\n";
-                str = str + "   <Count>" + CardCount[m] + "</Count>" + "\r\n";
+                str = str + "   <Id>" + Main.PROPERTIES.getProperty("blizzard.id."+currentDeckID[m]) + "</Id>" + "\r\n";
+                str = str + "   <Count>" + currentDeckCount[m] + "</Count>" + "\r\n";
                 str = str + "  </Card>" + "\r\n";
             }
         }
         str = str + " </Cards>" + "\r\n";
-        str = str + " <Class>" + capitalizeFirstLetter(ChosenClassStr) + "</Class>" + "\r\n";
+        str = str + " <Class>" + capitalizeFirstLetter(chosenClassStr) + "</Class>" + "\r\n";
         str = str + " <Name>" + name + "</Name>" + "\r\n";
         str = str + " <Note />" + "\r\n";
         str = str + " <Tags />" + "\r\n";
@@ -788,8 +777,8 @@ public class Frame {
     public static void UpdateWindow() {
         editorPane.setText(" ");
         for (int m = 0; m < 30; m++) {
-            if (CardCount[m] > 0) {
-                editorPane.setText(editorPane.getText() + CardCount[m] + "x: " + Main.PROPERTIES.getProperty("card.name."+CardNumb[m]) + "\n ");
+            if (currentDeckCount[m] > 0) {
+                editorPane.setText(editorPane.getText() + currentDeckCount[m] + "x: " + Main.PROPERTIES.getProperty("card.name."+currentDeckID[m]) + "\n ");
             }
         }
     }
@@ -797,16 +786,16 @@ public class Frame {
     //Remove spaces in array keeping track of cards when search is done, also put one gold and one normal cards togeather as one.
     public static void RemoveSpace() {
         for (int m = 0; m < 29; m++) {
-            if (CardNumb[m] == CardNumb[m + 1]) {
-                CardCount[m] = 2;
-                CardCount[m + 1] = 0;
-                CardNumb[m + 1] = -1;
+            if (currentDeckID[m] == currentDeckID[m + 1]) {
+                currentDeckCount[m] = 2;
+                currentDeckCount[m + 1] = 0;
+                currentDeckID[m + 1] = -1;
             }
         }
         for (int m = 0; m < 29; m++) {
-            if (CardCount[m] == -1) {
-                CardCount[m] = CardCount[m + 1];
-                CardNumb[m] = CardNumb[m + 1];
+            if (currentDeckCount[m] == -1) {
+                currentDeckCount[m] = currentDeckCount[m + 1];
+                currentDeckID[m] = currentDeckID[m + 1];
             }
         }
 
@@ -826,11 +815,11 @@ public class Frame {
         //Button pressed
         editorPane.setText(" ");
         for (int x = 0; x < 30; x++) {
-            CardNumb[x] = -1;
-            CardCount[x] = 0;
+            currentDeckID[x] = -1;
+            currentDeckCount[x] = 0;
         }
-        CurrentSlot = 0;
-        TotCards = 0;
+        currentSlot = 0;
+        totalCards = 0;
         editorPane.setText(" ");
         i = 0;
         GetScreen();
@@ -840,13 +829,13 @@ public class Frame {
 
     //Img compare function
     //Following function almost 100% taken from: http://rosettacode.org/wiki/Percentage_difference_between_images
-    public static double ImgDiffPercent(String IMG1, String IMG2) {
-        BufferedImage img1 = null;
+    public static double ImgDiffPercent(BufferedImage img1, String IMG2) {
+        //BufferedImage img1 = null;
         BufferedImage img2 = null;
         try {
             //URL url1 = new URL("http://rosettacode.org/mw/images/3/3c/Lenna50.jpg");
             //URL url2 = new URL("http://rosettacode.org/mw/images/b/b6/Lenna100.jpg");
-            img1 = ImageIO.read(new File(IMG1));
+            //img1 = ImageIO.read(new File(IMG1));
             img2 = ImageIO.read(new File(IMG2));
         } catch (IOException e) {
             e.printStackTrace();
@@ -885,13 +874,13 @@ public class Frame {
 
     //Img compare function one pixel up
     //Following function almost 100% taken from: http://rosettacode.org/wiki/Percentage_difference_between_images
-    public static double ImgDiffPercentUp(String IMG1, String IMG2) {
-        BufferedImage cimg1 = null;
+    public static double ImgDiffPercentUp(BufferedImage cimg1, String IMG2) {
+        //BufferedImage cimg1 = null;
         BufferedImage cimg2 = null;
         try {
             //URL url1 = new URL("http://rosettacode.org/mw/images/3/3c/Lenna50.jpg");
             //URL url2 = new URL("http://rosettacode.org/mw/images/b/b6/Lenna100.jpg");
-            cimg1 = ImageIO.read(new File(IMG1));
+            //cimg1 = ImageIO.read(new File(IMG1));
             cimg2 = ImageIO.read(new File(IMG2));
         } catch (IOException e) {
             e.printStackTrace();
@@ -931,13 +920,13 @@ public class Frame {
 
     //Img compare function one pixel down
     //Following function almost 100% taken from: http://rosettacode.org/wiki/Percentage_difference_between_images
-    public static double ImgDiffPercentDown(String IMG1, String IMG2) {
-        BufferedImage cimg1 = null;
+    public static double ImgDiffPercentDown(BufferedImage cimg1, String IMG2) {
+        //BufferedImage cimg1 = null;
         BufferedImage cimg2 = null;
         try {
             //URL url1 = new URL("http://rosettacode.org/mw/images/3/3c/Lenna50.jpg");
             //URL url2 = new URL("http://rosettacode.org/mw/images/b/b6/Lenna100.jpg");
-            cimg1 = ImageIO.read(new File(IMG1));
+            //cimg1 = ImageIO.read(new File(IMG1));
             cimg2 = ImageIO.read(new File(IMG2));
         } catch (IOException e) {
             e.printStackTrace();
