@@ -20,6 +20,9 @@ import java.util.Properties;
 public class Main {
     public static final int[] cardNumb = new int[30];
     public static final int[] cardCount = new int[30];
+
+
+
     public static final double percentDiffAllowed = 9;
     public static final double extraDiffTwenty = 1;
     public static Properties PROPERTIES;
