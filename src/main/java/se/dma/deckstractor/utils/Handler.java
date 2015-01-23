@@ -24,7 +24,7 @@ public class Handler implements ActionListener {
         if (event.getSource() == Main.timer) {
             //Timer pulse
             if (i == 20) {
-                comparer.imgFind(i);
+                comparer.imgFind(false);
                 Main.timer.stop();
                 i = 0;
                 Frame.cardsFound.setText("Cards found: " + Main.totCards);
@@ -33,7 +33,7 @@ public class Handler implements ActionListener {
                     Frame.cardsFound.setText(str);
                 }
             } else {
-                comparer.imgFind(i);
+                comparer.imgFind(false);
                 i++;
                 if (Main.totCards > 29) {
                     Main.timer.stop();
@@ -48,11 +48,11 @@ public class Handler implements ActionListener {
 
             //Timer pulse
             if (i == 0) {
-                comparer.imgFind(i);
+                comparer.imgFind(true);
                 Main.timerMore.stop();
                 i = 0;
             } else {
-                comparer.imgFind(i);
+                comparer.imgFind(true);
                 if (Main.totCards > 29) {
                     Main.timerMore.stop();
                     i = 0;
