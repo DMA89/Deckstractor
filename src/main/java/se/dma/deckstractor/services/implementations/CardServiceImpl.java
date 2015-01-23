@@ -45,4 +45,9 @@ public class CardServiceImpl implements CardService {
     public void updateCard(Card card) {
         repo.updateCard(card);
     }
+
+    @Override
+    public void initializeCardDatabase() {
+        repo.initializeCardDatabase();
+    }
 }

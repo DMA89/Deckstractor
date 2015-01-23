@@ -13,6 +13,8 @@ import java.util.ArrayList;
  */
 public class XstreamClassRepository implements ClassRepository {
 
+    public static ArrayList<HearthstoneClass> hearthstoneClasses = new ArrayList();
+
     @Override
     public long saveHearthstoneClass(HearthstoneClass hearthstoneClass) {
         hearthstoneClass.setId(FileCounter.getFile("src/main/resources/xstream/hearthstoneclasses/"));
@@ -32,19 +34,7 @@ public class XstreamClassRepository implements ClassRepository {
 
     @Override
     public HearthstoneClass getHearthstoneClass(long id) {
-        InputStream in = getClass().getResourceAsStream("/main/resources/xstream/hearthstoneclasses/" + id + ".xml");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-        StringBuffer buffer = new StringBuffer();
-        String line = null;
-        try {
-            while ((line = reader.readLine()) != null) {
-                buffer.append(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        HearthstoneClass hearthstoneClass = (HearthstoneClass) Main.xstream.fromXML(buffer.toString());
-        return hearthstoneClass;
+        return hearthstoneClasses.get((int)id);
     }
 
     @Override
@@ -99,5 +89,30 @@ public class XstreamClassRepository implements ClassRepository {
         }
         writer.println(xml);
         writer.close();
+    }
+
+    @Override
+    public void initializeClassDatabase() {
+        int nr = FileCounter.getFile("src/main/resources/xstream/hearthstoneclasses/");
+        for (int i = 0; i < nr; i++) {
+            hearthstoneClasses.add(getClassFromXML(i));
+        }
+    }
+
+
+    private HearthstoneClass getClassFromXML(long id){
+        InputStream in = getClass().getResourceAsStream("/main/resources/xstream/hearthstoneclasses/" + id + ".xml");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+        StringBuffer buffer = new StringBuffer();
+        String line = null;
+        try {
+            while ((line = reader.readLine()) != null) {
+                buffer.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        HearthstoneClass hearthstoneClass = (HearthstoneClass) Main.xstream.fromXML(buffer.toString());
+        return hearthstoneClass;
     }
 }

@@ -274,9 +274,9 @@ class Comparer {
         // Create a compare object specifying the 2 images for comparison.
         String path;
         if (single){
-            path = "SingleImgTemplate/" + Main.BlizzardID[j] + ".jpeg";
+            path = "SingleImgTemplate/" + Main.cardService.getCard(j).getBlizzardId() + ".jpeg";
         }else{
-            path = "DoubleImgTemplate/" + Main.BlizzardID[j] + ".jpeg";
+            path = "DoubleImgTemplate/" + Main.cardService.getCard(j).getBlizzardId() + ".jpeg";
         }
         if (Files.exists(Paths.get(path))) {
             test = ImgDiffPercent(tempImg[i],path,searchDirection);
@@ -307,7 +307,6 @@ class Comparer {
 
     public boolean imgFind(int i) {
         boolean found;
-        System.out.println(i);
         //Class search
         for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
 

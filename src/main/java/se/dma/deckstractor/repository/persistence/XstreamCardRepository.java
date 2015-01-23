@@ -13,6 +13,9 @@ import java.util.ArrayList;
  * Created by palle on 22/01/15.
  */
 public class XstreamCardRepository implements CardRepository {
+
+    public static ArrayList<Card> cards = new ArrayList();
+
     @Override
     public long saveCard(Card card) {
         card.setId(FileCounter.getFile("src/main/resources/xstream/cards/"));
@@ -32,28 +35,11 @@ public class XstreamCardRepository implements CardRepository {
 
     @Override
     public Card getCard(long id) {
-        InputStream in = getClass().getResourceAsStream("/main/resources/xstream/cards/" + id + ".xml");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-        StringBuffer buffer = new StringBuffer();
-        String line = null;
-        try {
-            while ((line = reader.readLine()) != null) {
-                buffer.append(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Card card = (Card) Main.xstream.fromXML(buffer.toString());
-        return card;
+        return cards.get((int)id);
     }
 
     @Override
     public ArrayList<Card> getAllCards() {
-        ArrayList<Card> cards = new ArrayList();
-        int nr = FileCounter.getFile("src/main/resources/xstream/cards/");
-        for (int i = 0; i < nr; i++) {
-            cards.add(getCard(i));
-        }
         return cards;
     }
 
@@ -99,5 +85,29 @@ public class XstreamCardRepository implements CardRepository {
         }
         writer.println(xml);
         writer.close();
+    }
+
+    @Override
+    public void initializeCardDatabase() {
+        int nr = FileCounter.getFile("src/main/resources/xstream/cards/");
+        for (int i = 0; i < nr; i++) {
+            cards.add(getCardFromXML(i));
+        }
+    }
+
+    private Card getCardFromXML(long id) {
+        InputStream in = getClass().getResourceAsStream("/main/resources/xstream/cards/" + id + ".xml");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+        StringBuffer buffer = new StringBuffer();
+        String line = null;
+        try {
+            while ((line = reader.readLine()) != null) {
+                buffer.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Card card = (Card) Main.xstream.fromXML(buffer.toString());
+        return card;
     }
 }

@@ -50,4 +50,9 @@ public class MockCardRepository extends IdCounter implements CardRepository {
     public void updateCard(Card card) {
         repo.put(card.getId(), card);
     }
+
+    @Override
+    public void initializeCardDatabase() {
+        //TODO:Implement
+    }
 }

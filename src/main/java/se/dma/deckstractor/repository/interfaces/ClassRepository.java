@@ -20,4 +20,6 @@ public interface ClassRepository {
     void removeHearthstoneClass(long id);
 
     void updateHearthstoneClass(HearthstoneClass hearthstoneClass);
+
+    void initializeClassDatabase();
 }

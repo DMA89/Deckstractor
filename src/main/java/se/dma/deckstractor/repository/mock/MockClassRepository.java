@@ -51,4 +51,9 @@ public class MockClassRepository implements ClassRepository {
     public void updateHearthstoneClass(HearthstoneClass hearthstoneClass) {
         repo.put(hearthstoneClass.getId(), hearthstoneClass);
     }
+
+    @Override
+    public void initializeClassDatabase() {
+        //TODO:Implement
+    }
 }

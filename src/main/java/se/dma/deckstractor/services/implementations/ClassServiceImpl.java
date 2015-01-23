@@ -44,4 +44,9 @@ public class ClassServiceImpl implements ClassService {
     public void updateHearthstoneClass(HearthstoneClass hearthstoneClass) {
         repo.updateHearthstoneClass(hearthstoneClass);
     }
+
+    @Override
+    public void initializeClassDatabase() {
+        repo.initializeClassDatabase();
+    }
 }

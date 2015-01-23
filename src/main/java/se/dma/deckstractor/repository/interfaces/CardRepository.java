@@ -21,4 +21,6 @@ public interface CardRepository {
     void removeCard(long id);
 
     void updateCard(Card card);
+
+    void initializeCardDatabase();
 }
