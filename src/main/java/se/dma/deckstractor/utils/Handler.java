@@ -186,6 +186,8 @@ public class Handler implements ActionListener {
 
     public static void StartSearch() {
         //Button pressed
+        threadsRunning = 0;
+        threadsStarted = 0;
         Frame.editorPane.setText(" ");
         for (int x = 0; x < 30; x++) {
             Main.cardNumb[x] = -1;
@@ -211,6 +213,7 @@ public class Handler implements ActionListener {
 
     public static void ComplementSearch() {
         threadsStarted = 0;
+        threadsRunning = 0;
         while(Main.totCards < 30 && threadsStarted < 9) {
             System.out.println(threadsStarted);
             if(threadsRunning < Runtime.getRuntime().availableProcessors()) {
