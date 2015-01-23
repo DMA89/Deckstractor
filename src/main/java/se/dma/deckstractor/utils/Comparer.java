@@ -268,7 +268,7 @@ class Comparer {
 
 
     //Match images
-    public boolean ImageMatchCheck(int i, int j, boolean single, int searchDirection){
+    public boolean ImageMatchCheck(int i, int j, boolean single, int searchDirection, int currentSlot){
         //Card card;
         //card = Main.cardService.getCard(j);
         // Create a compare object specifying the 2 images for comparison.
@@ -281,18 +281,13 @@ class Comparer {
         if (Files.exists(Paths.get(path))) {
             test = ImgDiffPercent(tempImg[i],path,searchDirection);
             if ((test < Main.percentDiffAllowed) || ((i == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
-                Main.cardNumb[Main.currentSlot] = j;
+                Main.cardNumb[currentSlot] = j;
                 if (single){
-                    Main.cardCount[Main.currentSlot]++;
+                    Main.cardCount[currentSlot]++;
                     Main.totCards++;
                 }else{
-                    Main.cardCount[Main.currentSlot] = 2;
+                    Main.cardCount[currentSlot] = 2;
                     Main.totCards = Main.totCards + 2;
-                }
-                if (Main.currentSlot > 20) {
-                    Main.currentSlot--;
-                } else {
-                    Main.currentSlot++;
                 }
                 return true;
             }else{
@@ -305,14 +300,43 @@ class Comparer {
 
 
 
-    public boolean imgFind(int i) {
+    public boolean imgFind(boolean complimentSearch) {
         boolean found;
+        int currentSlot = -1;
+        int i = -1;
+        if (complimentSearch){
+            i=8;
+            for (int u = 29; u > 20; u--) {
+                if (Main.cardNumb[u] == -1) {
+                    currentSlot = u;
+                    Main.cardNumb[u] = -2;
+                    break;
+                }else{
+                    i--;
+                }
+
+            }
+        }else {
+            for (int u = 0; u < 21; u++) {
+                if (Main.cardNumb[u] == -1) {
+                    currentSlot = u;
+                    Main.cardNumb[u] = -2;
+                    i = u;
+                    break;
+                }
+            }
+        }
+        if (currentSlot==-1){
+            return false;
+        }
+        System.out.println("i:" + i);
+        System.out.println("currentSlot:" + currentSlot);
         //Class search
         for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
 
-            found = ImageMatchCheck(i, j, false, 0);
+            found = ImageMatchCheck(i, j, false, 0, currentSlot);
             if (!found) {
-                found = ImageMatchCheck(i, j, true, 0);
+                found = ImageMatchCheck(i, j, true, 0, currentSlot);
             }
             if (found) {
                 return true;
@@ -322,9 +346,9 @@ class Comparer {
 
         //Neutral search
         for (int j = 306; j < 535; j++) {
-            found = ImageMatchCheck(i, j, false, 0);
+            found = ImageMatchCheck(i, j, false, 0, currentSlot);
             if (!found) {
-                found = ImageMatchCheck(i, j, true, 0);
+                found = ImageMatchCheck(i, j, true, 0, currentSlot);
             }
             if (found) {
                 return true;
@@ -336,18 +360,18 @@ class Comparer {
         System.out.println("Extra search engaged");
         for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
                 //One pixel up, double.
-                found = ImageMatchCheck(i, j, false, -1);
+                found = ImageMatchCheck(i, j, false, -1, currentSlot);
                 if (!found){
                     //One pixel up, single cards
-                    found = ImageMatchCheck(i, j, true, -1);
+                    found = ImageMatchCheck(i, j, true, -1, currentSlot);
                 }
                 if (!found){
                     //One pixel down, double cards
-                    found = ImageMatchCheck(i, j, false, 1);
+                    found = ImageMatchCheck(i, j, false, 1, currentSlot);
                 }
                 if (!found){
                     //One pixel down, single cards
-                    found = ImageMatchCheck(i, j, true, 1);
+                    found = ImageMatchCheck(i, j, true, 1, currentSlot);
                 }
                 if (found){
                     return true;
@@ -355,18 +379,18 @@ class Comparer {
         }
         for (int j = 306; j < 535; j++) {
             //One pixel up, double.
-            found = ImageMatchCheck(i, j, false, -1);
+            found = ImageMatchCheck(i, j, false, -1, currentSlot);
             if (!found) {
                 //One pixel up, single cards
-                found = ImageMatchCheck(i, j, true, -1);
+                found = ImageMatchCheck(i, j, true, -1, currentSlot);
             }
             if (!found) {
                 //One pixel up, single cards
-                found = ImageMatchCheck(i, j, false, 1);
+                found = ImageMatchCheck(i, j, false, 1, currentSlot);
             }
             if (!found) {
                 //One pixel up, single cards
-                found = ImageMatchCheck(i, j, true, 1);
+                found = ImageMatchCheck(i, j, true, 1, currentSlot);
             }
             if (found) {
                 return true;
