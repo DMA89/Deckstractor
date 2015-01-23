@@ -68,40 +68,7 @@ public class Handler implements ActionListener {
             File output;
             JTextArea textarea;
             switch (event.getActionCommand()) {
-                case "..as Warrior":
-                    Main.chosenClass = Main.classService.getHearthstoneClassByName("Warrior");
-                    comparer.StartSearch(Frame.editorPane);
-                    break;
-                case "..as Warlock":
-                    Main.chosenClass = Main.classService.getHearthstoneClassByName("Warlock");
-                    comparer.StartSearch(Frame.editorPane);
-                    break;
-                case "..as Shaman":
-                    Main.chosenClass = Main.classService.getHearthstoneClassByName("Shaman");
-                    comparer.StartSearch(Frame.editorPane);
-                    break;
-                case "..as Rogue":
-                    Main.chosenClass = Main.classService.getHearthstoneClassByName("Rogue");
-                    comparer.StartSearch(Frame.editorPane);
-                    break;
-                case "..as Priest":
-                    Main.chosenClass = Main.classService.getHearthstoneClassByName("Priest");
-                    comparer.StartSearch(Frame.editorPane);
-                    break;
-                case "..as Paladin":
-                    Main.chosenClass = Main.classService.getHearthstoneClassByName("Paladin");
-                    comparer.StartSearch(Frame.editorPane);
-                    break;
-                case "..as Mage":
-                    Main.chosenClass = Main.classService.getHearthstoneClassByName("Mage");
-                    comparer.StartSearch(Frame.editorPane);
-                    break;
-                case "..as Hunter":
-                    Main.chosenClass = Main.classService.getHearthstoneClassByName("Hunter");
-                    comparer.StartSearch(Frame.editorPane);
-                    break;
-                case "..as Druid":
-                    Main.chosenClass = Main.classService.getHearthstoneClassByName("Druid");
+                case "Extract":
                     comparer.StartSearch(Frame.editorPane);
                     break;
                 case "Export as Text File":
@@ -132,6 +99,8 @@ public class Handler implements ActionListener {
                         m.printStackTrace();
                     }
                     im = robot.createScreenCapture(new Rectangle(1510, 121, 50, 25));
+                    //Old capture for class recognition
+                    //im = robot.createScreenCapture(new Rectangle(1420, 30, 25, 25));
                     output = new File("SingleImgTemplate.jpeg");
                     try {
                         ImageIO.write(im, "jpeg", output);

@@ -35,8 +35,105 @@ class Comparer {
         Main.totCards = 0;
         editorPane.setText(" ");
         Comparer.GetScreen();
+        Comparer.CheckClass();
         Main.timer.start();
     }
+
+    private static void CheckClass(){
+        Robot robot;
+        robot = null;
+        Double test = 50.0;
+        Double percentDifference = 10.0;
+        try {
+            robot = new Robot();
+        } catch (AWTException m) {
+            m.printStackTrace();
+        }
+        BufferedImage classScreenShot = robot.createScreenCapture(new Rectangle(1420, 30, 25, 25));
+        String path;
+        
+        path = "class-images/" + "constructed-warrior" + ".jpeg";
+        if (Files.exists(Paths.get(path))){
+            test = ImgDiffPercent(classScreenShot, path, 0);
+        }
+        System.out.println(test);
+        if (test<percentDifference){
+            Main.chosenClass = Main.classService.getHearthstoneClassByName("Warrior");
+        }
+        
+        path = "class-images/" + "constructed-warlock" + ".jpeg";
+        if (Files.exists(Paths.get(path))){
+            test = ImgDiffPercent(classScreenShot, path, 0);
+        }
+        System.out.println(test);
+        if (test<percentDifference){
+            Main.chosenClass = Main.classService.getHearthstoneClassByName("Warlock");
+        }
+        
+        path = "class-images/" + "constructed-shaman" + ".jpeg";
+        if (Files.exists(Paths.get(path))) {
+            test = ImgDiffPercent(classScreenShot, path, 0);
+        }
+        System.out.println(test);
+        if (test<percentDifference){
+            Main.chosenClass = Main.classService.getHearthstoneClassByName("Shaman");
+        }
+
+        path = "class-images/" + "constructed-rogue" + ".jpeg";
+        if (Files.exists(Paths.get(path))) {
+            test = ImgDiffPercent(classScreenShot, path, 0);
+        }
+        System.out.println(test);
+        if (test<percentDifference){
+            Main.chosenClass = Main.classService.getHearthstoneClassByName("Rogue");
+        }
+
+        path = "class-images/" + "constructed-priest" + ".jpeg";
+        if (Files.exists(Paths.get(path))) {
+            test = ImgDiffPercent(classScreenShot, path, 0);
+        }
+        System.out.println(test);
+        if (test<percentDifference){
+            Main.chosenClass = Main.classService.getHearthstoneClassByName("Priest");
+        }
+
+        path = "class-images/" + "constructed-paladin" + ".jpeg";
+        if (Files.exists(Paths.get(path))) {
+            test = ImgDiffPercent(classScreenShot, path, 0);
+        }
+        System.out.println(test);
+        if (test<percentDifference){
+            Main.chosenClass = Main.classService.getHearthstoneClassByName("Paladin");
+        }
+
+        path = "class-images/" + "constructed-mage" + ".jpeg";
+        if (Files.exists(Paths.get(path))) {
+            test = ImgDiffPercent(classScreenShot, path, 0);
+        }
+        System.out.println(test);
+        if (test<percentDifference){
+            Main.chosenClass = Main.classService.getHearthstoneClassByName("Mage");
+        }
+
+        path = "class-images/" + "constructed-hunter" + ".jpeg";
+        if (Files.exists(Paths.get(path))) {
+            test = ImgDiffPercent(classScreenShot, path, 0);
+        }
+        System.out.println(test);
+        if (test<percentDifference){
+            Main.chosenClass = Main.classService.getHearthstoneClassByName("Hunter");
+        }
+
+        path = "class-images/" + "constructed-druid" + ".jpeg";
+        if (Files.exists(Paths.get(path))) {
+            test = ImgDiffPercent(classScreenShot, path, 0);
+        }
+        System.out.println(test);
+        if (test<percentDifference){
+            Main.chosenClass = Main.classService.getHearthstoneClassByName("Druid");
+        }
+    }
+
 
     //Take printscreens for normal search
     private static void GetScreen() {
@@ -172,14 +269,14 @@ class Comparer {
 
     //Match images
     public boolean ImageMatchCheck(int i, int j, boolean single, int searchDirection){
-        Card card;
-        card = Main.cardService.getCard(j);
+        //Card card;
+        //card = Main.cardService.getCard(j);
         // Create a compare object specifying the 2 images for comparison.
         String path;
         if (single){
-            path = "SingleImgTemplate/" + card.getBlizzardId() + ".jpeg";
+            path = "SingleImgTemplate/" + Main.BlizzardID[j] + ".jpeg";
         }else{
-            path = "DoubleImgTemplate/" + card.getBlizzardId() + ".jpeg";
+            path = "DoubleImgTemplate/" + Main.BlizzardID[j] + ".jpeg";
         }
         if (Files.exists(Paths.get(path))) {
             test = ImgDiffPercent(tempImg[i],path,searchDirection);

@@ -20,7 +20,7 @@ import java.util.Properties;
 public class Main {
     public static final int[] cardNumb = new int[30];
     public static final int[] cardCount = new int[30];
-
+    public static String[] BlizzardID = new String[535];
 
 
     public static final double percentDiffAllowed = 9;
@@ -34,12 +34,20 @@ public class Main {
     public static ClassService classService = new ClassServiceImpl();
     public static CardService cardService = new CardServiceImpl();
 
+
     public static XStream xstream;
 
     public static void main(String[] args) {
         xstream = new XStream(new Dom4JDriver());
         xstream.alias("card", Card.class);
         xstream.alias("hearthstoneclass", HearthstoneClass.class);
+
+        Card card;
+
+        for (int i = 0; i < 535; i++){
+            card = Main.cardService.getCard(i);
+            BlizzardID[i]=card.getBlizzardId();
+        }
         //initializeDatabase();
         try {
             if (OSValidator.isWindows()) {
