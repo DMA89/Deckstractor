@@ -28,16 +28,17 @@ class Comparer extends Thread {
     public void run() {
         boolean found = imgFind(complementSearch);
         if(found) {
-            Handler.threadsRunning--;
             try {
+                Handler.threadsRunning--;
+                Handler.threadsStarted++;
                 System.out.println("Thread killed");
                 t.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         } else {
-            Handler.threadsRunning--;
             try {
+                Handler.threadsRunning--;
                 System.out.println("Thread killed");
                 t.join();
             } catch (InterruptedException e) {
@@ -48,6 +49,7 @@ class Comparer extends Thread {
 
     public void start ()
     {
+        Handler.threadsRunning++;
         System.out.println("Threads running: " + Handler.threadsRunning);
         if (t == null)
         {
@@ -265,8 +267,6 @@ class Comparer extends Thread {
         if (currentSlot==-1){
             return false;
         }
-        System.out.println("i:" + i);
-        System.out.println("currentSlot:" + currentSlot);
         //Class search
         for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
 

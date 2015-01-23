@@ -197,11 +197,10 @@ public class Handler implements ActionListener {
         GetScreen();
         Comparer.CheckClass();
         while(Main.totCards < 30 && threadsStarted < 21) {
+            System.out.println(threadsStarted);
             if(threadsRunning < Runtime.getRuntime().availableProcessors()) {
                 Comparer comparer = new Comparer(false);
                 comparer.start();
-                threadsRunning++;
-                threadsStarted++;
                 Frame.cardsFound.setText("Cards found: " + Main.totCards);
                 Frame.UpdateWindow();
             }
@@ -213,11 +212,10 @@ public class Handler implements ActionListener {
     public static void ComplementSearch() {
         threadsStarted = 0;
         while(Main.totCards < 30 && threadsStarted < 9) {
+            System.out.println(threadsStarted);
             if(threadsRunning < Runtime.getRuntime().availableProcessors()) {
                 Comparer comparer = new Comparer(true);
                 comparer.start();
-                threadsRunning++;
-                threadsStarted++;
                 Frame.cardsFound.setText("Cards found: " + Main.totCards);
                 Frame.UpdateWindow();
             }
