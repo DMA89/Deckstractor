@@ -1,10 +1,8 @@
 package main.java.se.dma.deckstractor.utils;
 
 import main.java.se.dma.deckstractor.Main;
-import main.java.se.dma.deckstractor.domain.Card;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -17,29 +15,48 @@ import java.nio.file.Paths;
  */
 
 
-class Comparer {
+class Comparer extends Thread {
 
-
-    public static BufferedImage tempImg[] = new BufferedImage[21];
     private double test = 0;
-
-    //Start new search
-    public static void StartSearch(JEditorPane editorPane) {
-        //Button pressed
-        editorPane.setText(" ");
-        for (int x = 0; x < 30; x++) {
-            Main.cardNumb[x] = -1;
-            Main.cardCount[x] = 0;
-        }
-        Main.currentSlot = 0;
-        Main.totCards = 0;
-        editorPane.setText(" ");
-        Comparer.GetScreen();
-        Comparer.CheckClass();
-        Main.timer.start();
+    private Thread t;
+    boolean complementSearch;
+    public Comparer(boolean complimentSearch) {
+        this.complementSearch = complimentSearch;
     }
 
-    private static void CheckClass(){
+    //Start new search
+    public void run() {
+        boolean found = imgFind(complementSearch);
+        if(found) {
+            Handler.threadsRunning--;
+            try {
+                System.out.println("Thread killed");
+                t.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        } else {
+            Handler.threadsRunning--;
+            try {
+                System.out.println("Thread killed");
+                t.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void start ()
+    {
+        System.out.println("Threads running: " + Handler.threadsRunning);
+        if (t == null)
+        {
+            t = new Thread (this);
+            t.start ();
+        }
+    }
+
+    public static void CheckClass(){
         Robot robot;
         robot = null;
         Double test = 50.0;
@@ -51,7 +68,7 @@ class Comparer {
         }
         BufferedImage classScreenShot = robot.createScreenCapture(new Rectangle(1420, 30, 25, 25));
         String path;
-        
+
         path = "class-images/" + "constructed-warrior" + ".jpeg";
         if (Files.exists(Paths.get(path))){
             test = ImgDiffPercent(classScreenShot, path, 0);
@@ -60,7 +77,7 @@ class Comparer {
         if (test<percentDifference){
             Main.chosenClass = Main.classService.getHearthstoneClassByName("Warrior");
         }
-        
+
         path = "class-images/" + "constructed-warlock" + ".jpeg";
         if (Files.exists(Paths.get(path))){
             test = ImgDiffPercent(classScreenShot, path, 0);
@@ -69,7 +86,7 @@ class Comparer {
         if (test<percentDifference){
             Main.chosenClass = Main.classService.getHearthstoneClassByName("Warlock");
         }
-        
+
         path = "class-images/" + "constructed-shaman" + ".jpeg";
         if (Files.exists(Paths.get(path))) {
             test = ImgDiffPercent(classScreenShot, path, 0);
@@ -133,87 +150,6 @@ class Comparer {
             Main.chosenClass = Main.classService.getHearthstoneClassByName("Druid");
         }
     }
-
-
-    //Take printscreens for normal search
-    private static void GetScreen() {
-
-        int pLeft = 1510;
-        int pHeight = 25;
-        int pWidth = 50;
-
-        Robot robot = null;
-
-        try {
-            robot = new Robot();
-        } catch (AWTException m) {
-            m.printStackTrace();
-        }
-
-        //Capture screens distance to top:
-        int[] top = new int[21];
-        top[0] = 120;
-        top[1] = 161;
-        top[2] = 201;
-        top[3] = 242;
-        top[4] = 282;
-        top[5] = 322;
-        top[6] = 363;
-        top[7] = 403;
-        top[8] = 444;
-        top[9] = 484;
-        top[10] = 525;
-        top[11] = 565;
-        top[12] = 606;
-        top[13] = 646;
-        top[14] = 687;
-        top[15] = 727;
-        top[16] = 767;
-        top[17] = 808;
-        top[18] = 848;
-        top[19] = 889;
-        top[20] = 929;
-
-        for (int i = 0; i < 21; i++) {
-            tempImg[i] = robot.createScreenCapture(new Rectangle(pLeft, (top[i] + 1), pWidth, pHeight));
-        }
-
-    } //End of GetScreen
-
-    //Take printscreens for search after scroll
-    public static void GetScreenExtra() {
-
-        int pLeft = 1510;
-        int pHeight = 25;
-        int pWidth = 50;
-
-        Robot robot = null;
-
-        try {
-            robot = new Robot();
-        } catch (AWTException m) {
-            m.printStackTrace();
-        }
-
-        //Capture screens distance to top:
-        int[] top = new int[21];
-        top[0] = 606;
-        top[1] = 646;
-        top[2] = 687;
-        top[3] = 727;
-        top[4] = 767;
-        top[5] = 808;
-        top[6] = 849;
-        top[7] = 889;
-        top[8] = 930;
-
-        for (int i = 0; i < 9; i++) {
-            tempImg[i] = robot.createScreenCapture(new Rectangle(pLeft, (top[i] - 5), pWidth, pHeight));
-
-        }
-
-    } //End of GetScreenExtra
-
 
     //Img compare function
     // (First buffered image, String location for second image, search direction: -1 for up, 1 for down or 0 for stay the same)
@@ -279,7 +215,7 @@ class Comparer {
             path = "DoubleImgTemplate/" + Main.cardService.getCard(j).getBlizzardId() + ".jpeg";
         }
         if (Files.exists(Paths.get(path))) {
-            test = ImgDiffPercent(tempImg[i],path,searchDirection);
+            test = ImgDiffPercent(Handler.tempImg[i],path,searchDirection);
             if ((test < Main.percentDiffAllowed) || ((i == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
                 Main.cardNumb[currentSlot] = j;
                 if (single){

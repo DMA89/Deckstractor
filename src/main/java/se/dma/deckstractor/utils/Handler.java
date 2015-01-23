@@ -17,51 +17,12 @@ import java.io.IOException;
  */
 public class Handler implements ActionListener {
 
-    private final Comparer comparer = new Comparer();
-    private int i = 0;
+    public static BufferedImage tempImg[] = new BufferedImage[21];
+    public static int threadsRunning = 0;
+    public static int threadsStarted = 0;
+
 
     public void actionPerformed(ActionEvent event) {
-        if (event.getSource() == Main.timer) {
-            //Timer pulse
-            if (i == 20) {
-                comparer.imgFind(false);
-                Main.timer.stop();
-                i = 0;
-                Frame.cardsFound.setText("Cards found: " + Main.totCards);
-                if (Main.totCards < 30) {
-                    String str = "<html><font color=\"red\"> Only " + Main.totCards + " where found, please scroll <br> ALL the way down in your decklist <br> and then press \"Second Extraction\".</font>";
-                    Frame.cardsFound.setText(str);
-                }
-            } else {
-                comparer.imgFind(false);
-                i++;
-                if (Main.totCards > 29) {
-                    Main.timer.stop();
-                    i = 0;
-                }
-                Frame.cardsFound.setText("Cards found: " + Main.totCards);
-            }
-            Frame.UpdateWindow();
-
-
-        } else if (event.getSource() == Main.timerMore) {
-
-            //Timer pulse
-            if (i == 0) {
-                comparer.imgFind(true);
-                Main.timerMore.stop();
-                i = 0;
-            } else {
-                comparer.imgFind(true);
-                if (Main.totCards > 29) {
-                    Main.timerMore.stop();
-                    i = 0;
-                }
-                i--;
-            }
-            Frame.cardsFound.setText("Cards found: " + Main.totCards);
-            Frame.UpdateWindow();
-            } else {
             String str;
             Robot robot;
             BufferedImage im;
@@ -69,7 +30,7 @@ public class Handler implements ActionListener {
             JTextArea textarea;
             switch (event.getActionCommand()) {
                 case "Extract":
-                    comparer.StartSearch(Frame.editorPane);
+                    StartSearch();
                     break;
                 case "Export as Text File":
                     Frame.RemoveSpace();
@@ -139,12 +100,129 @@ public class Handler implements ActionListener {
                     );
                     break;
                 case "Second Extraction (If decklist has scroll)":
-                    Comparer.GetScreenExtra();
-                    Main.currentSlot = 29;
-                    i = 8;
-                    Main.timerMore.start();
+                    GetScreenExtra();
+                    ComplementSearch();
                     break;
             } //End of Export as text file.
+    }
+
+    //Take printscreens for normal search
+    private static void GetScreen() {
+
+        int pLeft = 1510;
+        int pHeight = 25;
+        int pWidth = 50;
+
+        Robot robot = null;
+
+        try {
+            robot = new Robot();
+        } catch (AWTException m) {
+            m.printStackTrace();
         }
+
+        //Capture screens distance to top:
+        int[] top = new int[21];
+        top[0] = 120;
+        top[1] = 161;
+        top[2] = 201;
+        top[3] = 242;
+        top[4] = 282;
+        top[5] = 322;
+        top[6] = 363;
+        top[7] = 403;
+        top[8] = 444;
+        top[9] = 484;
+        top[10] = 525;
+        top[11] = 565;
+        top[12] = 606;
+        top[13] = 646;
+        top[14] = 687;
+        top[15] = 727;
+        top[16] = 767;
+        top[17] = 808;
+        top[18] = 848;
+        top[19] = 889;
+        top[20] = 929;
+
+        for (int i = 0; i < 21; i++) {
+            tempImg[i] = robot.createScreenCapture(new Rectangle(pLeft, (top[i] + 1), pWidth, pHeight));
+        }
+
+    } //End of GetScreen
+    //Take printscreens for search after scroll
+    public static void GetScreenExtra() {
+
+        int pLeft = 1510;
+        int pHeight = 25;
+        int pWidth = 50;
+
+        Robot robot = null;
+
+        try {
+            robot = new Robot();
+        } catch (AWTException m) {
+            m.printStackTrace();
+        }
+
+        //Capture screens distance to top:
+        int[] top = new int[21];
+        top[0] = 606;
+        top[1] = 646;
+        top[2] = 687;
+        top[3] = 727;
+        top[4] = 767;
+        top[5] = 808;
+        top[6] = 849;
+        top[7] = 889;
+        top[8] = 930;
+
+        for (int i = 0; i < 9; i++) {
+            tempImg[i] = robot.createScreenCapture(new Rectangle(pLeft, (top[i] - 5), pWidth, pHeight));
+
+        }
+
+    } //End of GetScreenExtra
+
+    public static void StartSearch() {
+        //Button pressed
+        Frame.editorPane.setText(" ");
+        for (int x = 0; x < 30; x++) {
+            Main.cardNumb[x] = -1;
+            Main.cardCount[x] = 0;
+        }
+        Main.currentSlot = 0;
+        Main.totCards = 0;
+        Frame.editorPane.setText(" ");
+        GetScreen();
+        Comparer.CheckClass();
+        while(Main.totCards < 30 && threadsStarted < 21) {
+            if(threadsRunning < Runtime.getRuntime().availableProcessors()) {
+                Comparer comparer = new Comparer(false);
+                comparer.start();
+                threadsRunning++;
+                threadsStarted++;
+                Frame.cardsFound.setText("Cards found: " + Main.totCards);
+                Frame.UpdateWindow();
+            }
+        }
+        Frame.cardsFound.setText("Cards found: " + Main.totCards);
+        Frame.UpdateWindow();
+    }
+
+    public static void ComplementSearch() {
+        threadsStarted = 0;
+        while(Main.totCards < 30 && threadsStarted < 9) {
+            if(threadsRunning < Runtime.getRuntime().availableProcessors()) {
+                Comparer comparer = new Comparer(true);
+                comparer.start();
+                threadsRunning++;
+                threadsStarted++;
+                Frame.cardsFound.setText("Cards found: " + Main.totCards);
+                Frame.UpdateWindow();
+            }
+        }
+        Frame.cardsFound.setText("Cards found: " + Main.totCards);
+        Frame.UpdateWindow();
     }
 }
