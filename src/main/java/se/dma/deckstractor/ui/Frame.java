@@ -72,85 +72,85 @@ public class Frame {
         JMenuBar bar = new JMenuBar();
         frame.setJMenuBar(bar);
 
-        JMenu extract = new JMenu("Extract");
-        bar.add(extract);
+            JMenu extract = new JMenu("Extract");
+            bar.add(extract);
 
-        JMenuItem Druid = new JMenuItem("..as Druid");
-        extract.add(Druid);
-        Druid.addActionListener(handler);
-        JMenuItem Hunter = new JMenuItem("..as Hunter");
-        extract.add(Hunter);
-        Hunter.addActionListener(handler);
-        JMenuItem Mage = new JMenuItem("..as Mage");
-        extract.add(Mage);
-        Mage.addActionListener(handler);
-        JMenuItem Paladin = new JMenuItem("..as Paladin");
-        extract.add(Paladin);
-        Paladin.addActionListener(handler);
-        JMenuItem Priest = new JMenuItem("..as Priest");
-        extract.add(Priest);
-        Priest.addActionListener(handler);
-        JMenuItem Rogue = new JMenuItem("..as Rogue");
-        extract.add(Rogue);
-        Rogue.addActionListener(handler);
-        JMenuItem Shaman = new JMenuItem("..as Shaman");
-        extract.add(Shaman);
-        Shaman.addActionListener(handler);
-        JMenuItem Warlock = new JMenuItem("..as Warlock");
-        extract.add(Warlock);
-        Warlock.addActionListener(handler);
-        JMenuItem Warrior = new JMenuItem("..as Warrior");
-        extract.add(Warrior);
-        Warrior.addActionListener(handler);
-        extract.addSeparator();
-        JMenuItem ExtractMore = new JMenuItem("Second Extraction (If decklist has scroll)");
-        extract.add(ExtractMore);
-        ExtractMore.addActionListener(handler);
+                JMenuItem Druid = new JMenuItem("..as Druid");
+                extract.add(Druid);
+                Druid.addActionListener(handler);
+                JMenuItem Hunter = new JMenuItem("..as Hunter");
+                extract.add(Hunter);
+                Hunter.addActionListener(handler);
+                JMenuItem Mage = new JMenuItem("..as Mage");
+                extract.add(Mage);
+                Mage.addActionListener(handler);
+                JMenuItem Paladin = new JMenuItem("..as Paladin");
+                extract.add(Paladin);
+                Paladin.addActionListener(handler);
+                JMenuItem Priest = new JMenuItem("..as Priest");
+                extract.add(Priest);
+                Priest.addActionListener(handler);
+                JMenuItem Rogue = new JMenuItem("..as Rogue");
+                extract.add(Rogue);
+                Rogue.addActionListener(handler);
+                JMenuItem Shaman = new JMenuItem("..as Shaman");
+                extract.add(Shaman);
+                Shaman.addActionListener(handler);
+                JMenuItem Warlock = new JMenuItem("..as Warlock");
+                extract.add(Warlock);
+                Warlock.addActionListener(handler);
+                JMenuItem Warrior = new JMenuItem("..as Warrior");
+                extract.add(Warrior);
+                Warrior.addActionListener(handler);
+                extract.addSeparator();
+                JMenuItem ExtractMore = new JMenuItem("Second Extraction (If decklist has scroll)");
+                extract.add(ExtractMore);
+                ExtractMore.addActionListener(handler);
 
-        JMenu Export = new JMenu("Export");
-        bar.add(Export);
+            JMenu Export = new JMenu("Export");
+            bar.add(Export);
 
-        JMenuItem HearthPwn = new JMenuItem("Export to HearthPwn");
-        Export.add(HearthPwn);
-        HearthPwn.addActionListener(handler);
+                JMenuItem HearthPwn = new JMenuItem("Export to HearthPwn");
+                Export.add(HearthPwn);
+                HearthPwn.addActionListener(handler);
 
-        JMenuItem Textfile = new JMenuItem("Export as Text File");
-        Export.add(Textfile);
-        Textfile.addActionListener(handler);
+                JMenuItem Textfile = new JMenuItem("Export as Text File");
+                Export.add(Textfile);
+                Textfile.addActionListener(handler);
 
-        JMenuItem Textfile2 = new JMenuItem("Export as Text File (Card by Card)");
-        Export.add(Textfile2);
-        Textfile2.addActionListener(handler);
+                JMenuItem Textfile2 = new JMenuItem("Export as Text File (Card by Card)");
+                Export.add(Textfile2);
+                Textfile2.addActionListener(handler);
 
-        JMenuItem xml = new JMenuItem("Export as XML");
-        Export.add(xml);
-        xml.addActionListener(handler);
+                JMenuItem xml = new JMenuItem("Export as XML");
+                Export.add(xml);
+                xml.addActionListener(handler);
 
-        JMenu Help = new JMenu("Help");
-        bar.add(Help);
+            JMenu Help = new JMenu("Help");
+            bar.add(Help);
 
-        JMenuItem Instructions = new JMenuItem("Instructions");
-        Help.add(Instructions);
-        Instructions.addActionListener(handler);
+                JMenuItem Instructions = new JMenuItem("Instructions");
+                Help.add(Instructions);
+                Instructions.addActionListener(handler);
 
-        JMenuItem MissingCards = new JMenuItem("Missing Cards");
-        Help.add(MissingCards);
-        MissingCards.addActionListener(handler);
+                JMenuItem MissingCards = new JMenuItem("Missing Cards");
+                Help.add(MissingCards);
+                MissingCards.addActionListener(handler);
 
-        JMenuItem SearchTemplate = new JMenuItem("Creating Search Template");
-        Help.add(SearchTemplate);
-        SearchTemplate.addActionListener(handler);
+                JMenuItem SearchTemplate = new JMenuItem("Creating Search Template");
+                Help.add(SearchTemplate);
+                SearchTemplate.addActionListener(handler);
 
-        JMenu Template = new JMenu("Template");
-        bar.add(Template);
+            JMenu Template = new JMenu("Template");
+            bar.add(Template);
 
-        JMenuItem SingleTemplate = new JMenuItem("Create Single Card Template");
-        Template.add(SingleTemplate);
-        SingleTemplate.addActionListener(handler);
+                JMenuItem SingleTemplate = new JMenuItem("Create Single Card Template");
+                Template.add(SingleTemplate);
+                SingleTemplate.addActionListener(handler);
 
-        JMenuItem DoubleTemplate = new JMenuItem("Create Double Card Template");
-        Template.add(DoubleTemplate);
-        DoubleTemplate.addActionListener(handler);
+                JMenuItem DoubleTemplate = new JMenuItem("Create Double Card Template");
+                Template.add(DoubleTemplate);
+                DoubleTemplate.addActionListener(handler);
     }
 
     private JFrame getjFrame() {

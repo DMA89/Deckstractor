@@ -23,11 +23,7 @@ public class Handler implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == Main.timer) {
             //Timer pulse
-            if (i == 0) {
-                comparer.imgFind(i);
-                i++;
-                Frame.cardsFound.setText("Cards found: " + Main.totCards);
-            } else if (i == 20) {
+            if (i == 20) {
                 comparer.imgFind(i);
                 Main.timer.stop();
                 i = 0;
@@ -36,14 +32,12 @@ public class Handler implements ActionListener {
                     String str = "<html><font color=\"red\"> Only " + Main.totCards + " where found, please scroll <br> ALL the way down in your decklist <br> and then press \"Second Extraction\".</font>";
                     Frame.cardsFound.setText(str);
                 }
-
             } else {
                 comparer.imgFind(i);
                 i++;
                 if (Main.totCards > 29) {
                     Main.timer.stop();
                     i = 0;
-                    Frame.cardsFound.setText("Cards found: " + Main.totCards);
                 }
                 Frame.cardsFound.setText("Cards found: " + Main.totCards);
             }
@@ -67,7 +61,7 @@ public class Handler implements ActionListener {
             }
             Frame.cardsFound.setText("Cards found: " + Main.totCards);
             Frame.UpdateWindow();
-        } else {
+            } else {
             String str;
             Robot robot;
             BufferedImage im;

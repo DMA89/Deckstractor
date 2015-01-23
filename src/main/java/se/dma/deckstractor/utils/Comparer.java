@@ -210,16 +210,20 @@ class Comparer {
 
     public boolean imgFind(int i) {
         boolean found;
+        System.out.println(i);
         //Class search
         for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
+
             found = ImageMatchCheck(i, j, false, 0);
             if (!found) {
                 found = ImageMatchCheck(i, j, true, 0);
             }
             if (found) {
                 return true;
+
             }
         }
+
         //Neutral search
         for (int j = 306; j < 535; j++) {
             found = ImageMatchCheck(i, j, false, 0);
@@ -232,6 +236,8 @@ class Comparer {
         }
         //Extra test with one pixel up and down
         // This only runs is Normal test fails###
+
+        System.out.println("Extra search engaged");
         for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
                 //One pixel up, double.
                 found = ImageMatchCheck(i, j, false, -1);
