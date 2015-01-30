@@ -16,8 +16,6 @@ class Exporter {
     public static void HearthPwn() {
         String URL = "http://www.hearthpwn.com/deckbuilder/";
         Card card;
-
-
         URL = URL + Main.chosenClass.getName().toLowerCase() + "#";
 
         for (int m = 0; m < 30; m++) {

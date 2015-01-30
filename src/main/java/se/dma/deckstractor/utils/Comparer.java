@@ -97,20 +97,14 @@ class Comparer extends Thread {
 
         for (int i = 0; i < 9; i++) {
             path = "class-images/" + "constructed-" + classStr[i] + ".jpeg";
-            System.out.println(path);
             if (Files.exists(Paths.get(path))){
                 test = ImgDiffPercent(classScreenShot, path, 0);
             }
             path = "class-images/" + "arena-" + classStr[i] + ".jpeg";
-            System.out.println(path);
             if (Files.exists(Paths.get(path))){
                 test2 = ImgDiffPercent(classScreenShotArena, path, 0);
             }
-            System.out.println(test);
-            System.out.println(test2);
             if (test<percentDifference||test2<percentDifference){
-                System.out.println("jhfjdf");
-                System.out.println(classStrBig[i]);
                 Main.chosenClass = Main.classService.getHearthstoneClassByName(classStrBig[i]);
             }
         }
