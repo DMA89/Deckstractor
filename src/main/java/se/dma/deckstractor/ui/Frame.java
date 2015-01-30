@@ -22,13 +22,44 @@ public class Frame {
         editorPane.setText(" ");
         for (int m = 0; m < 30; m++) {
             if (Main.cardCount[m] > 0) {
-                editorPane.setText(editorPane.getText() + Main.cardCount[m] + "x: " + Main.cardService.getCard(Main.cardNumb[m]).getName() + "\n ");
+                //System.out.println("M: " + m);
+                //System.out.println("Main.cardCount[m]: " + Main.cardCount[m]);
+                //System.out.println(Main.cardService.getCard(Main.cardNumb[m]).getName());
+                        editorPane.setText(editorPane.getText() + Main.cardCount[m] + "x: " + Main.cardService.getCard(Main.cardNumb[m]).getName() + "\n ");
+            }else{
+                editorPane.setText(editorPane.getText() + " " + "\n ");
+            }
+
+        }
+    }
+
+
+    public static void RemoveOverThirtyFirst(){
+        for (int i = 29; i > 13; i--) {
+            if (Main.totCards>30) {
+                Main.totCards = Main.totCards - Main.cardCount[i];
+                Main.cardCount[i] = 0;
+                Main.cardNumb[i] = -1;
             }
         }
     }
 
+
+    public static void RemoveOverThirtySecond(){
+        for (int i = 21; i < 30; i++) {
+            if (Main.totCards>30) {
+                Main.totCards = Main.totCards - Main.cardCount[i];
+                Main.cardCount[i] = 0;
+                Main.cardNumb[i] = -1;
+            }
+        }
+    }
+
+
     //Remove spaces in array keeping track of cards when search is done, also put one gold and one normal cards togeather as one.
     public static void RemoveSpace() {
+
+
         for (int m = 0; m < 29; m++) {
             if (Main.cardNumb[m] == Main.cardNumb[m + 1]) {
                 Main.cardCount[m] = 2;
@@ -36,13 +67,36 @@ public class Frame {
                 Main.cardNumb[m + 1] = -1;
             }
         }
+
         for (int m = 0; m < 29; m++) {
-            if (Main.cardCount[m] == -1) {
-                Main.cardCount[m] = Main.cardCount[m + 1];
-                Main.cardNumb[m] = Main.cardNumb[m + 1];
+            if (Main.cardNumb[m] == -1 || Main.cardNumb[m] == -2) {
+                System.out.println("move it" + m);
+                int Counter = 0;
+                while((Main.cardNumb[m] == -1 || Main.cardNumb[m] == -2)&&(Counter < 29)){
+                    for (int n = m; n < 29; n++){
+                        Main.cardCount[n] = Main.cardCount[n + 1];
+                        Main.cardNumb[n] = Main.cardNumb[n + 1];
+                    }
+                    Main.cardCount[29] = 0;
+                    Main.cardNumb[29] = -1;
+                    Counter++;
+                }
+
+                Main.cardNumb[29] = -1;
+                Main.cardCount[29] = 0;
+
+
+                /*
+                System.out.println("TEST NUMBER: " + m);
+                for (int k = 0; k < 30; k++) {
+                    System.out.println(k);
+                    System.out.println("CardNumb:" + Main.cardNumb[k]);
+                    System.out.println("cardCount:" + Main.cardCount[k]);
+                }
+                */
+
             }
         }
-
     }
 
     public void init() {
@@ -56,7 +110,7 @@ public class Frame {
         Handler handler = new Handler();
 
         Main.timer = new Timer(interval, handler);
-        Main.timerMore = new Timer(interval, handler);
+        Main.timerMore = new Timer(interval + 20, handler);
 
         editorPane.setEditable(true);
         editorPane.setPreferredSize(new Dimension(190, 500));

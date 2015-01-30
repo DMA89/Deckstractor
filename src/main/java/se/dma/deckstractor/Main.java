@@ -20,7 +20,8 @@ import java.util.Properties;
 public class Main {
     public static final int[] cardNumb = new int[30];
     public static final int[] cardCount = new int[30];
-    public static final double percentDiffAllowed = 9;
+    public static final double percentDiffAllowed = 8;
+    public static final double percentDiffAllowedDuringExtraSearch = 12;
     public static final double extraDiffTwenty = 1;
     public static Properties PROPERTIES;
     public static Timer timer;
@@ -30,7 +31,9 @@ public class Main {
     public static int totCards = 0;
     public static ClassService classService = new ClassServiceImpl();
     public static CardService cardService = new CardServiceImpl();
-
+    public static int numberOfTimesTimerHasRun = 0;
+    public static int threadsStarted = 0;
+    public static int threadsRunning = 0;
 
     public static XStream xstream;
 

@@ -18,8 +18,6 @@ import java.io.IOException;
 public class Handler implements ActionListener {
 
     public static BufferedImage tempImg[] = new BufferedImage[21];
-    public static int threadsRunning = 0;
-    public static int threadsStarted = 0;
 
 
     public void actionPerformed(ActionEvent event) {
@@ -28,81 +26,128 @@ public class Handler implements ActionListener {
             BufferedImage im;
             File output;
             JTextArea textarea;
-            switch (event.getActionCommand()) {
-                case "Extract":
-                    StartSearch();
-                    break;
-                case "Export as Text File":
+
+            if(event.getSource()==Main.timer){
+                Main.numberOfTimesTimerHasRun++;
+                System.out.println("NUMBER OF TIMES: " + Main.numberOfTimesTimerHasRun);
+                System.out.println(Main.threadsStarted);
+                if((Main.threadsRunning < Runtime.getRuntime().availableProcessors())) {
+                    System.out.println("Main.numberOfTimesTimerHasRun: " + Main.numberOfTimesTimerHasRun);
+                    System.out.println("threadsStarted: " + Main.threadsStarted);
+                    Comparer comparer = new Comparer(false);
+                    comparer.start();
+                    Frame.cardsFound.setText("Cards found: " + Main.totCards);
+                    Frame.UpdateWindow();
+
+                }
+
+                //STOP TIMER?
+                if(Main.threadsStarted > 20 || Main.numberOfTimesTimerHasRun > 200) {
+                    Main.timer.stop();
+                    Frame.RemoveOverThirtyFirst();
+                    System.out.println("timer stop");
+                }
+
+                Frame.cardsFound.setText("Cards found: " + Main.totCards);
+                Frame.UpdateWindow();
+            }else if(event.getSource()==Main.timerMore){
+                Main.numberOfTimesTimerHasRun++;
+                System.out.println(Main.threadsStarted);
+                if((Main.threadsRunning < Runtime.getRuntime().availableProcessors())) {
+                    Comparer comparer = new Comparer(true);
+                    comparer.start();
+                    Frame.cardsFound.setText("Cards found: " + Main.totCards);
+                    Frame.UpdateWindow();
+                }
+
+                //STOP TIMER?
+                if((Main.threadsStarted > 8 || Main.numberOfTimesTimerHasRun > 100)) {
+                    Main.timerMore.stop();
+                    Frame.RemoveOverThirtySecond();
                     Frame.RemoveSpace();
-                    str = Exporter.CreateTxtNum();
-                    Exporter.CreateFile(str, ".txt");
-                    break;
-                case "Export as Text File (Card by Card)":
-                    Frame.RemoveSpace();
-                    str = Exporter.CreateTxt();
-                    Exporter.CreateFile(str, ".txt");
-                    break;
-                case "Export as XML":
-                    Frame.RemoveSpace();
-                    String xmlClass = JOptionPane.showInputDialog("Choose a name for your deck.");
-                    str = Exporter.CreateXML(xmlClass);
-                    Exporter.CreateFile(str, ".xml");
-                    break;
-                case "Export to HearthPwn":
-                    Frame.RemoveSpace();
-                    Exporter.HearthPwn();
-                    break;
-                case "Create Single Card Template":
-                    robot = null;
-                    try {
-                        robot = new Robot();
-                    } catch (AWTException m) {
-                        m.printStackTrace();
-                    }
-                    im = robot.createScreenCapture(new Rectangle(1510, 121, 50, 25));
-                    //Old capture for class recognition
-                    //im = robot.createScreenCapture(new Rectangle(1420, 30, 25, 25));
-                    output = new File("SingleImgTemplate.jpeg");
-                    try {
-                        ImageIO.write(im, "jpeg", output);
-                    } catch (IOException p) {
-                        p.printStackTrace();
-                    }
-                    break;
-                case "Create Double Card Template":
-                    robot = null;
-                    try {
-                        robot = new Robot();
-                    } catch (AWTException m) {
-                        m.printStackTrace();
-                    }
-                    im = robot.createScreenCapture(new Rectangle(1510, 121, 50, 25));
-                    output = new File("DoubleImgTemplate.jpeg");
-                    try {
-                        ImageIO.write(im, "jpeg", output);
-                    } catch (IOException p) {
-                        p.printStackTrace();
-                    }
-                    break;
-                case "Creating Search Template":
-                    textarea = new JTextArea(Main.PROPERTIES.getProperty("notification.instructions"));
-                    textarea.setEditable(true);
-                    JOptionPane.showMessageDialog(null, textarea, "Creating Search Template", JOptionPane.PLAIN_MESSAGE);
-                    break;
-                case "Missing Cards":
-                    textarea = new JTextArea(Main.PROPERTIES.getProperty("notification.missing.cards"));
-                    textarea.setEditable(true);
-                    JOptionPane.showMessageDialog(null, textarea, "Creating Search Template", JOptionPane.PLAIN_MESSAGE);
-                    break;
-                case "Instructions":
-                    JOptionPane.showMessageDialog(null, " * Deckstractor only works with 1920x1080 resolution. The \"Fullscreen\" option must be checked. \n   The progam takes printscreens of the deck and without fullscreen and 1920x1080 the cordinates \n   won't align properly." +
-                                    "\n \n* If your deck has a scrollbar make sure it's at the very top when you extract your deck. \n   After every card shown has been extracted, scroll ALL the way down and press \n   \"Secondary extraction\"."
-                    );
-                    break;
-                case "Second Extraction (If decklist has scroll)":
-                    GetScreenExtra();
-                    ComplementSearch();
-                    break;
+                }
+
+                System.out.println("VI KOM HIT!!!!");
+                Frame.cardsFound.setText("Cards found: " + Main.totCards);
+                Frame.UpdateWindow();
+            }else
+            {
+                switch (event.getActionCommand()) {
+                    case "Extract":
+                        StartSearch();
+                        break;
+                    case "Export as Text File":
+                        Frame.RemoveSpace();
+                        str = Exporter.CreateTxtNum();
+                        Exporter.CreateFile(str, ".txt");
+                        break;
+                    case "Export as Text File (Card by Card)":
+                        Frame.RemoveSpace();
+                        str = Exporter.CreateTxt();
+                        Exporter.CreateFile(str, ".txt");
+                        break;
+                    case "Export as XML":
+                        Frame.RemoveSpace();
+                        String xmlClass = JOptionPane.showInputDialog("Choose a name for your deck.");
+                        str = Exporter.CreateXML(xmlClass);
+                        Exporter.CreateFile(str, ".xml");
+                        break;
+                    case "Export to HearthPwn":
+                        Frame.RemoveSpace();
+                        Exporter.HearthPwn();
+                        break;
+                    case "Create Single Card Template":
+                        robot = null;
+                        try {
+                            robot = new Robot();
+                        } catch (AWTException m) {
+                            m.printStackTrace();
+                        }
+                        im = robot.createScreenCapture(new Rectangle(1510, 121, 50, 25));
+                        //Old capture for class recognition
+                        //im = robot.createScreenCapture(new Rectangle(1420, 30, 25, 25));
+                        output = new File("SingleImgTemplate.jpeg");
+                        try {
+                            ImageIO.write(im, "jpeg", output);
+                        } catch (IOException p) {
+                            p.printStackTrace();
+                        }
+                        break;
+                    case "Create Double Card Template":
+                        robot = null;
+                        try {
+                            robot = new Robot();
+                        } catch (AWTException m) {
+                            m.printStackTrace();
+                        }
+                        im = robot.createScreenCapture(new Rectangle(1510, 121, 50, 25));
+                        output = new File("DoubleImgTemplate.jpeg");
+                        try {
+                            ImageIO.write(im, "jpeg", output);
+                        } catch (IOException p) {
+                            p.printStackTrace();
+                        }
+                        break;
+                    case "Creating Search Template":
+                        textarea = new JTextArea(Main.PROPERTIES.getProperty("notification.instructions"));
+                        textarea.setEditable(true);
+                        JOptionPane.showMessageDialog(null, textarea, "Creating Search Template", JOptionPane.PLAIN_MESSAGE);
+                        break;
+                    case "Missing Cards":
+                        textarea = new JTextArea(Main.PROPERTIES.getProperty("notification.missing.cards"));
+                        textarea.setEditable(true);
+                        JOptionPane.showMessageDialog(null, textarea, "Creating Search Template", JOptionPane.PLAIN_MESSAGE);
+                        break;
+                    case "Instructions":
+                        JOptionPane.showMessageDialog(null, " * Deckstractor only works with 1920x1080 resolution. The \"Fullscreen\" option must be checked. \n   The progam takes printscreens of the deck and without fullscreen and 1920x1080 the cordinates \n   won't align properly." +
+                                        "\n \n* If your deck has a scrollbar make sure it's at the very top when you extract your deck. \n   After every card shown has been extracted, scroll ALL the way down and press \n   \"Secondary extraction\"."
+                        );
+                        break;
+                    case "Second Extraction (If decklist has scroll)":
+                        GetScreenExtra();
+                        ComplementSearch();
+                        break;
+                }
             } //End of Export as text file.
     }
 
@@ -186,8 +231,9 @@ public class Handler implements ActionListener {
 
     public static void StartSearch() {
         //Button pressed
-        threadsRunning = 0;
-        threadsStarted = 0;
+        Main.threadsRunning = 0;
+        Main.threadsStarted = 0;
+        Main.numberOfTimesTimerHasRun = 0;
         Frame.editorPane.setText(" ");
         for (int x = 0; x < 30; x++) {
             Main.cardNumb[x] = -1;
@@ -198,32 +244,13 @@ public class Handler implements ActionListener {
         Frame.editorPane.setText(" ");
         GetScreen();
         Comparer.CheckClass();
-        while(Main.totCards < 30 && threadsStarted < 21) {
-            System.out.println(threadsStarted);
-            if(threadsRunning < Runtime.getRuntime().availableProcessors()) {
-                Comparer comparer = new Comparer(false);
-                comparer.start();
-                Frame.cardsFound.setText("Cards found: " + Main.totCards);
-                Frame.UpdateWindow();
-            }
-        }
-        Frame.cardsFound.setText("Cards found: " + Main.totCards);
-        Frame.UpdateWindow();
+        Main.timer.start();
     }
 
     public static void ComplementSearch() {
-        threadsStarted = 0;
-        threadsRunning = 0;
-        while(Main.totCards < 30 && threadsStarted < 9) {
-            System.out.println(threadsStarted);
-            if(threadsRunning < Runtime.getRuntime().availableProcessors()) {
-                Comparer comparer = new Comparer(true);
-                comparer.start();
-                Frame.cardsFound.setText("Cards found: " + Main.totCards);
-                Frame.UpdateWindow();
-            }
-        }
-        Frame.cardsFound.setText("Cards found: " + Main.totCards);
-        Frame.UpdateWindow();
+        Main.threadsStarted = 0;
+        Main.threadsRunning = 0;
+        Main.numberOfTimesTimerHasRun = 0;
+        Main.timerMore.start();
     }
 }

@@ -29,8 +29,8 @@ class Comparer extends Thread {
         boolean found = imgFind(complementSearch);
         if(found) {
             try {
-                Handler.threadsRunning--;
-                Handler.threadsStarted++;
+                Main.threadsRunning--;
+                Main.threadsStarted++;
                 System.out.println("Thread killed");
                 t.join();
             } catch (InterruptedException e) {
@@ -38,7 +38,7 @@ class Comparer extends Thread {
             }
         } else {
             try {
-                Handler.threadsRunning--;
+                Main.threadsRunning--;
                 System.out.println("Thread killed");
                 t.join();
             } catch (InterruptedException e) {
@@ -49,8 +49,8 @@ class Comparer extends Thread {
 
     public void start ()
     {
-        Handler.threadsRunning++;
-        System.out.println("Threads running: " + Handler.threadsRunning);
+        Main.threadsRunning++;
+        System.out.println("Threads running: " + Main.threadsRunning);
         if (t == null)
         {
             t = new Thread (this);
@@ -62,6 +62,7 @@ class Comparer extends Thread {
         Robot robot;
         robot = null;
         Double test = 50.0;
+        Double test2 = 50.0;
         Double percentDifference = 10.0;
         try {
             robot = new Robot();
@@ -69,88 +70,51 @@ class Comparer extends Thread {
             m.printStackTrace();
         }
         BufferedImage classScreenShot = robot.createScreenCapture(new Rectangle(1420, 30, 25, 25));
+        BufferedImage classScreenShotArena = robot.createScreenCapture(new Rectangle(1420, 30, 25, 25));
         String path;
 
-        path = "class-images/" + "constructed-warrior" + ".jpeg";
-        if (Files.exists(Paths.get(path))){
-            test = ImgDiffPercent(classScreenShot, path, 0);
-        }
-        System.out.println(test);
-        if (test<percentDifference){
-            Main.chosenClass = Main.classService.getHearthstoneClassByName("Warrior");
+        String classStr[] = new String[9];
+        classStr[0]="warrior";
+        classStr[1]="warlock";
+        classStr[2]="shaman";
+        classStr[3]="rogue";
+        classStr[4]="priest";
+        classStr[5]="paladin";
+        classStr[6]="mage";
+        classStr[7]="hunter";
+        classStr[8]="druid";
+
+        String classStrBig[] = new String[9];
+        classStrBig[0]="Warrior";
+        classStrBig[1]="Warlock";
+        classStrBig[2]="Shaman";
+        classStrBig[3]="Rogue";
+        classStrBig[4]="Priest";
+        classStrBig[5]="Paladin";
+        classStrBig[6]="Mage";
+        classStrBig[7]="Hunter";
+        classStrBig[8]="Druid";
+
+        for (int i = 0; i < 9; i++) {
+            path = "class-images/" + "constructed-" + classStr[i] + ".jpeg";
+            System.out.println(path);
+            if (Files.exists(Paths.get(path))){
+                test = ImgDiffPercent(classScreenShot, path, 0);
+            }
+            path = "class-images/" + "arena-" + classStr[i] + ".jpeg";
+            System.out.println(path);
+            if (Files.exists(Paths.get(path))){
+                test2 = ImgDiffPercent(classScreenShotArena, path, 0);
+            }
+            System.out.println(test);
+            System.out.println(test2);
+            if (test<percentDifference||test2<percentDifference){
+                System.out.println("jhfjdf");
+                System.out.println(classStrBig[i]);
+                Main.chosenClass = Main.classService.getHearthstoneClassByName(classStrBig[i]);
+            }
         }
 
-        path = "class-images/" + "constructed-warlock" + ".jpeg";
-        if (Files.exists(Paths.get(path))){
-            test = ImgDiffPercent(classScreenShot, path, 0);
-        }
-        System.out.println(test);
-        if (test<percentDifference){
-            Main.chosenClass = Main.classService.getHearthstoneClassByName("Warlock");
-        }
-
-        path = "class-images/" + "constructed-shaman" + ".jpeg";
-        if (Files.exists(Paths.get(path))) {
-            test = ImgDiffPercent(classScreenShot, path, 0);
-        }
-        System.out.println(test);
-        if (test<percentDifference){
-            Main.chosenClass = Main.classService.getHearthstoneClassByName("Shaman");
-        }
-
-        path = "class-images/" + "constructed-rogue" + ".jpeg";
-        if (Files.exists(Paths.get(path))) {
-            test = ImgDiffPercent(classScreenShot, path, 0);
-        }
-        System.out.println(test);
-        if (test<percentDifference){
-            Main.chosenClass = Main.classService.getHearthstoneClassByName("Rogue");
-        }
-
-        path = "class-images/" + "constructed-priest" + ".jpeg";
-        if (Files.exists(Paths.get(path))) {
-            test = ImgDiffPercent(classScreenShot, path, 0);
-        }
-        System.out.println(test);
-        if (test<percentDifference){
-            Main.chosenClass = Main.classService.getHearthstoneClassByName("Priest");
-        }
-
-        path = "class-images/" + "constructed-paladin" + ".jpeg";
-        if (Files.exists(Paths.get(path))) {
-            test = ImgDiffPercent(classScreenShot, path, 0);
-        }
-        System.out.println(test);
-        if (test<percentDifference){
-            Main.chosenClass = Main.classService.getHearthstoneClassByName("Paladin");
-        }
-
-        path = "class-images/" + "constructed-mage" + ".jpeg";
-        if (Files.exists(Paths.get(path))) {
-            test = ImgDiffPercent(classScreenShot, path, 0);
-        }
-        System.out.println(test);
-        if (test<percentDifference){
-            Main.chosenClass = Main.classService.getHearthstoneClassByName("Mage");
-        }
-
-        path = "class-images/" + "constructed-hunter" + ".jpeg";
-        if (Files.exists(Paths.get(path))) {
-            test = ImgDiffPercent(classScreenShot, path, 0);
-        }
-        System.out.println(test);
-        if (test<percentDifference){
-            Main.chosenClass = Main.classService.getHearthstoneClassByName("Hunter");
-        }
-
-        path = "class-images/" + "constructed-druid" + ".jpeg";
-        if (Files.exists(Paths.get(path))) {
-            test = ImgDiffPercent(classScreenShot, path, 0);
-        }
-        System.out.println(test);
-        if (test<percentDifference){
-            Main.chosenClass = Main.classService.getHearthstoneClassByName("Druid");
-        }
     }
 
     //Img compare function
@@ -171,6 +135,12 @@ class Comparer extends Thread {
         }else if (searchDirection==1){
             img1 = img1.getSubimage(0, 1, 50, 24);
             img2 = img2.getSubimage(0, 0, 50, 24);
+        }else if (searchDirection==-2){
+            img1 = img1.getSubimage(0, 0, 50, 23);
+            img2 = img2.getSubimage(0, 2, 50, 23);
+        }else if (searchDirection==2){
+            img1 = img1.getSubimage(0, 2, 50, 23);
+            img2 = img2.getSubimage(0, 0, 50, 23);
         }
 
         int width1 = img1.getWidth(null);
@@ -206,7 +176,7 @@ class Comparer extends Thread {
 
 
     //Match images
-    public boolean ImageMatchCheck(int i, int j, boolean single, int searchDirection, int currentSlot){
+    public boolean ImageMatchCheck(int i, int j, boolean single, int searchDirection, int currentSlot, double diffAllowed){
         //Card card;
         //card = Main.cardService.getCard(j);
         // Create a compare object specifying the 2 images for comparison.
@@ -218,7 +188,7 @@ class Comparer extends Thread {
         }
         if (Files.exists(Paths.get(path))) {
             test = ImgDiffPercent(Handler.tempImg[i],path,searchDirection);
-            if ((test < Main.percentDiffAllowed) || ((i == 20) && (test < (Main.percentDiffAllowed + Main.extraDiffTwenty)))) {
+            if ((test < diffAllowed) || ((i == 20) && (test < (diffAllowed + Main.extraDiffTwenty)))) {
                 Main.cardNumb[currentSlot] = j;
                 if (single){
                     Main.cardCount[currentSlot]++;
@@ -270,9 +240,9 @@ class Comparer extends Thread {
         //Class search
         for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
 
-            found = ImageMatchCheck(i, j, false, 0, currentSlot);
+            found = ImageMatchCheck(i, j, false, 0, currentSlot, Main.percentDiffAllowed);
             if (!found) {
-                found = ImageMatchCheck(i, j, true, 0, currentSlot);
+                found = ImageMatchCheck(i, j, true, 0, currentSlot, Main.percentDiffAllowed);
             }
             if (found) {
                 return true;
@@ -282,9 +252,9 @@ class Comparer extends Thread {
 
         //Neutral search
         for (int j = 306; j < 535; j++) {
-            found = ImageMatchCheck(i, j, false, 0, currentSlot);
+            found = ImageMatchCheck(i, j, false, 0, currentSlot, Main.percentDiffAllowed);
             if (!found) {
-                found = ImageMatchCheck(i, j, true, 0, currentSlot);
+                found = ImageMatchCheck(i, j, true, 0, currentSlot, Main.percentDiffAllowed);
             }
             if (found) {
                 return true;
@@ -293,45 +263,115 @@ class Comparer extends Thread {
         //Extra test with one pixel up and down
         // This only runs is Normal test fails###
 
-        System.out.println("Extra search engaged");
+
         for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
-                //One pixel up, double.
-                found = ImageMatchCheck(i, j, false, -1, currentSlot);
-                if (!found){
-                    //One pixel up, single cards
-                    found = ImageMatchCheck(i, j, true, -1, currentSlot);
-                }
-                if (!found){
-                    //One pixel down, double cards
-                    found = ImageMatchCheck(i, j, false, 1, currentSlot);
-                }
-                if (!found){
-                    //One pixel down, single cards
-                    found = ImageMatchCheck(i, j, true, 1, currentSlot);
-                }
-                if (found){
-                    return true;
-                }
+
+            found = ImageMatchCheck(i, j, false, 0, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            if (!found) {
+                found = ImageMatchCheck(i, j, true, 0, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            }
+            if (found) {
+                return true;
+
+            }
         }
+
+        //Neutral search
         for (int j = 306; j < 535; j++) {
-            //One pixel up, double.
-            found = ImageMatchCheck(i, j, false, -1, currentSlot);
+            found = ImageMatchCheck(i, j, false, 0, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
             if (!found) {
-                //One pixel up, single cards
-                found = ImageMatchCheck(i, j, true, -1, currentSlot);
-            }
-            if (!found) {
-                //One pixel up, single cards
-                found = ImageMatchCheck(i, j, false, 1, currentSlot);
-            }
-            if (!found) {
-                //One pixel up, single cards
-                found = ImageMatchCheck(i, j, true, 1, currentSlot);
+                found = ImageMatchCheck(i, j, true, 0, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
             }
             if (found) {
                 return true;
             }
         }
+
+
+
+        System.out.println("Extra search engaged");
+        for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
+                //One pixel up, double.
+                found = ImageMatchCheck(i, j, false, -1, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+                if (!found){
+                    //One pixel up, single cards
+                    found = ImageMatchCheck(i, j, true, -1, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+                }
+                if (!found){
+                    //One pixel down, double cards
+                    found = ImageMatchCheck(i, j, false, 1, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+                }
+                if (!found){
+                    //One pixel down, single cards
+                    found = ImageMatchCheck(i, j, true, 1, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+                }
+                if (found){
+                    return true;
+                }
+        }
+
+        for (int j = 306; j < 535; j++) {
+            //One pixel up, double.
+            found = ImageMatchCheck(i, j, false, -1, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            if (!found) {
+                //One pixel up, single cards
+                found = ImageMatchCheck(i, j, true, -1, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            }
+            if (!found) {
+                //One pixel up, single cards
+                found = ImageMatchCheck(i, j, false, 1, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            }
+            if (!found) {
+                //One pixel up, single cards
+                found = ImageMatchCheck(i, j, true, 1, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            }
+            if (found) {
+                return true;
+            }
+        }
+
+
+        System.out.println("Super extra search engaged");
+        for (int j = Main.chosenClass.getSearchStart(); j < (Main.chosenClass.getSearchEnd() + 1); j++) {
+            //One pixel up, double.
+            found = ImageMatchCheck(i, j, false, -2, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            if (!found){
+                //One pixel up, single cards
+                found = ImageMatchCheck(i, j, true, -2, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            }
+            if (!found){
+                //One pixel down, double cards
+                found = ImageMatchCheck(i, j, false, 2, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            }
+            if (!found){
+                //One pixel down, single cards
+                found = ImageMatchCheck(i, j, true, 2, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            }
+            if (found){
+                return true;
+            }
+        }
+        for (int j = 306; j < 535; j++) {
+            //One pixel up, double.
+            found = ImageMatchCheck(i, j, false, -2, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            if (!found) {
+                //One pixel up, single cards
+                found = ImageMatchCheck(i, j, true, -2, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            }
+            if (!found) {
+                //One pixel up, single cards
+                found = ImageMatchCheck(i, j, false, 2, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            }
+            if (!found) {
+                //One pixel up, single cards
+                found = ImageMatchCheck(i, j, true, 2, currentSlot, Main.percentDiffAllowedDuringExtraSearch);
+            }
+            if (found) {
+                return true;
+            }
+        }
+
+
         return false;
     }
 
