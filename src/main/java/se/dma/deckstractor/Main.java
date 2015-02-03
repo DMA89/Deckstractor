@@ -38,6 +38,12 @@ public class Main {
     public static XStream xstream;
 
     public static void main(String[] args) {
+        PROPERTIES = new Properties();
+        try {
+            PROPERTIES.load(Main.class.getResourceAsStream("/main/resources/data.properties"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         xstream = new XStream(new Dom4JDriver());
         xstream.alias("card", Card.class);
         xstream.alias("hearthstoneclass", HearthstoneClass.class);
@@ -66,8 +72,6 @@ public class Main {
     private static void initializeDatabase() {
 
         try {
-            PROPERTIES = new Properties();
-            PROPERTIES.load(Main.class.getResourceAsStream("/main/resources/data.properties"));
             ArrayList<String> classes = new ArrayList<>();
             classes.add("Warrior");
             classes.add("Warlock");

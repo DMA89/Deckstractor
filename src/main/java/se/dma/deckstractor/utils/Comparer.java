@@ -73,42 +73,19 @@ class Comparer extends Thread {
         BufferedImage classScreenShotArena = robot.createScreenCapture(new Rectangle(1420, 30, 25, 25));
         String path;
 
-        String classStr[] = new String[9];
-        classStr[0]="warrior";
-        classStr[1]="warlock";
-        classStr[2]="shaman";
-        classStr[3]="rogue";
-        classStr[4]="priest";
-        classStr[5]="paladin";
-        classStr[6]="mage";
-        classStr[7]="hunter";
-        classStr[8]="druid";
-
-        String classStrBig[] = new String[9];
-        classStrBig[0]="Warrior";
-        classStrBig[1]="Warlock";
-        classStrBig[2]="Shaman";
-        classStrBig[3]="Rogue";
-        classStrBig[4]="Priest";
-        classStrBig[5]="Paladin";
-        classStrBig[6]="Mage";
-        classStrBig[7]="Hunter";
-        classStrBig[8]="Druid";
-
         for (int i = 0; i < 9; i++) {
-            path = "class-images/" + "constructed-" + classStr[i] + ".jpeg";
+            path = "class-images/" + "constructed-" + Main.classService.getHearthstoneClass(i).getName().toLowerCase() + ".jpeg";
             if (Files.exists(Paths.get(path))){
                 test = ImgDiffPercent(classScreenShot, path, 0);
             }
-            path = "class-images/" + "arena-" + classStr[i] + ".jpeg";
+            path = "class-images/" + "arena-" + Main.classService.getHearthstoneClass(i).getName().toLowerCase() + ".jpeg";
             if (Files.exists(Paths.get(path))){
                 test2 = ImgDiffPercent(classScreenShotArena, path, 0);
             }
             if (test<percentDifference||test2<percentDifference){
-                Main.chosenClass = Main.classService.getHearthstoneClassByName(classStrBig[i]);
+                Main.chosenClass = Main.classService.getHearthstoneClass(i);
             }
         }
-
     }
 
     //Img compare function
@@ -368,5 +345,4 @@ class Comparer extends Thread {
 
         return false;
     }
-
 }

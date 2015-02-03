@@ -11,6 +11,8 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
  * Created by palle on 22/01/15.
@@ -129,19 +131,35 @@ public class Handler implements ActionListener {
                         }
                         break;
                     case "Creating Search Template":
-                        textarea = new JTextArea(Main.PROPERTIES.getProperty("notification.instructions"));
-                        textarea.setEditable(true);
-                        JOptionPane.showMessageDialog(null, textarea, "Creating Search Template", JOptionPane.PLAIN_MESSAGE);
+                        JOptionPane.showMessageDialog(null, Main.PROPERTIES.getProperty("notification.instructions"));
                         break;
                     case "Missing Cards":
-                        textarea = new JTextArea(Main.PROPERTIES.getProperty("notification.missing.cards"));
-                        textarea.setEditable(true);
-                        JOptionPane.showMessageDialog(null, textarea, "Creating Search Template", JOptionPane.PLAIN_MESSAGE);
+                        int counter = 0;
+                        StringBuilder sb = new StringBuilder();
+                        sb.append(Main.PROPERTIES.getProperty("notification.missing.cards.start"));
+                        String prefix = "";
+                        for(int i = 0; i < Integer.valueOf(Main.PROPERTIES.getProperty("total.amount.of.cards")); i++) {
+                            String path = "SingleImgTemplate/" + Main.cardService.getCard(i).getBlizzardId() + ".jpeg";
+                            if (Files.exists(Paths.get(path))) {
+                            }else {
+                                if((counter % 8) == 0){
+                                    sb.append("\n");
+                                }
+                                sb.append(prefix);
+                                prefix = ", ";
+                                sb.append(Main.cardService.getCard(i).getName());
+                                counter++;
+                            }
+                        }
+                        sb.append(Main.PROPERTIES.getProperty("notification.missing.cards.end"));
+                        String message = sb.toString();
+                        JOptionPane.showMessageDialog(null, message);
                         break;
                     case "Instructions":
-                        JOptionPane.showMessageDialog(null, " * Deckstractor only works with 1920x1080 resolution. The \"Fullscreen\" option must be checked. \n   The progam takes printscreens of the deck and without fullscreen and 1920x1080 the cordinates \n   won't align properly." +
-                                        "\n \n* If your deck has a scrollbar make sure it's at the very top when you extract your deck. \n   After every card shown has been extracted, scroll ALL the way down and press \n   \"Secondary extraction\"."
-                        );
+                        String message1 = " * Deckstractor only works with 1920x1080 resolution. The \"Fullscreen\" option must be checked. \n   The progam takes printscreens of the deck and without fullscreen and 1920x1080 the cordinates \n   won't align properly." +
+                                "\n \n* If your deck has a scrollbar make sure it's at the very top when you extract your deck. \n   After every card shown has been extracted, scroll ALL the way down and press \n   \"Secondary extraction\".";
+
+                        JOptionPane.showMessageDialog(null, message1);
                         break;
                     case "Second Extraction (If decklist has scroll)":
                         GetScreenExtra();
